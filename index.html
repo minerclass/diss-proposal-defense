@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposal Defense Studio | Pedagogical Friction in the Age of Generative AI</title>
+  <meta name="description" content="Interactive dissertation proposal defense studio for claims, methods, references, and committee preparation.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Proposal defense navigation">
+      <a class="brand" href="#defense" data-view-link="defense" aria-label="Open Defense Room">
+        <span class="brand-mark" aria-hidden="true">PF</span>
+        <span>
+          <strong>Proposal Defense Studio</strong>
+          <small>Micah J. Miner · Phase 2</small>
+        </span>
+      </a>
+
+      <nav class="nav-stack" aria-label="Studio modes">
+        <button class="nav-item active" type="button" data-view="defense">
+          <span aria-hidden="true">01</span> Defense Room
+        </button>
+        <button class="nav-item" type="button" data-view="claims">
+          <span aria-hidden="true">02</span> Claims Lab
+        </button>
+        <button class="nav-item" type="button" data-view="methods">
+          <span aria-hidden="true">03</span> Methods Map
+        </button>
+        <button class="nav-item" type="button" data-view="history">
+          <span aria-hidden="true">04</span> Intellectual History
+        </button>
+        <button class="nav-item" type="button" data-view="committee">
+          <span aria-hidden="true">05</span> Committee Questions
+        </button>
+      </nav>
+
+      <section class="readiness" aria-labelledby="readiness-title">
+        <h2 id="readiness-title">Defense Readiness</h2>
+        <div class="readiness-meter" aria-hidden="true">
+          <span id="readinessBar"></span>
+        </div>
+        <p id="readinessText">Calculating readiness from tracked tasks.</p>
+      </section>
+
+      <section class="source-note" aria-labelledby="source-note-title">
+        <h2 id="source-note-title">Privacy Boundary</h2>
+        <p>Public site content should explain the study, rehearse the defense, and map sources. Interview data, consent records, transcripts, survey responses, and private notes do not belong in GitHub Pages.</p>
+      </section>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="section-label">Dissertation Proposal Preparation</p>
+          <h1>Pedagogical Friction in the Age of Generative AI</h1>
+          <p class="lede">A mixed-methods collective instrumental case study of how K-12 educators understand, preserve, and govern the forms of difficulty that still matter for learning.</p>
+          <div class="source-links" aria-label="Authoritative source documents">
+            <a href="https://docs.google.com/document/d/1i8C03IS1cGkFbdFCDGZfwzQkMFggcA4eqG9WsAYMlPU/edit?usp=sharing" target="_blank" rel="noopener">Chapters 1-3 draft</a>
+            <a href="https://docs.google.com/document/d/1ZtE5wDm3HvBcHt6LB7DyI1_oUZx5oc89CrKbRl_WAGY/edit?usp=sharing" target="_blank" rel="noopener">Qualifying paper</a>
+          </div>
+        </div>
+        <div class="top-actions" aria-label="Studio actions">
+          <button class="icon-button" type="button" id="printView" title="Print or save current view">
+            <span aria-hidden="true">□</span>
+            <span>Print</span>
+          </button>
+          <button class="icon-button" type="button" id="resetNotes" title="Reset local rehearsal notes">
+            <span aria-hidden="true">↺</span>
+            <span>Reset Notes</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-defense" aria-labelledby="defense-title">
+        <div class="defense-grid">
+          <section class="argument-board panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Argument Constellation</p>
+                <h2 id="defense-title">The proposal in one defensible arc</h2>
+              </div>
+              <span class="status-chip review">Review with chair</span>
+            </div>
+            <div class="constellation" aria-label="Core argument map">
+              <button class="node central" type="button" data-node="Pedagogical Friction">
+                <strong>Pedagogical Friction</strong>
+                <span>productive interpretive labor</span>
+              </button>
+              <button class="node node-a" type="button" data-node="Tertiary Algorithmicity">
+                <strong>Tertiary Algorithmicity</strong>
+                <span>machine-shaped meaning conditions</span>
+              </button>
+              <button class="node node-b" type="button" data-node="Output Looks Like Learning">
+                <strong>Output Looks Like Learning</strong>
+                <span>polished product, uncertain cognition</span>
+              </button>
+              <button class="node node-c" type="button" data-node="K-12 Policy and Practice">
+                <strong>K-12 Policy and Practice</strong>
+                <span>governance, assessment, instruction</span>
+              </button>
+              <button class="node node-d" type="button" data-node="Mixed Methods Case Study">
+                <strong>Mixed Methods Case Study</strong>
+                <span>QUAL + quan integration</span>
+              </button>
+              <svg class="lines" viewBox="0 0 900 520" aria-hidden="true" focusable="false">
+                <path d="M450 260 C330 160 260 120 200 104"></path>
+                <path d="M450 260 C610 138 675 110 745 100"></path>
+                <path d="M450 260 C310 340 238 406 160 430"></path>
+                <path d="M450 260 C590 350 680 410 770 430"></path>
+                <path d="M200 104 C410 70 575 70 745 100"></path>
+                <path d="M160 430 C370 470 585 468 770 430"></path>
+              </svg>
+            </div>
+            <div class="node-detail" id="nodeDetail">
+              Select a node to rehearse the claim, evidence, and committee risk.
+            </div>
+          </section>
+
+          <aside class="panel rehearsal-card" aria-labelledby="rehearsal-title">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-label">Defense Rehearsal</p>
+                <h2 id="rehearsal-title">Opening answer</h2>
+              </div>
+            </div>
+            <p class="prompt">In two minutes, explain why this dissertation is necessary now and why this design fits the problem.</p>
+            <textarea id="openingAnswer" aria-label="Opening defense answer notes"></textarea>
+            <div class="timer-row">
+              <button type="button" class="primary-button" id="startTimer">Start 2:00</button>
+              <output id="timerOutput" aria-live="polite">02:00</output>
+            </div>
+          </aside>
+        </div>
+
+        <section class="evidence-rail panel" aria-labelledby="evidence-title">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">Defense Sequence</p>
+              <h2 id="evidence-title">What the committee needs to hear</h2>
+            </div>
+          </div>
+          <div class="sequence" id="defenseSequence"></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-claims" aria-labelledby="claims-title">
+        <div class="toolbar panel">
+          <div>
+            <p class="section-label">Claims Lab</p>
+            <h2 id="claims-title">Stress-test the claims before the room does</h2>
+          </div>
+          <label class="select-label">Filter
+            <select id="claimFilter">
+              <option value="all">All claim types</option>
+              <option value="problem">Problem</option>
+              <option value="framework">Framework</option>
+              <option value="method">Method</option>
+              <option value="ethics">Ethics</option>
+            </select>
+          </label>
+        </div>
+        <div class="claim-layout">
+          <div class="claim-list panel" id="claimList" aria-label="Claim list"></div>
+          <article class="claim-detail panel" id="claimDetail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-methods" aria-labelledby="methods-title">
+        <div class="toolbar panel">
+          <div>
+            <p class="section-label">Methods Map</p>
+            <h2 id="methods-title">Research questions, data sources, analysis, integration</h2>
+          </div>
+          <span class="status-chip caution">IRB-ready language needed</span>
+        </div>
+        <div class="method-matrix panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Question / strand</th>
+                <th>Data source</th>
+                <th>Analysis</th>
+                <th>Integration point</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="methodRows"></tbody>
+          </table>
+        </div>
+        <div class="methods-support-grid">
+          <section class="panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-label">Sample Boundary</p>
+                <h2>Resolve before proposal submission</h2>
+              </div>
+            </div>
+            <ul class="check-list" id="sampleChecks"></ul>
+          </section>
+          <section class="panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-label">Public / Private</p>
+                <h2>Data governance split</h2>
+              </div>
+            </div>
+            <div class="boundary-grid" id="boundaryGrid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-history" aria-labelledby="history-title">
+        <div class="toolbar panel">
+          <div>
+            <p class="section-label">Intellectual History</p>
+            <h2 id="history-title">A reference atlas for the proposal defense</h2>
+          </div>
+          <div class="toolbar-controls">
+            <input id="historySearch" type="search" placeholder="Search source, concept, discipline" aria-label="Search intellectual history">
+            <select id="historyFilter" aria-label="Filter intellectual history by cluster">
+              <option value="all">All clusters</option>
+              <option value="media ecology">Media ecology</option>
+              <option value="learning science">Learning science</option>
+              <option value="algorithm studies">Algorithm studies</option>
+              <option value="ai education">AI and education</option>
+              <option value="methods">Methods</option>
+            </select>
+          </div>
+        </div>
+        <div class="history-layout">
+          <div class="timeline panel" id="historyTimeline" aria-label="Reference timeline"></div>
+          <article class="source-detail panel" id="sourceDetail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-committee" aria-labelledby="committee-title">
+        <div class="toolbar panel">
+          <div>
+            <p class="section-label">Committee Questions</p>
+            <h2 id="committee-title">Rehearse the questions that matter</h2>
+          </div>
+          <span class="status-chip verified">Local notes only</span>
+        </div>
+        <div class="committee-layout">
+          <section class="panel">
+            <div class="question-list" id="questionList"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-label">Scratchpad</p>
+                <h2>Chair-facing notes</h2>
+              </div>
+            </div>
+            <textarea id="committeeNotes" aria-label="Committee preparation notes"></textarea>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
