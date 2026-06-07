@@ -113,6 +113,8 @@ button {
   color: rgba(255, 255, 255, .84);
   background: transparent;
   text-align: left;
+  font: inherit;
+  text-decoration: none;
 }
 
 .nav-item span {
@@ -127,6 +129,11 @@ button {
   color: #fff;
   background: rgba(255, 255, 255, .08);
   border-left-color: #d8eff2;
+}
+
+.nav-external {
+  margin-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, .14);
 }
 
 .readiness,
