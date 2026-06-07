@@ -25,10 +25,10 @@ const nodes = {
     evidence: "The proposal is situated in Curriculum, Advocacy, and Policy and focuses on institutional conditions that enable or constrain friction-preserving pedagogy.",
     risk: "Public-facing GitHub materials must not collect participant data or expose district-sensitive material."
   },
-  "Mixed Methods Case Study": {
-    claim: "A qualitative-dominant mixed methods collective instrumental case study fits because the dissertation needs educator reasoning, institutional context, and bounded quantitative support.",
-    evidence: "The ESR 616 materials supply the methods spine: QUAL + quan, interviews, survey support, document analysis, joint displays, narrative weaving, and meta-inferences.",
-    risk: "Scope, sample-size language, instrument status, and IRB-ready procedures need tightening before the proposal defense."
+  "Merriam-Aligned Case Study": {
+    claim: "The design transitions from Stake's useful collective instrumental framing toward Merriam's constructivist educational case study approach as the methodological center.",
+    evidence: "Merriam aligns the bounded study with applied educational inquiry through particularistic focus, thick description, and heuristic understanding, while QUAL + quan integration supplies complementary structural context.",
+    risk: "The defense must explain what the bounded case is, how participant groups relate to it, and how mixed methods integration supports rather than overrides constructivist case interpretation."
   }
 };
 
@@ -36,7 +36,7 @@ const defenseSequence = [
   ["Purpose", "Investigate how K-12 educators respond to friction-reducing GenAI affordances, what institutional conditions shape that work, and how the framework can inform AI policy."],
   ["Problem", "Generative AI can make schoolwork appear successful while bypassing interpretive labor, authorial ownership, and durable learning processes."],
   ["Framework", "Pedagogical friction responds to noetic displacement, rhetorical saturation, and existential abstraction without romanticizing exclusionary difficulty."],
-  ["Design", "A QUAL + quan collective instrumental case study can examine professional reasoning, institutional conditions, learner retrospection, and bounded quantitative context."],
+  ["Design", "A convergent QUAL + quan design embedded in a Merriam-aligned constructivist case study can examine professional reasoning, institutional conditions, learner retrospection, and bounded quantitative context."],
   ["Boundary", "The student strand, quantitative strands, secondary datasets, and AI artifact strand support the core qualitative questions rather than becoming separate dissertations."],
   ["Contribution", "The study can inform K-12 AI policy, assessment, instructional design, and media-ecological scholarship while avoiding claims before data collection."]
 ];
@@ -73,10 +73,10 @@ const claims = [
     id: "method-fit",
     type: "method",
     title: "The methods design fits because the problem is interpretive and institutional.",
-    defense: "The proposal uses a convergent mixed methods design embedded within a collective instrumental case study. The notation is QUAL + quan because the primary questions concern interpretation, sense-making, professional reasoning, and lived experience.",
-    evidence: "The Chapters 1-3 draft names overlapping data collection, independent analysis, joint displays, narrative synthesis, and meta-inferences as the integration architecture.",
-    challenge: "Is this too much for one dissertation?",
-    answer: "The defense should name the hierarchy: RQ1-RQ3 are core; the SRQ, QRQs, NCES/RAND context, and SAQ are bounded supports."
+    defense: "The proposal uses a convergent mixed methods design embedded within a constructivist educational case study. Stake supplies the initial collective instrumental logic; Merriam supplies the stronger methodological center for applied educational meaning-making.",
+    evidence: "The Stake-to-Merriam transition clarifies that the study seeks a particularistic, descriptive, and heuristic understanding of a bounded educational phenomenon, while joint displays and meta-inferences integrate bounded quantitative context.",
+    challenge: "Why move from Stake to Merriam?",
+    answer: "Stake helps explain why multiple participant groups illuminate a shared issue. Merriam more directly aligns the study with applied educational research, bounded-case definition, thick description, and participants' constructed meanings."
   },
   {
     id: "ethics-public-private",
@@ -295,12 +295,12 @@ const sources = [
   },
   {
     cluster: "methods",
-    year: "2018",
-    title: "Case Study Research and Applications",
-    author: "Robert K. Yin",
-    role: "Methods anchor for case study design, evidence chains, and analytic boundaries.",
-    bridge: "Supports the collective instrumental case study frame.",
-    status: "Verify methods citation"
+    year: "2009/2016",
+    title: "Constructivist case study methodology for educational research",
+    author: "Sharan B. Merriam",
+    role: "Primary case study methodology anchor for constructivist educational inquiry.",
+    bridge: "Centers the study as particularistic, descriptive, and heuristic while preserving a clearly bounded educational case.",
+    status: "Primary methods anchor"
   }
 ];
 
@@ -491,7 +491,7 @@ function bindEvents() {
     updateReadiness();
   });
 
-  qs("#openingAnswer").value = localStorage.getItem(storage.opening) || "This dissertation asks how K-12 educators can preserve the forms of interpretive labor that still matter for learning when generative AI can produce polished academic artifacts quickly. The study is necessary because schools need more than acceptable-use rules; they need a way to distinguish productive friction from barriers that should be removed. A qualitative-dominant mixed methods case study fits because the problem is interpretive, institutional, and policy-facing.";
+  qs("#openingAnswer").value = localStorage.getItem(storage.opening) || "This dissertation asks how K-12 educators can preserve the forms of interpretive labor that still matter for learning when generative AI can produce polished academic artifacts quickly. The study is necessary because schools need more than acceptable-use rules; they need a way to distinguish productive friction from barriers that should be removed. A convergent mixed methods design embedded in a Merriam-aligned constructivist case study fits because the problem is interpretive, institutional, educational, and policy-facing.";
   qs("#openingAnswer").addEventListener("input", event => localStorage.setItem(storage.opening, event.target.value));
 
   qs("#committeeNotes").value = localStorage.getItem(storage.committee) || [
