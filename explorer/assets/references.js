@@ -1,0 +1,3771 @@
+﻿window.referenceData = [
+    {
+        "id":  "981630bc4567ce9e",
+        "title":  "Qualifying Paper   Initial Review (1)",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Qualifying Paper   Initial Review (1).",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "7d9a04cca535d8bc",
+        "title":  "Qualifying Paper Miner MixedMethodsPlan",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Qualifying Paper Miner MixedMethodsPlan.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "c0b5593db7119595",
+        "title":  "Toward a Theory of Culturally Relevant Pedagogy",
+        "authors":  null,
+        "year":  "1995",
+        "source_type":  "journal",
+        "journal_or_source":  "American Educational Research Journal",
+        "publisher":  "American Educational Research Association (AERA)",
+        "doi":  "10.3102/00028312032003465",
+        "apa_citation":  "Ladson-Billings, G. (1995). Toward a Theory of Culturally Relevant Pedagogy. *American Educational Research Journal*, *32*(3), 465-491. https://doi.org/10.3102/00028312032003465",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "CRP provides a foundational equity lens for analyzing curriculum design and instructional policy. Within a Curriculum, Advocacy \u0026 Policy framework, Ladson-Billings raises critical questions about whose knowledge is legitimated in official curriculum and how policy can either enable or systematically undermine culturally sustaining practice.",
+        "relevance_note":  "CRP provides a foundational equity lens for analyzing curriculum design and instructional policy. Within a Curriculum, Advocacy \u0026 Policy framework, Ladson-Billings raises critical questions about whose knowledge is legitimated in official curriculum and how policy can either enable or systematically undermine culturally sustaining practice.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "42d8b38353564c81",
+        "title":  "2601.5v2",
+        "authors":  null,
+        "year":  "2024",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2024). 2601.5v2.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "ac79517dc5f9427c",
+        "title":  "ED674230",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). ED674230.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "d77ce2492ab3cbca",
+        "title":  "Lixiang Yan  Promises and challenges of generative artificial intelligence for human learning []",
+        "authors":  null,
+        "year":  "2024",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2024). Lixiang Yan  Promises and challenges of generative artificial intelligence for human learning [].",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "This source directly addresses the central tension in AI-integration policy between promise and risk from a learning sciences perspective. It provides empirical grounding for theoretical arguments about AI as both pedagogical opportunity and potential threat to the intellectual agency and self-regulation that deeper learning requires. Relevant to curriculum design, teacher professional development, and equity dimensions of AI policy.",
+        "relevance_note":  "This source directly addresses the central tension in AI-integration policy between promise and risk from a learning sciences perspective. It provides empirical grounding for theoretical arguments about AI as both pedagogical opportunity and potential threat to the intellectual agency and self-regulation that deeper learning requires. Relevant to curriculum design, teacher professional development, and equity dimensions of AI policy.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "cd60979b411398e5",
+        "title":  "Scaffolding Human Champions: AI as a More Competent Other",
+        "authors":  null,
+        "year":  "2025",
+        "source_type":  "journal",
+        "journal_or_source":  "Human Arenas",
+        "publisher":  "Springer Science and Business Media LLC",
+        "doi":  "10.1007/s42087-022-00304-8",
+        "apa_citation":  "SÃ¦tra, H. S. (2025). Scaffolding Human Champions: AI as a More Competent Other. *Human Arenas*, *8*(1), 56-78. https://doi.org/10.1007/s42087-022-00304-8",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, learning sciences, methods/mixed methods and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, learning sciences, methods/mixed methods and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "d390a560b764d443",
+        "title":  "The Architecture of Cognitive Amplification Enhanc",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Architecture of Cognitive Amplification Enhanc.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "87d3f4833b3a021a",
+        "title":  "Copy of Dissertation Refinement  Media(1)",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Copy of Dissertation Refinement  Media(1).",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "18a00ff0647ada06",
+        "title":  "Copy of Dissertation Refinement  Media",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Copy of Dissertation Refinement  Media.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e6f7f71bc225cb66",
+        "title":  "Dissertation Refinement  Media",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Dissertation Refinement  Media.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "1191d959f73622b0",
+        "title":  "Papert  Mindstorms, 1st ed",
+        "authors":  null,
+        "year":  "1980",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1980). Papert  Mindstorms, 1st ed.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "f06d3fae502be0c0",
+        "title":  "The Children s Machine  Papert",
+        "authors":  null,
+        "year":  "1993",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1993). The Children s Machine  Papert.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "b662a1562e94df9a",
+        "title":  "amusing ourselves to death neil postman",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). amusing ourselves to death neil postman.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "98aa99e3d4fe55bf",
+        "title":  "Amusing Ourselves to Death 1sgubl1",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Amusing Ourselves to Death 1sgubl1.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "23ccba9e8f7bf743",
+        "title":  "Bill Tally  Digital Technology and the End of Social Studies Education []",
+        "authors":  null,
+        "year":  "2007",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2007). Bill Tally  Digital Technology and the End of Social Studies Education [].",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "59fcf0aabbbae82f",
+        "title":  "IllichRecovery",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). IllichRecovery.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "ea2daf7b38784428",
+        "title":  "Jacques Ellul   The Technological Society",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Jacques Ellul   The Technological Society.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "2a698878b1be6a18",
+        "title":  "Special Issue introduction: AI and media ecology",
+        "authors":  null,
+        "year":  "2024",
+        "source_type":  "journal",
+        "journal_or_source":  "Explorations in Media Ecology",
+        "publisher":  "Intellect",
+        "doi":  "10.1386/eme_00198_2",
+        "apa_citation":  "Petricini, T. (2024). Special Issue introduction: AI and media ecology. *Explorations in Media Ecology*, *23*(2), 93-103. https://doi.org/10.1386/eme_00198_2",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "acfaf06999c17b36",
+        "title":  "Postman   Informing Ourselves to Death",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Postman   Informing Ourselves to Death.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e4367e6b23cef948",
+        "title":  "QuestioningTechnologypreface",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). QuestioningTechnologypreface.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "9ae93d9d822f6ee4",
+        "title":  "Technopoly  The Surrender of Culture to Technology by Neil Postman",
+        "authors":  null,
+        "year":  "1992",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1992). Technopoly  The Surrender of Culture to Technology by Neil Postman.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "fa788e8341ca1d12",
+        "title":  "The Gutenberg Elegies   Sven Birkerts",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Gutenberg Elegies   Sven Birkerts.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "851f62b3ec5ccf0c",
+        "title":  "Tools for Conviviality Argument Insight Influence",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Tools for Conviviality Argument Insight Influence.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, pedagogical friction, methods/mixed methods and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, pedagogical friction, methods/mixed methods and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "5a3d847cea98c382",
+        "title":  "understanding media the extensions of man mcluhan",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). understanding media the extensions of man mcluhan.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "a4d7d63162e7a486",
+        "title":  "communities murphy turkle c",
+        "authors":  null,
+        "year":  "1997",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1997). communities murphy turkle c.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "48dd8c6742314e5e",
+        "title":  "communities murphy turkle b",
+        "authors":  null,
+        "year":  "1999",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1999). communities murphy turkle b.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "92d7d7ba5600d5fd",
+        "title":  "Turkle Reading",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Turkle Reading.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e0e04abb5a769bfe",
+        "title":  "who am we sherry turkle",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). who am we sherry turkle.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "1b2f3bbe131fac34",
+        "title":  "Some Short Descriptions of my Dissertation Research",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Some Short Descriptions of my Dissertation Research.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "9811ef5f1d67bb86",
+        "title":  "We Shape Our Tools, and Thereafter Our Tools Shape Us",
+        "authors":  null,
+        "year":  "2017",
+        "source_type":  "journal",
+        "journal_or_source":  "Human Technology",
+        "publisher":  "Centre of Sociological Research, NGO",
+        "doi":  "10.17011/ht/urn.201711104209",
+        "apa_citation":  "Hurme, P. (2017). We Shape Our Tools, and Thereafter Our Tools Shape Us. *Human Technology*, *13*(2), 145-148. https://doi.org/10.17011/ht/urn.201711104209",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "383bfd222a7cc2c0",
+        "title":  "Macgilchrist Novelty, Innovation and Transformation ..",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Macgilchrist Novelty, Innovation and Transformation ..",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "ff5fda367320b958",
+        "title":  "Laws of Media The four effects A McLuhan",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Laws of Media The four effects A McLuhan.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "4f69637d1cf8b826",
+        "title":  "Marshall McLuhan: The Possibility of Re-Reading His Notion of Medium",
+        "authors":  null,
+        "year":  "2016",
+        "source_type":  "journal",
+        "journal_or_source":  "Philosophies",
+        "publisher":  "MDPI AG",
+        "doi":  "10.3390/philosophies1020141",
+        "apa_citation":  "Roncallo-Dow, S., \u0026 Scolari, C. (2016). Marshall McLuhan: The Possibility of Re-Reading His Notion of Medium. *Philosophies*, *1*(2), 141-152. https://doi.org/10.3390/philosophies1020141",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "a311fe5037b38aa6",
+        "title":  "McLuhan s General Theory Media",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). McLuhan s General Theory Media.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "437083b712d2cf1f",
+        "title":  "McLuhans Philosophy of Media Ecology An",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). McLuhans Philosophy of Media Ecology An.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "efdc6ddec8b2197d",
+        "title":  "hayles how we think",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). hayles how we think.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "6a192405af2ce589",
+        "title":  "Hayles N Katherine How We Became Posthuman Virtual Bodies in Cybernetics Literature and Informatics",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Hayles N Katherine How We Became Posthuman Virtual Bodies in Cybernetics Literature and Informatics.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "395d395687aa46a3",
+        "title":  "Operative Media Archaeology: Wolfgang Ernstâ€™s Materialist Media Diagrammatics",
+        "authors":  null,
+        "year":  "2011",
+        "source_type":  "journal",
+        "journal_or_source":  "Theory, Culture \u0026amp; Society",
+        "publisher":  "SAGE Publications",
+        "doi":  "10.1177/0263276411411496",
+        "apa_citation":  "Parikka, J. (2011). Operative Media Archaeology: Wolfgang Ernstâ€™s Materialist Media Diagrammatics. *Theory, Culture \u0026amp; Society*, *28*(5), 52-74. https://doi.org/10.1177/0263276411411496",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "cac4e6fcc78df8b9",
+        "title":  "Algorithmic Orality Research and Citation",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Algorithmic Orality Research and Citation.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "4b815e692e5c5cd2",
+        "title":  "Copy of Dissertation Idea Reflection as of 8 11 25",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Copy of Dissertation Idea Reflection as of 8 11 25.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e21e8657eb1fa99f",
+        "title":  "Orality and Literacy",
+        "authors":  null,
+        "year":  "2003",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "Routledge",
+        "doi":  "10.4324/9780203426258",
+        "apa_citation":  "Ong, W. J. (2003). Orality and Literacy. Routledge. https://doi.org/10.4324/9780203426258",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "cfa5712c665453c7",
+        "title":  "Dissertation Friction Framework Development",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Dissertation Friction Framework Development.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "bb9701760b8129ee",
+        "title":  "Dissertation Idea Reflection as of 8 11 25",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Dissertation Idea Reflection as of 8 11 25.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e258804f3cd3253b",
+        "title":  "paper 226403 1",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). paper 226403 1.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences, tertiary algorithmicity and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences, tertiary algorithmicity and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "34de9c44ec7ed6e6",
+        "title":  "The Digital Mind: How Computers (Re)Structure Human Consciousness",
+        "authors":  null,
+        "year":  "2023",
+        "source_type":  "journal",
+        "journal_or_source":  "Philosophies",
+        "publisher":  "MDPI AG",
+        "doi":  "10.3390/philosophies8010004",
+        "apa_citation":  "Ott, B. L. (2023). The Digital Mind: How Computers (Re)Structure Human Consciousness. *Philosophies*, *8*(1), 4. https://doi.org/10.3390/philosophies8010004",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e01847528eac4303",
+        "title":  "buckingham media education chapter 3 pdf",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). buckingham media education chapter 3 pdf.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "c3a258b1afb74e35",
+        "title":  "Buckinghammedialiteracy",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Buckinghammedialiteracy.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "53e661243d9dacc9",
+        "title":  "Confronting the Challenges of participatory culture  macarthur foundation read on media in ed",
+        "authors":  null,
+        "year":  "2006",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2006). Confronting the Challenges of participatory culture  macarthur foundation read on media in ed.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "2c236eba526647fa",
+        "title":  "media education in digital capitalism",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). media education in digital capitalism.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "66c07ba04ad28aae",
+        "title":  "media education merj",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). media education merj.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "3a0be5e10a4a5465",
+        "title":  "Media, media education, GAI and radical uncertainty",
+        "authors":  null,
+        "year":  "2024",
+        "source_type":  "journal",
+        "journal_or_source":  "Media Education",
+        "publisher":  "Firenze University Press",
+        "doi":  "10.36253/me-16303",
+        "apa_citation":  "Honkanen, P., \u0026 Nylund, M. (2024). Media, media education, GAI and radical uncertainty. *Media Education*, *15*(2), 7-20. https://doi.org/10.36253/me-16303",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with AI discourse comparison, Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with AI discourse comparison, Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "8558801e21286aed",
+        "title":  "â€œMultiliteraciesâ€: New Literacies, New Learning",
+        "authors":  null,
+        "year":  "2009",
+        "source_type":  "journal",
+        "journal_or_source":  "Pedagogies: An International Journal",
+        "publisher":  "Informa UK Limited",
+        "doi":  "10.1080/15544800903076044",
+        "apa_citation":  "Cope, B., \u0026 Kalantzis, M. (2009). â€œMultiliteraciesâ€: New Literacies, New Learning. *Pedagogies: An International Journal*, *4*(3), 164-195. https://doi.org/10.1080/15544800903076044",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "46401abb0a90c3a8",
+        "title":  "Rethinking digital literacy   education in the age of digital capitalism   david buckingham",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Rethinking digital literacy   education in the age of digital capitalism   david buckingham.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e1b152cd412573c4",
+        "title":  "Shifting landscapes of digital literacy",
+        "authors":  null,
+        "year":  "2022",
+        "source_type":  "journal",
+        "journal_or_source":  "The Australian Journal of Language and Literacy",
+        "publisher":  "Springer Science and Business Media LLC",
+        "doi":  "10.1007/s44020-022-00019-x",
+        "apa_citation":  "Bacalja, A., Beavis, C., \u0026 Oâ€™Brien, A. (2022). Shifting landscapes of digital literacy. *The Australian Journal of Language and Literacy*, *45*(2), 253-263. https://doi.org/10.1007/s44020-022-00019-x",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "f9b257d4eee2b2b3",
+        "title":  "Elicit   Algorithmic Curation in Media Ecology   Report",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Elicit   Algorithmic Curation in Media Ecology   Report.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, tertiary algorithmicity, methods/mixed methods and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, tertiary algorithmicity, methods/mixed methods and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "eaba32674df0098e",
+        "title":  "Elicit   Algorithmic vs. Human Symbolic Interpretation   Report",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Elicit   Algorithmic vs. Human Symbolic Interpretation   Report.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "17ac2b10f696406d",
+        "title":  "Elicit   Media Ecology and Generative AI in Higher Educatio   Report (1)",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Elicit   Media Ecology and Generative AI in Higher Educatio   Report (1).",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "82135736411331c8",
+        "title":  "Elicit   The Role of Pedagogical Friction in Education   Report",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Elicit   The Role of Pedagogical Friction in Education   Report.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "27646b9f77a528cd",
+        "title":  "Grok 3 DeepSearch First Request",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Grok 3 DeepSearch First Request.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "ae6bdd4b8c9e62b7",
+        "title":  "Media Theory, Technoskepticism, and Education",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Media Theory, Technoskepticism, and Education.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "854d9ea0b560668a",
+        "title":  "Nicholas Carr Important Points and Highlights for Superbloom and the Shallows",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Nicholas Carr Important Points and Highlights for Superbloom and the Shallows.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, learning sciences, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "c0bab9c7c979e455",
+        "title":  "The Evolution of Media Literacy  From Print to Digital Consciousness   Claude 3.7",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Evolution of Media Literacy  From Print to Digital Consciousness   Claude 3.7.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "286a543efaf026dd",
+        "title":  "The Freedom to Think Otherwise",
+        "authors":  null,
+        "year":  "2025",
+        "source_type":  "journal",
+        "journal_or_source":  "The Journal of Dialogic Ethics",
+        "publisher":  "Philosophy Documentation Center",
+        "doi":  "10.5840/jde2025413",
+        "apa_citation":  "Petricini, T. (2025). The Freedom to Think Otherwise. *The Journal of Dialogic Ethics*, *4*(1), 28-46. https://doi.org/10.5840/jde2025413",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "As a practitioner policy document from a leading Kâ€“12 technology organization, this report contextualizes the AI-integration landscape from a district leadership perspective. Its identification of critical media literacy as a key hurdle, alongside generative AI as the top technology enabler, creates a productive tension worth examining in a Curriculum, Advocacy \u0026 Policy framework: the very technology being positioned as the solution is simultaneously implicated in the media literacy challenges districts face.",
+        "relevance_note":  "As a practitioner policy document from a leading Kâ€“12 technology organization, this report contextualizes the AI-integration landscape from a district leadership perspective. Its identification of critical media literacy as a key hurdle, alongside generative AI as the top technology enabler, creates a productive tension worth examining in a Curriculum, Advocacy \u0026 Policy framework: the very technology being positioned as the solution is simultaneously implicated in the media literacy challenges districts face.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "1f75c35968af5477",
+        "title":  "The Freedom to Think Otherwise",
+        "authors":  null,
+        "year":  "2025",
+        "source_type":  "journal",
+        "journal_or_source":  "The Journal of Dialogic Ethics",
+        "publisher":  "Philosophy Documentation Center",
+        "doi":  "10.5840/jde2025413",
+        "apa_citation":  "Petricini, T. (2025). The Freedom to Think Otherwise. *The Journal of Dialogic Ethics*, *4*(1), 28-46. https://doi.org/10.5840/jde2025413",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "As a practitioner policy document from a leading Kâ€“12 technology organization, this report contextualizes the AI-integration landscape from a district leadership perspective. Its identification of critical media literacy as a key hurdle, alongside generative AI as the top technology enabler, creates a productive tension worth examining in a Curriculum, Advocacy \u0026 Policy framework: the very technology being positioned as the solution is simultaneously implicated in the media literacy challenges districts face.",
+        "relevance_note":  "As a practitioner policy document from a leading Kâ€“12 technology organization, this report contextualizes the AI-integration landscape from a district leadership perspective. Its identification of critical media literacy as a key hurdle, alongside generative AI as the top technology enabler, creates a productive tension worth examining in a Curriculum, Advocacy \u0026 Policy framework: the very technology being positioned as the solution is simultaneously implicated in the media literacy challenges districts face.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "42a8017296a5d58a",
+        "title":  "The Biological Foundation of Media Ecolo",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Biological Foundation of Media Ecolo.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "079daf1d666e23e3",
+        "title":  "Logan   Digital Orality or Tertiary Orality",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Logan   Digital Orality or Tertiary Orality.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "c82c2969969f1577",
+        "title":  "Ong Last Book Language as Hermeneutic Commentary",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Ong Last Book Language as Hermeneutic Commentary.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "2d82e0d3fa004918",
+        "title":  "Ong on Noetic, Rhetorical and Existential in  Orality and Literacy",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Ong on Noetic, Rhetorical and Existential in  Orality and Literacy.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "3e26ceee3620336c",
+        "title":  "Ong Walter J Orality and Literacy 2nd ed",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Ong Walter J Orality and Literacy 2nd ed.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "3323bcc4473f1384",
+        "title":  "The Role of Rhetoric  Ong s Ramus Research as a Hermeneutic Opening for Mediated Communication",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Role of Rhetoric  Ong s Ramus Research as a Hermeneutic Opening for Mediated Communication.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "43114bd0455067ed",
+        "title":  "Walter Ong Summary  Language as a Hermeneutic",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Walter Ong Summary  Language as a Hermeneutic.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "d9299537ac6a3f6e",
+        "title":  "WalterJ.OngThom PartILanguageasHermen LanguageAsHermeneutic",
+        "authors":  null,
+        "year":  "2017",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2017). WalterJ.OngThom PartILanguageasHermen LanguageAsHermeneutic.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "5e93c2497d1b8f2e",
+        "title":  "Language as a Hermeneutic   Ong",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Language as a Hermeneutic   Ong.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "aab3987a991ef9a5",
+        "title":  "Ong Walter J Orality and Literacy 2nd ed",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Ong Walter J Orality and Literacy 2nd ed.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "1074a79df4644ead",
+        "title":  "WalterJ.Ong 1.Transformationsofth InterfacesoftheWordSt",
+        "authors":  null,
+        "year":  "1977",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1977). WalterJ.Ong 1.Transformationsofth InterfacesoftheWordSt.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with AI discourse comparison, Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with AI discourse comparison, Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "b49f00d94e634acd",
+        "title":  "WalterJ.Ong 3.MediaTransformation InterfacesoftheWordSt",
+        "authors":  null,
+        "year":  "1977",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1977). WalterJ.Ong 3.MediaTransformation InterfacesoftheWordSt.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e174e43dfc6ae8fc",
+        "title":  "WalterJ.Ong I Preview",
+        "authors":  null,
+        "year":  "1977",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1977). WalterJ.Ong I Preview.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "d86ac4b25282d0a6",
+        "title":  "WalterJ.Ong IV.PresentandFuture InterfacesoftheWordSt",
+        "authors":  null,
+        "year":  "1977",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(1977). WalterJ.Ong IV.PresentandFuture InterfacesoftheWordSt.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "f0f4f2fde861cdd8",
+        "title":  "Writing  Ancient Origins with Modern Implications",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Writing  Ancient Origins with Modern Implications.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "dc2990de844a2e11",
+        "title":  "12 sharratt",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). 12 sharratt.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "a47ad433075e47c8",
+        "title":  "EBSCO FullText 02 05",
+        "authors":  null,
+        "year":  "2026",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2026). EBSCO FullText 02 05.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "f3f2c18362fca781",
+        "title":  "Idolatry and Evolution A Comparison of W",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Idolatry and Evolution A Comparison of W.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "6e3b11f1ef800003",
+        "title":  "Looking Is Not Enough Reflections on Wal",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Looking Is Not Enough Reflections on Wal.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "bd1bd52655efbb72",
+        "title":  "The Role of Rhetoric  Ong s Ramus Research as a Hermeneutic Openi",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Role of Rhetoric  Ong s Ramus Research as a Hermeneutic Openi.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "f6d0a0180779e24e",
+        "title":  "The State of Ong Scholarship   A Symposium at Gonzaga University",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The State of Ong Scholarship   A Symposium at Gonzaga University.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "4b94e5f04eb782ea",
+        "title":  "The Analogy of Walter Ong",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). The Analogy of Walter Ong.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "6e057465f3f8386c",
+        "title":  "Walter Ong and the Willard Preacher Brin",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Walter Ong and the Willard Preacher Brin.",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "learning sciences"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "noetic friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "02ab3835afceb7a5",
+        "title":  "Eleven Kinds of Orality: A Probe",
+        "authors":  null,
+        "year":  "2024",
+        "source_type":  "journal",
+        "journal_or_source":  "New Explorations",
+        "publisher":  "Consortium Erudit",
+        "doi":  "10.7202/1111652ar",
+        "apa_citation":  "Logan, R. K. (2024). Eleven Kinds of Orality: A Probe. *New Explorations*, *4*(1). https://doi.org/10.7202/1111652ar",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "9cfdf503d31cd7b5",
+        "title":  "Collapsedpublics oralityliteracyandvulnerabilityinacademicTwitterfinal(1)",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Collapsedpublics oralityliteracyandvulnerabilityinacademicTwitterfinal(1).",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "9102fa893514fa9a",
+        "title":  "Collapsedpublics oralityliteracyandvulnerabilityinacademicTwitterfinal",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Collapsedpublics oralityliteracyandvulnerabilityinacademicTwitterfinal.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with AI discourse comparison, Ong/media ecology, pedagogical friction and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "7bb7108c5ad8ec08",
+        "title":  "D. Biber  Tertiary Orality []",
+        "authors":  null,
+        "year":  "2021",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(2021). D. Biber  Tertiary Orality [].",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "response framework",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as response framework. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "b5e737baf951dd8b",
+        "title":  "dalrev vol64 iss2 pp332 353",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). dalrev vol64 iss2 pp332 353.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "8f267974c56cbff2",
+        "title":  "Rhetorical Analysis of Literary Culture in Social Reading Platforms",
+        "authors":  null,
+        "year":  "2013",
+        "source_type":  "journal",
+        "journal_or_source":  "CLCWeb: Comparative Literature and Culture",
+        "publisher":  "Purdue University (bepress)",
+        "doi":  "10.7771/1481-4374.2244",
+        "apa_citation":  "Vlieghe, J., \u0026 Rutten, K. (2013). Rhetorical Analysis of Literary Culture in Social Reading Platforms. *CLCWeb: Comparative Literature and Culture*, *15*(3). https://doi.org/10.7771/1481-4374.2244",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "pedagogical friction",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, pedagogical friction, tertiary algorithmicity and Section V: pedagogical friction framework.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "e80faa0e67e36dc9",
+        "title":  "RKL11ORALITIESArtcl (1)",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). RKL11ORALITIESArtcl (1).",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "647730bc1210985a",
+        "title":  "Special Issue introduction: AI and media ecology",
+        "authors":  null,
+        "year":  "2024",
+        "source_type":  "journal",
+        "journal_or_source":  "Explorations in Media Ecology",
+        "publisher":  "Intellect",
+        "doi":  "10.1386/eme_00198_2",
+        "apa_citation":  "Petricini, T. (2024). Special Issue introduction: AI and media ecology. *Explorations in Media Ecology*, *23*(2), 93-103. https://doi.org/10.1386/eme_00198_2",
+        "qualifying_paper_section":  "Section IV: educational stakes and unproductive success",
+        "dissertation_role":  "pedagogical implications",
+        "theory_tags":  [
+                            "AI discourse comparison",
+                            "Ong/media ecology",
+                            "learning sciences",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+                            "equity/CRTL"
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "noetic friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "relevance_note":  "Drafted for dissertation use as pedagogical implications. Most aligned with AI discourse comparison, Ong/media ecology, learning sciences and Section IV: educational stakes and unproductive success.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "03607a1d18e055d5",
+        "title":  "tertiary orality   new approaches to spoken cmc",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). tertiary orality   new approaches to spoken cmc.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, tertiary algorithmicity, methods/mixed methods and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, tertiary algorithmicity, methods/mixed methods and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "479fd184d8b4c355",
+        "title":  "Theresa Heyd   Tertiary Orality New Approaches to Spoken CMC",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Theresa Heyd   Tertiary Orality New Approaches to Spoken CMC.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, tertiary algorithmicity, methods/mixed methods and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, tertiary algorithmicity, methods/mixed methods and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "2cc66c9414f65ab0",
+        "title":  "Writing Space Ch 5 Jay Bolter",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Writing Space Ch 5 Jay Bolter.",
+        "qualifying_paper_section":  "Section III: algorithmic secondary orality / tertiary algorithmicity",
+        "dissertation_role":  "core theory",
+        "theory_tags":  [
+                            "Ong/media ecology",
+                            "tertiary algorithmicity"
+                        ],
+        "method_tags":  [
+
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "relevance_note":  "Drafted for dissertation use as core theory. Most aligned with Ong/media ecology, tertiary algorithmicity and Section III: algorithmic secondary orality / tertiary algorithmicity.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "ad01904b7caf26d7",
+        "title":  "Case Study Research and Applications",
+        "authors":  null,
+        "year":  "",
+        "source_type":  "other",
+        "journal_or_source":  "",
+        "publisher":  "",
+        "doi":  "",
+        "apa_citation":  "(n.d.). Case Study Research and Applications.",
+        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "Ong/media ecology"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "existential friction",
+                                          "rhetorical friction"
+                                      ],
+        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Needs verification",
+        "review_status":  "Drafted"
+    },
+    {
+        "id":  "908f36780e648e6c",
+        "title":  "Qualitative Research: A Guide to Design and Implementation (4th ed.)",
+        "authors":  null,
+        "year":  "2015",
+        "source_type":  "book",
+        "journal_or_source":  "",
+        "publisher":  "Jossey-Bass",
+        "doi":  "",
+        "apa_citation":  "Merriam, S. B., \u0026 Tisdell, E. J. (2015). *Qualitative research: A guide to design and implementation* (4th ed.). Jossey-Bass.",
+        "qualifying_paper_section":  "Section V: pedagogical friction framework",
+        "dissertation_role":  "methods support",
+        "theory_tags":  [
+                            "learning sciences",
+                            "pedagogical friction"
+                        ],
+        "method_tags":  [
+                            "methods/mixed methods"
+                        ],
+        "equity_tags":  [
+
+                        ],
+        "pedagogical_friction_tags":  [
+                                          "infrastructural friction"
+                                      ],
+        "summary":  "Provides the core qualitative case study methodology framework, enabling an interpretive analysis of teachers\u0027 and students\u0027 experiences of learning struggle in K-12 classrooms. Supports the transition away from Yin\u0027s positivism to a constructivist case study model.",
+        "relevance_note":  "Provides the core qualitative case study methodology framework, enabling an interpretive analysis of teachers\u0027 and students\u0027 experiences of learning struggle in K-12 classrooms. Supports the transition away from Yin\u0027s positivism to a constructivist case study model.",
+        "key_highlights":  [
+
+                           ],
+        "quotes":  [
+
+                   ],
+        "verification_status":  "Verified",
+        "review_status":  "Verified"
+    }
+];

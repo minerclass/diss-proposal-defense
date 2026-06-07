@@ -1,0 +1,2312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedagogical Friction Proposal Defense Explorer</title>
+  <!-- Import Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --bg-dark: #070a13;
+      --bg-slate: #0b1120;
+      --card-bg: rgba(17, 24, 39, 0.75);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(244, 63, 94, 0.35);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      
+      /* Glowing Lenses & Labe/Roles Colors */
+      --accent-coral: #f43f5e;
+      --accent-coral-rgb: 244, 63, 94;
+      --accent-gold: #fbbf24;
+      --accent-blue: #0ea5e9;
+      --accent-emerald: #10b981;
+      --accent-indigo: #6366f1;
+      
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      --radius: 20px;
+      --font-ui: 'Inter', sans-serif;
+      --font-serif: 'Lora', Georgia, serif;
+      --font-logo: 'Outfit', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at top right, rgba(244, 63, 94, 0.07), transparent 45%),
+        radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.07), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.04), transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 99px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Core Layout */
+    .app-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    aside {
+      background: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(20px);
+      border-right: 1px solid var(--border-color);
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      margin-bottom: 40px;
+    }
+
+    .brand-title {
+      font-family: var(--font-logo);
+      font-weight: 800;
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #f43f5e, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .nav-item button {
+      width: 100%;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-family: var(--font-ui);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .nav-item button:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .nav-item button.active {
+      color: var(--text-main);
+      background: rgba(244, 63, 94, 0.1);
+      border-color: rgba(244, 63, 94, 0.25);
+      box-shadow: 0 4px 20px rgba(244, 63, 94, 0.06);
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .sidebar-footer a {
+      color: var(--accent-coral);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Main Content Area */
+    main {
+      padding: 40px;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      overflow-y: auto;
+    }
+
+    header {
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-info h1 {
+      font-family: var(--font-logo);
+      font-weight: 700;
+      font-size: 2.2rem;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .header-info p {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .meta-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+    }
+
+    .meta-pill.active-pill {
+      background: rgba(14, 165, 233, 0.1);
+      border-color: rgba(14, 165, 233, 0.3);
+      color: var(--accent-blue);
+    }
+
+    /* Tab Page Wrapper */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card System */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .grid-browser {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 28px;
+    }
+
+    /* Typography Utilities */
+    .serif-quote {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-main);
+      border-left: 3px solid var(--accent-coral);
+      padding-left: 20px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-family: var(--font-logo);
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--font-logo);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    /* Label Pill Styles */
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .tag-theory { background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .tag-methods { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+    .tag-equity { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
+    .tag-friction { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
+    .tag-validated { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .tag-review { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); }
+
+    /* ==========================================================================
+       TAB 1: DEFENSE PREP SANDBOX
+       ========================================================================== */
+    .prep-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+    }
+
+    /* 3D Flashcards */
+    .flashcard-container {
+      perspective: 1000px;
+      height: 380px;
+      margin-bottom: 20px;
+    }
+
+    .flashcard {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .flashcard.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .flashcard-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .flashcard-front {
+      background: linear-gradient(145deg, rgba(23, 27, 44, 0.95), rgba(13, 16, 27, 0.95));
+      justify-content: space-between;
+    }
+
+    .flashcard-front::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      border: 1px solid rgba(244, 63, 94, 0.15);
+      pointer-events: none;
+    }
+
+    .flashcard-back {
+      background: linear-gradient(145deg, rgba(13, 16, 27, 0.95), rgba(9, 11, 20, 0.95));
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      border-color: rgba(251, 191, 36, 0.2);
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .card-question {
+      font-family: var(--font-logo);
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: auto;
+      margin-bottom: auto;
+      color: var(--text-main);
+    }
+
+    .card-prompt {
+      font-size: 0.82rem;
+      color: var(--accent-coral);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-answer-title {
+      font-family: var(--font-logo);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 8px;
+    }
+
+    .card-answer-body {
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .card-answer-body p {
+      margin: 0 0 10px 0;
+    }
+
+    .card-evidence-box {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--accent-blue);
+      padding: 10px 14px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      margin-top: 14px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .card-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .prep-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 18px;
+      border-radius: 99px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .prep-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .prep-btn-primary {
+      background: var(--accent-coral);
+      border-color: var(--accent-coral);
+    }
+
+    .prep-btn-primary:hover {
+      background: #e11d48;
+      box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+    }
+
+    /* Joint Display Simulator */
+    .rq-selector-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .rq-btn {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--font-logo);
+      font-weight: 600;
+      font-size: 0.82rem;
+      transition: var(--transition);
+    }
+
+    .rq-btn:hover, .rq-btn.active {
+      color: var(--text-main);
+      background: rgba(14, 165, 233, 0.08);
+      border-color: rgba(14, 165, 233, 0.4);
+    }
+
+    .rq-btn.active {
+      box-shadow: 0 0 12px rgba(14, 165, 233, 0.2);
+    }
+
+    .joint-display-view {
+      background: rgba(255, 255, 255, 0.01);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .joint-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .joint-box {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .joint-box strong {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .joint-source-active {
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.03);
+    }
+
+    /* Prep Checklist */
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .checklist-item input {
+      margin-top: 4px;
+    }
+
+    .checklist-item span {
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .checklist-item input:checked + span {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       TAB 2: CLAIMS & OUTLINE (CHAPTERS 1-3)
+       ========================================================================== */
+    .accordion-section {
+      border-bottom: 1px solid var(--border-color);
+      padding: 20px 0;
+    }
+
+    .accordion-header {
+      font-family: var(--font-logo);
+      font-size: 1.35rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .accordion-header::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--accent-coral);
+      transition: var(--transition);
+    }
+
+    .accordion-section.open .accordion-header::after {
+      content: "−";
+      transform: rotate(90deg);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .accordion-section.open .accordion-body {
+      max-height: 1500px;
+      padding-top: 18px;
+    }
+
+    /* Stepper Model for Media Ecology */
+    .stepper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(244, 63, 94, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step-card.active-step {
+      background: rgba(244, 63, 94, 0.05);
+      border-color: rgba(244, 63, 94, 0.4);
+    }
+
+    .step-card.active-step .step-num {
+      background: var(--accent-coral);
+    }
+
+    .step-label {
+      font-family: var(--font-logo);
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       TAB 3: TIMELINE (INTELLECTUAL HISTORY)
+       ========================================================================== */
+    .timeline-container {
+      display: grid;
+      grid-template-columns: 2.2fr 0.8fr;
+      gap: 24px;
+      position: relative;
+    }
+
+    .timeline-sidebar {
+      position: sticky;
+      top: 90px;
+      height: fit-content;
+    }
+
+    .timeline-flow {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline-flow::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .timeline-group-header {
+      font-family: var(--font-logo);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--accent-gold);
+      margin: 32px 0 16px -32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .timeline-group-header::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 99px;
+      background: var(--bg-dark);
+      border: 4px solid var(--accent-gold);
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 24px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .timeline-node::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 22px;
+      width: 12px;
+      height: 12px;
+      border-radius: 99px;
+      background: var(--card-bg);
+      border: 3px solid var(--text-muted);
+      z-index: 2;
+      transition: var(--transition);
+    }
+
+    .timeline-node:hover::before, .timeline-node.active-node::before {
+      background: var(--accent-coral);
+      border-color: var(--accent-coral);
+      box-shadow: 0 0 10px rgba(244, 63, 94, 0.8);
+    }
+
+    .timeline-node-card {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      transition: var(--transition);
+    }
+
+    .timeline-node:hover .timeline-node-card, .timeline-node.active-node .timeline-node-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateX(4px);
+    }
+
+    .timeline-node-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .timeline-node-title {
+      font-family: var(--font-logo);
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .timeline-node-year {
+      font-family: var(--font-logo);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--accent-blue);
+    }
+
+    .timeline-node-author {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .timeline-node-summary {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Selected node detail pane */
+    .timeline-detail-pane {
+      background: rgba(17, 24, 39, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      position: sticky;
+      top: 90px;
+    }
+
+    /* ==========================================================================
+       TAB 4: REFERENCE DATABASE BROWSER
+       ========================================================================== */
+    .browser-sidebar {
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 22px;
+      height: fit-content;
+      position: sticky;
+      top: 90px;
+    }
+
+    .search-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--accent-coral);
+      box-shadow: 0 0 10px rgba(244, 63, 94, 0.1);
+    }
+
+    .filter-group {
+      margin-bottom: 20px;
+    }
+
+    .filter-group-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .filter-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .filter-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition);
+    }
+
+    .filter-checkbox:hover {
+      color: var(--text-main);
+    }
+
+    .filter-checkbox input {
+      cursor: pointer;
+    }
+
+    .ref-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ref-card {
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 20px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .ref-card:hover {
+      background: rgba(255, 255, 255, 0.02);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-1px);
+    }
+
+    .ref-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .ref-title {
+      font-family: var(--font-logo);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .ref-citation {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .ref-summary {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .ref-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* Slide-out Drawer Detail View */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 10, 19, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -600px;
+      width: 100%;
+      max-width: 580px;
+      height: 100%;
+      background: #090e1c;
+      border-left: 1px solid var(--border-color);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-overlay.active .drawer {
+      right: 0;
+    }
+
+    .drawer-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-title {
+      font-family: var(--font-logo);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text-main);
+      max-width: 85%;
+    }
+
+    .close-drawer {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: var(--transition);
+      line-height: 1;
+    }
+
+    .close-drawer:hover {
+      color: var(--text-main);
+    }
+
+    .drawer-body {
+      padding: 24px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .drawer-section {
+      margin-bottom: 24px;
+    }
+
+    .drawer-section-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-coral);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 1px solid rgba(244, 63, 94, 0.1);
+      padding-bottom: 4px;
+    }
+
+    .drawer-summary {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-main);
+    }
+
+    .quote-item {
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.94rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .quote-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       TAB 5: CONCEPT MAP
+       ========================================================================== */
+    .concept-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    #vis-graph {
+      height: 520px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+    }
+
+    .concept-sidebar {
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    /* Mobile Warning */
+    @media (max-width: 992px) {
+      .app-container {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        display: none; /* In a production app, we would add a hamburger menu */
+      }
+      .grid-2, .grid-3, .prep-layout, .timeline-container, .grid-browser, .concept-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside>
+      <div class="brand">
+        <div class="brand-title">Pedagogical Friction</div>
+        <div class="brand-subtitle">Dissertation Proposal Defense</div>
+      </div>
+      
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="active" onclick="switchTab('prep')">
+              <span>📑</span> Defense Prep Sandbox
+            </button>
+          </li>
+          <li class="nav-item">
+            <button onclick="switchTab('claims')">
+              <span>📖</span> Chapters 1-3 Outline
+            </button>
+          </li>
+          <li class="nav-item">
+            <button onclick="switchTab('timeline')">
+              <span>⏳</span> Intellectual Timeline
+            </button>
+          </li>
+          <li class="nav-item">
+            <button onclick="switchTab('browser')">
+              <span>📚</span> Reference Browser
+            </button>
+          </li>
+          <li class="nav-item">
+            <button onclick="switchTab('map')">
+              <span>🕸️</span> Interactive Concept Map
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        Candidate: <strong>Micah J. Miner</strong><br />
+        Ed.D. Program, NLU 2026<br />
+        Chair: Dr. Terri Jo Smith
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main>
+      
+      <header>
+        <div class="header-info">
+          <h1 id="page-title">Defense Preparation Sandbox</h1>
+          <p id="page-subtitle">Interactive practice tools, expected committee questions, and mixed methods design simulator.</p>
+        </div>
+        <div class="meta-pills" id="header-pills">
+          <span class="meta-pill active-pill">Proposal Version</span>
+          <span class="meta-pill">Curriculum & Policy</span>
+        </div>
+      </header>
+
+      <!-- ==========================================================================
+           TAB 1: DEFENSE PREP SANDBOX CONTENT
+           ========================================================================== -->
+      <div id="tab-prep" class="tab-content active">
+        
+        <div class="prep-layout">
+          
+          <!-- Left side: Flashcard Simulator -->
+          <div>
+            <h2 style="color: var(--accent-coral);">🛡️ Expected Defense Questions</h2>
+            <p class="text-muted" style="margin-top:-10px; margin-bottom: 20px;">Use these active recall flashcards to prepare for committee-specific questioning (Dr. Terri Jo Smith & Dr. Ruben Puentedura).</p>
+            
+            <div class="flashcard-container" onclick="toggleCard()">
+              <div class="flashcard" id="defense-card">
+                
+                <!-- Front of card -->
+                <div class="flashcard-face flashcard-front">
+                  <div class="card-meta">
+                    <span class="tag tag-friction" id="card-lens">Conceptual Framework</span>
+                    <span id="card-index">Card 1 of 7</span>
+                  </div>
+                  <div class="card-question" id="card-question-text">
+                    How is Generative AI a curriculum and pedagogy issue, rather than just an academic integrity/cheating issue?
+                  </div>
+                  <div class="card-prompt">
+                    <span>💡 Click card to flip and reveal answer</span>
+                  </div>
+                </div>
+
+                <!-- Back of card -->
+                <div class="flashcard-face flashcard-back">
+                  <div class="card-answer-title" id="card-answer-title-text">
+                    Core Argument: Unproductive Success & Cognitive Labor Bypass
+                  </div>
+                  <div class="card-answer-body" id="card-answer-body-text">
+                    <p>GenAI bypasses the interpretive, cognitive, and rhetorical labor necessary for learning. The central educational problem is "unproductive success"—students producing correct academic artifacts without experiencing the cognitive struggle that restructures consciousness and builds durable schemas.</p>
+                  </div>
+                  <div class="card-evidence-box" id="card-evidence-text">
+                    "The central educational problem posed by generative AI is the bypassing of interpretive labor, intellectual accountability, and the developmental conditions for learning rather than academic integrity." (Chapter 1, Statement of the Problem)
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-navigation">
+              <button class="prep-btn" onclick="prevCard(event)">⬅️ Prev Card</button>
+              <button class="prep-btn prep-btn-primary" onclick="toggleCard(event)">🔄 Flip Card</button>
+              <button class="prep-btn" onclick="nextCard(event)">Next Card ➡️</button>
+            </div>
+          </div>
+
+          <!-- Right side: Mixed Methods simulator -->
+          <div>
+            <h2 style="color: var(--accent-blue);">🔬 Mixed Methods Joint Display Simulator</h2>
+            <div class="glass-card">
+              <p class="text-muted" style="margin-top:0; font-size:0.88rem;">Click a Research Question to trace how its qualitative and quantitative data strands integrate into a visual joint display.</p>
+              
+              <div class="rq-selector-grid">
+                <button class="rq-btn active" onclick="simulateJoint('RQ1')">RQ1</button>
+                <button class="rq-btn" onclick="simulateJoint('RQ2')">RQ2</button>
+                <button class="rq-btn" onclick="simulateJoint('RQ3')">RQ3</button>
+                <button class="rq-btn" onclick="simulateJoint('SRQ')">SRQ</button>
+                <button class="rq-btn" onclick="simulateJoint('SAQ')">SAQ</button>
+              </div>
+
+              <div class="joint-display-view">
+                <div style="font-weight: 700; color: var(--text-main);" id="joint-title">Research Question 1 (RQ1)</div>
+                <div class="text-muted" style="font-size:0.82rem; margin-top:4px;" id="joint-rq-desc">
+                  How do K-12 teachers understand and navigate the friction-reducing affordances of generative AI in academic work?
+                </div>
+                
+                <div class="joint-grid">
+                  <div class="joint-box" id="joint-qual">
+                    <strong>QUAL STRAND (Evidence)</strong>
+                    • Practitioner Interviews<br />
+                    • Card Sort protocol<br />
+                    • Transcripts coded for noetic, rhetorical, and existential friction.
+                  </div>
+                  <div class="joint-box" id="joint-quan">
+                    <strong>quan STRAND (Context)</strong>
+                    • RAND American Educator Panel surveys<br />
+                    • Original educator survey instrument (frequency of AI use, perceived rigor).
+                  </div>
+                </div>
+                
+                <div class="joint-box" style="margin-top: 12px;" id="joint-integration">
+                  <strong>Mixed Methods Integration</strong>
+                  Joint display presenting side-by-side narrative findings matching survey frequencies with interview accounts of cognitive delegation vs. preservation.
+                </div>
+              </div>
+            </div>
+
+            <!-- Checklist -->
+            <h2>🎯 Proposal Milestones</h2>
+            <div class="glass-card" style="padding: 20px;">
+              <div class="checklist-item">
+                <input type="checkbox" id="chk-1" checked onchange="saveChecklist()" />
+                <span>Outline Chapters 1-3 (Completed & Synthesized)</span>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="chk-2" checked onchange="saveChecklist()" />
+                <span>Ingest 100 Literature Sources into local database (Completed)</span>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="chk-3" onchange="saveChecklist()" />
+                <span>Submit IRB Application (Adult consent for student strand)</span>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="chk-4" onchange="saveChecklist()" />
+                <span>Practice Defense Deck with Chair Terri Jo Smith</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================================================
+           TAB 2: CHAPTERS 1-3 OUTLINE CONTENT
+           ========================================================================== -->
+      <div id="tab-claims" class="tab-content">
+        
+        <div class="glass-card">
+          <h2>📖 Dissertation Proposal Core Structure</h2>
+          <p class="text-muted" style="margin-top:-10px;">Select a chapter to expand its structure, core arguments, and methodological components.</p>
+          
+          <!-- Accordion Group -->
+          <div class="accordion-section open">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Chapter 1: The Research Foundation
+            </div>
+            <div class="accordion-body">
+              <div class="grid-2">
+                <div>
+                  <h3>Statement of the Problem</h3>
+                  <p>School districts are rushing to adopt policy, purchase tools, or direct acceptable use for Generative AI, but their approaches are structured around a false framing. By viewing AI primarily as an academic integrity/cheating crisis, they miss the deeper threat: how friction-reducing technologies bypass the cognitive and interpretive struggles necessary to restructure human consciousness.</p>
+                  
+                  <h3>Purpose of the Study</h3>
+                  <p>This mixed-methods case study investigates how K–12 practitioners navigate, resist, or design for "pedagogical friction" in the writing process, capturing the perspectives of educators and retrospective accounts of university students who experienced the pre/post-GAI transition.</p>
+                </div>
+                <div>
+                  <h3>Significance & Researcher Positionality</h3>
+                  <p>As a K-12 instructional technology administrator, the researcher brings a critical, technoskeptical lens that resists technological determinism. This research shifts the debate from a simple binary of "ban vs. embrace" to one of intentional pedagogical design.</p>
+                  
+                  <div class="card-evidence-box" style="border-left-color: var(--accent-gold);">
+                    <strong>Significance:</strong> It establishes a clear warrant for the preservation of cognitive struggle (the "generation effect" and "desirable difficulties") in instruction when automated writing assistants make production effortless.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Chapter 2: Review of the Literature & Theoretical Framework
+            </div>
+            <div class="accordion-body">
+              <h3>Ong's Media Ecology Stepper</h3>
+              <p class="text-muted">My theoretical framework extends Walter Ong's developmental account of communication media. Select each stage to inspect the transition:</p>
+              
+              <div class="stepper">
+                <div class="step-card" onclick="selectStep(1)">
+                  <span class="step-num">1</span>
+                  <span class="step-label">Primary Orality</span>
+                  <span class="step-desc">Communal, situational, formulaic memory.</span>
+                </div>
+                <div class="step-card" onclick="selectStep(2)">
+                  <span class="step-num">2</span>
+                  <span class="step-label">Literacy</span>
+                  <span class="step-desc">Analytical detachment, critical interiority.</span>
+                </div>
+                <div class="step-card" onclick="selectStep(3)">
+                  <span class="step-num">3</span>
+                  <span class="step-label">Secondary Orality</span>
+                  <span class="step-desc">Broadcast media retrieves oral performance.</span>
+                </div>
+                <div class="step-card active-step" onclick="selectStep(4)">
+                  <span class="step-num">4</span>
+                  <span class="step-label">Algorithmic Secondary</span>
+                  <span class="step-desc">Human-made content; algorithmic circulation.</span>
+                </div>
+                <div class="step-card" onclick="selectStep(5)">
+                  <span class="step-num">5</span>
+                  <span class="step-label">Tertiary Algorithmicity</span>
+                  <span class="step-desc">Opaque machines generate and curate.</span>
+                </div>
+              </div>
+              
+              <div id="step-detail-box" class="card-evidence-box" style="border-left-color: var(--accent-coral);">
+                <strong>Current Focus: Algorithmic Secondary Orality</strong><br />
+                A transitional stage where human-created symbolic content continues, but algorithms determine what reaches which consciousness. Editorial judgment is optimized for engagement rather than truth or shared civic space.
+              </div>
+
+              <div class="grid-3" style="margin-top: 24px;">
+                <div class="joint-box">
+                  <strong style="color: var(--accent-coral);">🧠 Noetic Displacement</strong>
+                  Cognitive and interpretive labor is externalized to external systems, leading to correct outputs without human schema formation.
+                </div>
+                <div class="joint-box">
+                  <strong style="color: var(--accent-coral);">🗣️ Rhetorical Saturation</strong>
+                  Synthetic dialogue floods the environment, generating responsive text without human dialogic responsibility or mutual risk.
+                </div>
+                <div class="joint-box">
+                  <strong style="color: var(--accent-coral);">⚖️ Existential Abstraction</strong>
+                  Claims are severed from accountable claimants, allowing information to circulate without anyone backing the claims.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-section">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Chapter 3: Case Study Methodology
+            </div>
+            <div class="accordion-body">
+              <div class="grid-2">
+                <div>
+                  <h3>Pragmatist & Case Study Design</h3>
+                  <p>The proposed research is organized as a convergent parallel mixed methods design embedded in a qualitative case study. Stake's collective instrumental framing helps explain how multiple participant groups can illuminate a shared issue, while <strong>Sharan Merriam's constructivist case study model (2009, 2016)</strong> provides the methodological center for applied educational research.</p>
+                  <p>Merriam's approach is suited for applied educational settings because it is <strong>particularistic</strong> (focusing on the classroom writing experience), <strong>descriptive</strong> (producing thick descriptions of pedagogical struggle), and <strong>heuristic</strong> (illuminating how teachers and students understand learning struggle).</p>
+                  
+                  <h3>Data Sources Overview</h3>
+                  <ul>
+                    <li><strong>Proposed QUAL Practitioner:</strong> Merriam-style semi-structured interviews, a card sort protocol, and institutional document analysis.</li>
+                    <li><strong>Proposed QUAL Retrospective:</strong> University students recounting their high school transition (2022-2023).</li>
+                    <li><strong>quan (Educator Survey):</strong> General survey of K-12 teachers' perceived rigor vs. AI convenience.</li>
+                    <li><strong>quan (Secondary Datasets):</strong> Analyzing NCES School Pulse Panel data on national K-12 AI integration.</li>
+                    <li><strong>Supplementary AI comparison:</strong> Negative control comparing AI-generated teacher responses to human transcripts to outline human-specific pedagogical reasoning.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Methodology Flowchart (Merriam-Aligned)</h3>
+                  <div class="joint-display-view" style="border-left: 3px solid var(--accent-emerald);">
+                    <strong>Phase 1: Bounded Case Ingestion</strong><br />
+                    • Establish boundaries of the case (K-12 writing instruction & teacher policy).<br />
+                    • Collect QUAL interviews & card sorts alongside quan surveys & NCES datasets.<br />
+                    <br />
+                    <strong>Phase 2: Inductive Interpretative Analysis</strong><br />
+                    • Code QUAL transcripts for meaning-making, focusing on noetic, rhetorical, and existential dimensions.<br />
+                        • Run appropriate quan descriptive and conditional comparative analyses.<br />
+                    <br />
+                    <strong>Phase 3: Mixed Methods Integration</strong><br />
+                    • Construct side-by-side Joint Displays tracing each RQ, matching qualitative descriptions with quantitative frequencies.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================================================
+           TAB 3: TIMELINE (INTELLECTUAL HISTORY) CONTENT
+           ========================================================================== -->
+      <div id="tab-timeline" class="tab-content">
+        
+        <div class="timeline-container">
+          
+          <!-- Timeline flow -->
+          <div>
+            <h2 style="color: var(--accent-gold);">⏳ Chronological History of Ideas</h2>
+            <p class="text-muted" style="margin-top:-10px; margin-bottom: 20px;">Trace the intellectual heritage of your framework, from foundational orality/constructivism through critical media studies, surveillance, to contemporary Generative AI.</p>
+            
+            <div class="timeline-flow" id="timeline-flow-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Detail pane -->
+          <div class="timeline-sidebar">
+            <div class="timeline-detail-pane" id="timeline-detail">
+              <h3 style="color: var(--accent-gold); margin-bottom: 4px;" id="tl-title">Select an Author</h3>
+              <div class="text-muted" id="tl-author" style="font-size:0.85rem; margin-bottom: 12px;">Click any card on the timeline to inspect its intellectual history.</div>
+              <div id="tl-citation" style="font-size:0.82rem; margin-bottom: 12px; font-weight: 500;"></div>
+              <div id="tl-summary" class="drawer-summary" style="font-size:0.88rem; line-height: 1.5; margin-bottom: 16px;"></div>
+              <div id="tl-quotes" style="margin-top: 14px;"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================================================
+           TAB 4: REFERENCE DATABASE BROWSER CONTENT
+           ========================================================================== -->
+      <div id="tab-browser" class="tab-content">
+        
+        <div class="grid-browser">
+          
+          <!-- Left side: Filters -->
+          <div class="browser-sidebar">
+            <div class="search-box">
+              <input type="text" id="search-input" placeholder="Search references..." oninput="filterReferences()" />
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-group-title">Thematic Lenses</span>
+              <div class="filter-list" id="tag-filter-container">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-group-title">Dissertation Role</span>
+              <div class="filter-list" id="role-filter-container">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Reference Cards -->
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+              <h2 style="color: var(--accent-coral); margin-bottom:0;">📚 Literature Library</h2>
+              <span class="text-muted" id="ref-count" style="font-size:0.9rem;">100 sources available</span>
+            </div>
+            
+            <div class="ref-list" id="reference-list-cards">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================================================
+           TAB 5: CONCEPT MAP CONTENT
+           ========================================================================== -->
+      <div id="tab-map" class="tab-content">
+        
+        <div class="concept-layout">
+          <div>
+            <div id="vis-graph"></div>
+          </div>
+          <div>
+            <div class="concept-sidebar" id="concept-sidebar-panel">
+              <h3 id="concept-title" style="color: var(--accent-coral);">Click a Node</h3>
+              <p class="text-muted" id="concept-meta" style="font-size: 0.8rem; margin-top:-6px; text-transform:uppercase;"></p>
+              <div id="concept-definition" class="drawer-summary" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 16px;">
+                Select a concept in the graph to view its definition, key points, and supporting references from the database.
+              </div>
+              <h4 id="concept-points-title" style="display:none; font-family: var(--font-logo); font-size:0.95rem; margin-bottom: 8px;">Key Points:</h4>
+              <ul id="concept-points" style="margin-left: 18px; margin-top:0; font-size:0.88rem; line-height:1.5; color: var(--text-main);"></ul>
+              
+              <h4 id="concept-refs-title" style="display:none; font-family: var(--font-logo); font-size:0.95rem; margin-bottom: 8px;">Supporting Literature:</h4>
+              <div id="concept-refs" style="display:flex; flex-direction:column; gap:8px;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Slide-out Drawer for Reference Details -->
+  <div class="drawer-overlay" id="ref-drawer-overlay" onclick="closeDrawer()">
+    <div class="drawer" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <div class="drawer-title" id="drawer-title-text">Source Details</div>
+        <button class="close-drawer" onclick="closeDrawer()">&times;</button>
+      </div>
+      <div class="drawer-body">
+        
+        <div class="drawer-section">
+          <span class="drawer-section-title">Citation</span>
+          <div id="drawer-citation" style="font-size:0.92rem; line-height: 1.4; font-family: var(--font-serif); color: var(--text-main);"></div>
+        </div>
+
+        <div class="drawer-section">
+          <span class="drawer-section-title">Tags & Classification</span>
+          <div id="drawer-tags" class="ref-tags"></div>
+        </div>
+
+        <div class="drawer-section">
+          <span class="drawer-section-title">Summary</span>
+          <div id="drawer-summary-text" class="drawer-summary"></div>
+        </div>
+
+        <div class="drawer-section">
+          <span class="drawer-section-title">Relevance Note</span>
+          <div id="drawer-relevance-text" class="drawer-summary" style="font-style: italic; color: var(--accent-gold);"></div>
+        </div>
+
+        <div class="drawer-section">
+          <span class="drawer-section-title">Key Highlights</span>
+          <ul id="drawer-highlights" style="margin-left: 18px; line-height:1.5;"></ul>
+        </div>
+
+        <div class="drawer-section">
+          <span class="drawer-section-title">Quotations</span>
+          <div id="drawer-quotes-list"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Vis.js library -->
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+  <!-- Literature Database (enables file:// protocol access by avoiding CORS block) -->
+  <script src="assets/references.js"></script>
+
+  <!-- App Logic Script -->
+  <script>
+    // Global State
+    let referenceData = [];
+    let activeTab = 'prep';
+    
+    // Joint Display Simulation Data
+    const jointSimData = {
+      'RQ1': {
+        title: 'Research Question 1 (RQ1)',
+        desc: 'How do K-12 teachers understand and navigate the friction-reducing affordances of generative AI in academic work?',
+        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Merriam-style semi-structured interviews<br />• Card Sort protocol (constructivist categorization of struggle)<br />• Transcripts coded inductively for meaning-making and noetic, rhetorical, and existential friction.',
+        quan: '<strong>PROPOSED quan STRAND (Context)</strong>• Original educator survey instrument<br />• Descriptive and conditional comparative analyses of AI use and perceived task rigor.',
+        integration: '<strong>Mixed Methods Integration</strong>Joint display presenting side-by-side narrative findings matching survey frequencies with interview accounts of cognitive delegation vs. preservation.'
+      },
+      'RQ2': {
+        title: 'Research Question 2 (RQ2)',
+        desc: 'What institutional conditions, such as policy, assessment design, professional development, and leadership disposition, enable or constrain friction-preserving pedagogy?',
+        qual: '<strong>QUAL STRAND (Evidence)</strong>• Semi-structured interviews with principals & district technology leaders<br />• Analysis of local district AI policy documents and student handbooks.',
+        quan: '<strong>quan STRAND (Context)</strong>• NCES School Pulse Panel data (December 2024 release)<br />• Frequency distribution of policy adoption types across K-12 demographics.',
+        integration: '<strong>Mixed Methods Integration</strong>Bivariate mapping of policy type (restrictive/open) against teachers\' reporting of professional agency in design.'
+      },
+      'RQ3': {
+        title: 'Research Question 3 (RQ3)',
+        desc: 'How can the Pedagogical Friction Framework inform AI policy development in K-12 contexts?',
+        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Leader interviews and institutional document analysis<br />• Textual analysis of policy drafts using the friction framework.',
+        quan: '<strong>quan STRAND (Context)</strong>• Original survey feedback on policy effectiveness metrics from district leaders.',
+        integration: '<strong>Mixed Methods Integration</strong>Policy drafting crosswalk mapping specific policy clauses directly to the noetic, rhetorical, existential, and infrastructural dimensions.'
+      },
+      'SRQ': {
+        title: 'Supplementary Retrospective Question (SRQ)',
+        desc: 'How do current university students describe changes in their experiences of cognitive struggle, authorial ownership, and learning processes across the pre-GenAI and post-GenAI transition?',
+        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Retrospective interviews with university students who transitioned during 2022-2023<br />• Narrative reflection on writing and cognitive delegation.',
+        quan: '<strong>quan STRAND (Context)</strong>• Student survey ratings of perceived cognitive effort, ownership, and learning depth.',
+        integration: '<strong>Mixed Methods Integration</strong>Profile analysis mapping students\' narrative transition categories against their quantitative ratings of authorial ownership.'
+      },
+      'SAQ': {
+        title: 'Supplementary Agentic Question (SAQ)',
+        desc: 'When agentic AI systems are prompted to respond as educators, how do their outputs differ structurally from human practitioner responses?',
+        qual: '<strong>QUAL STRAND (Evidence)</strong>• Structural coding analysis comparing AI-simulated teacher responses to human Merriam-style interviews.',
+        quan: '<strong>quan STRAND (Context)</strong>• Structural coding analysis (counts of local context mentions, ambivalent phrases, and uncertainty flags).',
+        integration: '<strong>Mixed Methods Integration</strong>Lexical and structural joint display comparing counts and kinds of pedagogical reasoning indicators between AI outputs and human practitioners.'
+      }
+    };
+
+    // Flashcards Data
+    const flashcardsData = [
+      {
+        lens: 'Conceptual Framework',
+        index: 'Card 1 of 7',
+        question: 'How is Generative AI a curriculum and pedagogy issue, rather than just an academic integrity/cheating issue?',
+        answerTitle: 'Core Argument: Unproductive Success & Cognitive Labor Bypass',
+        answerBody: '<p>GenAI bypasses the interpretive, cognitive, and rhetorical labor necessary for learning. The central educational problem is "unproductive success"—students producing correct academic artifacts without experiencing the cognitive struggle that restructures consciousness and builds durable schemas.</p>',
+        evidence: '"The central educational problem posed by generative AI is the bypassing of interpretive labor, intellectual accountability, and the developmental conditions for learning rather than academic integrity." (Chapter 1, Statement of the Problem)'
+      },
+      {
+        lens: 'Media Ecology',
+        index: 'Card 2 of 7',
+        question: 'How does Tertiary Algorithmicity extend Walter Ong\'s media ecology stages?',
+        answerTitle: 'Core Argument: Restructuring of Consciousness & Origination',
+        answerBody: '<p>Ong\'s stages assumed human origination of symbolic content. Tertiary algorithmicity introduces a qualitative rupture: machines generate as well as curate content, rendering human authorship optional. It restructures consciousness by substituting interpretive work with automated text generation.</p>',
+        evidence: '"Algorithmic systems both curate and generate symbolic content, making human authorship optional at scale, shifting the environment from mediation to automated creation." (Chapter 2, Theoretical Framework)'
+      },
+      {
+        lens: 'Instructional Equity',
+        index: 'Card 3 of 7',
+        question: 'How do you distinguish between "productive" struggle and "exclusionary" friction?',
+        answerTitle: 'Core Argument: The Equity Boundary',
+        answerBody: '<p>Exclusionary friction includes administrative or accessibility barriers that prevent students from entering the learning space (e.g., complex logins, lack of translations). Productive friction represents the desirable difficulties (describing, editing, defending) that build schema. Equity requires removing exclusionary barriers while intentionally preserving productive struggle.</p>',
+        evidence: '"Exclusionary friction blocks access and reproduces inequity under the guise of rigor, whereas productive friction stimulates germane cognitive load and conceptual schema formation." (Chapter 2, The Friction Framework)'
+      },
+      {
+        lens: 'Methodology Transition',
+        index: 'Card 4 of 7',
+        question: 'Why did you transition your case study methodology from Stake to Merriam?',
+        answerTitle: 'Core Argument: Applied Educational Constructivism',
+        answerBody: '<p>Stake\'s collective instrumental case study provides a useful initial model for understanding how multiple participant groups illuminate a shared issue. The transition to Sharan Merriam\'s framework aligns the study directly with <strong>applied educational research</strong>. Merriam emphasizes case studies as <strong>particularistic</strong> (focusing on an educational phenomenon), <strong>descriptive</strong> (developing thick qualitative accounts), and <strong>heuristic</strong> (deepening understanding of learning processes).</p>',
+        evidence: '"The proposed study uses a convergent mixed methods design embedded within a qualitative case study, transitioning from Stake\'s collective instrumental framing to Merriam\'s (2009/2016) particularistic, descriptive, and heuristic framework." (Chapter 3, Research Design)'
+      },
+      {
+        lens: 'Methodology & Design',
+        index: 'Card 5 of 7',
+        question: 'Why did you choose a convergent mixed methods design? How do the strands integrate?',
+        answerTitle: 'Core Argument: Convergent parallel QUAL + quan Integration',
+        answerBody: '<p>Pragmatism dictates that research questions drive method selection. The QUAL strand (Merriam-style interviews, card sorts) uncovers the lived experience of teachers and students in a bounded system. The quan strand (NCES/RAND secondary data, original survey) establishes structural context. They integrate through Joint Displays matching QUAL descriptive themes with quan statistics.</p>',
+        evidence: '"A convergent mixed methods design embeds quantitative context within a qualitative case study, integrating through joint displays organized by research question." (Chapter 3, Research Design)'
+      },
+      {
+        lens: 'Committee Focus (Dr. Smith)',
+        index: 'Card 6 of 7',
+        question: 'How does your study connect to the Curriculum, Advocacy, and Policy (CAP) program framework?',
+        answerTitle: 'Core Argument: Advocacy for Pedagogical Agency in Policy',
+        answerBody: '<p>It addresses "Curriculum" by redesigning task structures. It addresses "Policy" by showing how rigid K-12 AI bans fail. It supports "Advocacy" by arguing for educator agency and policy frameworks that protect teacher professional judgment in preserving productive cognitive struggle.</p>',
+        evidence: '"Preserving pedagogical friction is a curriculum advocacy stance: it asserts the right of the educator to design for struggle and the right of the learner to experience difficulty." (Chapter 1, Significance of the Study)'
+      },
+      {
+        lens: 'Committee Focus (Dr. Puentedura)',
+        index: 'Card 7 of 7',
+        question: 'How does Pedagogical Friction interact with tech integration models like SAMR and TPACK?',
+        answerTitle: 'Core Argument: Guarding against Frictionless Substitution',
+        answerBody: '<p>SAMR Substitution (using AI to generate draft essays) can bypass learning if not designed carefully. Pedagogical Friction provides the criteria (noetic, rhetorical, existential) to ensure that when technology Redefines tasks, it retains the cognitive resistance required for schema creation (TPACK).</p>',
+        evidence: '"Technological pedagogical content knowledge (TPACK) in the AI era requires designing for friction, ensuring that redefinition does not mean the elimination of cognitive agency." (Chapter 2, Tech Integration Context)'
+      }
+    ];
+
+    let currentCardIdx = 0;
+
+    // Load references data and initialize app
+    window.addEventListener('load', async () => {
+      // If references.js was loaded successfully via script tag, window.referenceData is already populated
+      if (window.referenceData && window.referenceData.length > 0) {
+        referenceData = window.referenceData;
+      } else {
+        // Fallback to fetch for web servers that don't load references.js
+        try {
+          const response = await fetch("assets/references.json");
+          if (response.ok) {
+            referenceData = await response.json();
+          }
+        } catch (err) {
+          console.error("Error fetching references.json:", err);
+        }
+      }
+      
+      // Filter out entries that lack titles or citations to clean up the UI
+      referenceData = referenceData.filter(r => r.title && r.title.trim() !== "");
+      
+      initChecklist();
+      initFilters();
+      renderTimeline();
+      renderReferences();
+      initConceptMap();
+    });
+
+    // Tab Switching
+    function switchTab(tabId) {
+      activeTab = tabId;
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-item button').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(`tab-${tabId}`).classList.add('active');
+      event.currentTarget.classList.add('active');
+      
+      // Update header
+      const headerTitle = document.getElementById('page-title');
+      const headerSubtitle = document.getElementById('page-subtitle');
+      
+      if (tabId === 'prep') {
+        headerTitle.textContent = "Defense Preparation Sandbox";
+        headerSubtitle.textContent = "Interactive practice tools, expected committee questions, and mixed methods design simulator.";
+      } else if (tabId === 'claims') {
+        headerTitle.textContent = "Chapters 1-3 Outline";
+        headerSubtitle.textContent = "Structured visual walkthrough of the dissertation's problem statement, claims, and methodology.";
+      } else if (tabId === 'timeline') {
+        headerTitle.textContent = "Intellectual History Timeline";
+        headerSubtitle.textContent = "Chronological tracking of the literature from foundational roots to contemporary GAI and pedagogical friction.";
+      } else if (tabId === 'browser') {
+        headerTitle.textContent = "Reference Browser";
+        headerSubtitle.textContent = "A fully filterable and searchable database of the 100 ingested literature references.";
+      } else if (tabId === 'map') {
+        headerTitle.textContent = "Interactive Concept Map";
+        headerSubtitle.textContent = "Visual conceptual network mapping authors and theories directly to the core constructs.";
+      }
+    }
+
+    // Accordion
+    function toggleAccordion(headerEl) {
+      const parent = headerEl.parentElement;
+      const isOpen = parent.classList.contains('open');
+      document.querySelectorAll('.accordion-section').forEach(el => el.classList.remove('open'));
+      if (!isOpen) {
+        parent.classList.add('open');
+      }
+    }
+
+    // Flashcard Flip
+    function toggleCard(e) {
+      if (e) {
+        // Prevent trigger if button is clicked
+        if (e.target.tagName === 'BUTTON') return;
+      }
+      const card = document.getElementById('defense-card');
+      card.classList.toggle('flipped');
+    }
+
+    function updateCard() {
+      const card = document.getElementById('defense-card');
+      card.classList.remove('flipped'); // Reset flip state
+      
+      const data = flashcardsData[currentCardIdx];
+      
+      setTimeout(() => {
+        document.getElementById('card-lens').textContent = data.lens;
+        document.getElementById('card-index').textContent = `Card ${currentCardIdx + 1} of ${flashcardsData.length}`;
+        document.getElementById('card-question-text').textContent = data.question;
+        document.getElementById('card-answer-title-text').textContent = data.answerTitle;
+        document.getElementById('card-answer-body-text').innerHTML = data.answerBody;
+        document.getElementById('card-evidence-text').textContent = data.evidence;
+      }, 150);
+    }
+
+    function prevCard(e) {
+      e.stopPropagation();
+      currentCardIdx = (currentCardIdx - 1 + flashcardsData.length) % flashcardsData.length;
+      updateCard();
+    }
+
+    function nextCard(e) {
+      e.stopPropagation();
+      currentCardIdx = (currentCardIdx + 1) % flashcardsData.length;
+      updateCard();
+    }
+
+    // Joint Display Simulation
+    function simulateJoint(rqKey) {
+      document.querySelectorAll('.rq-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      
+      const info = jointSimData[rqKey];
+      document.getElementById('joint-title').textContent = info.title;
+      document.getElementById('joint-rq-desc').textContent = info.desc;
+      document.getElementById('joint-qual').innerHTML = info.qual;
+      document.getElementById('joint-quan').innerHTML = info.quan;
+      document.getElementById('joint-integration').innerHTML = info.integration;
+    }
+
+    // Stepper card selection
+    function selectStep(stepIndex) {
+      document.querySelectorAll('.step-card').forEach(card => card.classList.remove('active-step'));
+      const cards = document.querySelectorAll('.step-card');
+      cards[stepIndex - 1].classList.add('active-step');
+      
+      const detailBox = document.getElementById('step-detail-box');
+      
+      const stepDetails = [
+        "<strong>Stage 1: Primary Orality (Walter Ong)</strong><br />Thought is situational, formulaic, and memory-based. Knowledge must be stored in repetition, formulas, and community memory since there are no external texts.",
+        "<strong>Stage 2: Literacy (Walter Ong)</strong><br />The invention of writing separates the knower from the known, externalizing memory and enabling abstract reasoning, private interiority, criticism, and detached logic.",
+        "<strong>Stage 3: Secondary Orality (Walter Ong)</strong><br />Electronic media (TV, radio) retrieves the participatory, communal, and immediate qualities of oral culture but is structurally reliant on a literate foundation (scripts, code, clocks).",
+        "<strong>Stage 4: Algorithmic Secondary Orality (Micah Miner)</strong><br />A transitional phase where humans create the symbolic content but algorithms increasingly dictate its personalized circulation and feed ranking. Shared symbolic space fragments.",
+        "<strong>Stage 5: Tertiary Algorithmicity (Micah Miner)</strong><br />A generative condition where algorithms create as well as curate content. Human authorship is optional at scale. Bypasses the human interpretive labor necessary for durable learning."
+      ];
+      
+      detailBox.innerHTML = stepDetails[stepIndex - 1];
+    }
+
+    // Checklist save/load
+    function initChecklist() {
+      const items = ['chk-1', 'chk-2', 'chk-3', 'chk-4'];
+      items.forEach(id => {
+        const val = localStorage.getItem(id);
+        if (val !== null) {
+          document.getElementById(id).checked = val === 'true';
+        }
+      });
+    }
+
+    function saveChecklist() {
+      const items = ['chk-1', 'chk-2', 'chk-3', 'chk-4'];
+      items.forEach(id => {
+        localStorage.setItem(id, document.getElementById(id).checked);
+      });
+    }
+
+    // Reference Filters Setup
+    const lensesList = [
+      "Ong/media ecology",
+      "pedagogical friction",
+      "learning sciences",
+      "methods/mixed methods",
+      "equity/CRTL",
+      "tertiary algorithmicity"
+    ];
+
+    const rolesList = [
+      "theoretical foundation",
+      "response framework",
+      "methods support",
+      "pedagogical implications"
+    ];
+
+    function initFilters() {
+      const tagContainer = document.getElementById('tag-filter-container');
+      const roleContainer = document.getElementById('role-filter-container');
+      
+      tagContainer.innerHTML = lensesList.map(tag => `
+        <label class="filter-checkbox">
+          <input type="checkbox" value="${tag}" onchange="filterReferences()" class="tag-chk" />
+          <span>${tag}</span>
+        </label>
+      `).join('');
+
+      roleContainer.innerHTML = rolesList.map(role => `
+        <label class="filter-checkbox">
+          <input type="checkbox" value="${role}" onchange="filterReferences()" class="role-chk" />
+          <span>${role}</span>
+        </label>
+      `).join('');
+    }
+
+    // Filter Logic
+    function filterReferences() {
+      const searchVal = document.getElementById('search-input').value.toLowerCase();
+      
+      const checkedTags = Array.from(document.querySelectorAll('.tag-chk:checked')).map(el => el.value);
+      const checkedRoles = Array.from(document.querySelectorAll('.role-chk:checked')).map(el => el.value);
+      
+      const filtered = referenceData.filter(ref => {
+        const titleMatch = (ref.title || '').toLowerCase().includes(searchVal);
+        const authorMatch = (ref.authors || []).some(a => {
+          const authorStr = typeof a === 'string' ? a : `${a.given || ''} ${a.family || ''}`;
+          return authorStr.toLowerCase().includes(searchVal);
+        });
+        const summaryMatch = (ref.summary || '').toLowerCase().includes(searchVal);
+        const citationMatch = (ref.apa_citation || '').toLowerCase().includes(searchVal);
+        const textMatch = titleMatch || authorMatch || summaryMatch || citationMatch;
+        
+        // Match tags
+        const allTags = [
+          ...(ref.theory_tags || []),
+          ...(ref.method_tags || []),
+          ...(ref.equity_tags || []),
+          ...(ref.pedagogical_friction_tags || [])
+        ];
+        const tagMatch = checkedTags.length === 0 || checkedTags.every(t => allTags.includes(t));
+        
+        // Match roles
+        const roleMatch = checkedRoles.length === 0 || checkedRoles.includes(ref.dissertation_role);
+        
+        return textMatch && tagMatch && roleMatch;
+      });
+
+      document.getElementById('ref-count').textContent = `${filtered.length} sources found`;
+      renderRefCards(filtered);
+    }
+
+    function renderRefCards(refs) {
+      const container = document.getElementById('reference-list-cards');
+      if (refs.length === 0) {
+        container.innerHTML = `<div class="glass-card text-muted" style="text-align:center;">No references match your filters.</div>`;
+        return;
+      }
+
+      container.innerHTML = refs.map(ref => {
+        const allTags = [
+          ...(ref.theory_tags || []),
+          ...(ref.method_tags || []),
+          ...(ref.equity_tags || []),
+          ...(ref.pedagogical_friction_tags || [])
+        ];
+
+        return `
+          <div class="ref-card" onclick="openRefDrawer('${ref.id}')">
+            <div class="ref-header">
+              <span class="ref-title">${ref.title}</span>
+              <span class="tag tag-review">${ref.dissertation_role || 'General'}</span>
+            </div>
+            <div class="ref-citation">${ref.apa_citation}</div>
+            <div class="ref-summary">${ref.summary ? ref.summary.substring(0, 160) + '...' : 'No summary loaded.'}</div>
+            <div class="ref-tags">
+              ${ref.year ? `<span class="tag" style="background:rgba(255,255,255,0.05); color:var(--text-main); border:1px solid var(--border-color);">${ref.year}</span>` : ''}
+              ${ref.theory_tags && ref.theory_tags.includes('Ong/media ecology') ? `<span class="tag tag-theory">Ong</span>` : ''}
+              ${ref.pedagogical_friction_tags && ref.pedagogical_friction_tags.length > 0 ? `<span class="tag tag-friction">Friction</span>` : ''}
+              ${ref.method_tags && ref.method_tags.includes('methods/mixed methods') ? `<span class="tag tag-methods">Mixed Methods</span>` : ''}
+              ${ref.equity_tags && ref.equity_tags.includes('equity/CRTL') ? `<span class="tag tag-equity">Equity</span>` : ''}
+              ${ref.verification_status === 'Verified' ? `<span class="tag tag-validated">Verified</span>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderReferences() {
+      renderRefCards(referenceData);
+    }
+
+    // Timeline Rendering
+    function renderTimeline() {
+      const flow = document.getElementById('timeline-flow-list');
+      
+      // Chronological sort
+      const sortedRefs = [...referenceData]
+        .filter(r => r.year && !isNaN(parseInt(refYear(r))))
+        .sort((a, b) => parseInt(refYear(a)) - parseInt(refYear(b)));
+
+      // Group into eras
+      const eras = {
+        "Foundational Roots (Pre-2000)": [],
+        "Digital Infrastructure & Curation (2000-2018)": [],
+        "Surveillance & Postdigital Eras (2019-2023)": [],
+        "Generative AI & Pedagogical Friction (2024+)": []
+      };
+
+      sortedRefs.forEach(ref => {
+        const year = parseInt(refYear(ref));
+        if (year < 2000) {
+          eras["Foundational Roots (Pre-2000)"].push(ref);
+        } else if (year >= 2000 && year <= 2018) {
+          eras["Digital Infrastructure & Curation (2000-2018)"].push(ref);
+        } else if (year >= 2019 && year <= 2023) {
+          eras["Surveillance & Postdigital Eras (2019-2023)"].push(ref);
+        } else {
+          eras["Generative AI & Pedagogical Friction (2024+)"].push(ref);
+        }
+      });
+
+      let html = '';
+      for (const [eraTitle, eraRefs] of Object.entries(eras)) {
+        if (eraRefs.length === 0) continue;
+        html += `<div class="timeline-group-header">${eraTitle}</div>`;
+        eraRefs.forEach(ref => {
+          const authorStr = formatAuthorName(ref.authors);
+          html += `
+            <div class="timeline-node" id="tl-node-${ref.id}" onclick="selectTimelineNode('${ref.id}')">
+              <div class="timeline-node-card">
+                <div class="timeline-node-header">
+                  <span class="timeline-node-title">${ref.title}</span>
+                  <span class="timeline-node-year">${ref.year}</span>
+                </div>
+                <div class="timeline-node-author">${authorStr}</div>
+                <div class="timeline-node-summary">${ref.summary}</div>
+              </div>
+            </div>
+          `;
+        });
+      }
+      flow.innerHTML = html;
+      
+      // Auto select first node in timeline
+      if (sortedRefs.length > 0) {
+        selectTimelineNode(sortedRefs[0].id);
+      }
+    }
+
+    function selectTimelineNode(refId) {
+      document.querySelectorAll('.timeline-node').forEach(n => n.classList.remove('active-node'));
+      const node = document.getElementById(`tl-node-${refId}`);
+      if (node) node.classList.add('active-node');
+
+      const ref = referenceData.find(r => r.id === refId);
+      if (!ref) return;
+
+      document.getElementById('tl-title').textContent = ref.title;
+      document.getElementById('tl-author').textContent = formatAuthorName(ref.authors) + ` (${ref.year || 'n.d.'})`;
+      document.getElementById('tl-citation').innerHTML = `<em>APA Citation:</em><br />${ref.apa_citation}`;
+      document.getElementById('tl-summary').textContent = ref.summary || 'No summary loaded.';
+      
+      const quotesBox = document.getElementById('tl-quotes');
+      if (ref.quotes && ref.quotes.length > 0) {
+        quotesBox.innerHTML = `
+          <h4 style="font-family: var(--font-logo); font-size:0.95rem; margin-bottom: 8px;">Quotable Passages:</h4>
+          ${ref.quotes.map(q => `
+            <div class="card-evidence-box">
+              "${q.text}" (${q.page_or_location || 'p. X'})
+            </div>
+          `).join('')}
+        `;
+      } else {
+        quotesBox.innerHTML = '';
+      }
+    }
+
+    // Open/Close Drawers
+    function openRefDrawer(refId) {
+      const ref = referenceData.find(r => r.id === refId);
+      if (!ref) return;
+
+      document.getElementById('drawer-title-text').textContent = ref.title;
+      document.getElementById('drawer-citation').textContent = ref.apa_citation;
+      document.getElementById('drawer-summary-text').textContent = ref.summary;
+      document.getElementById('drawer-relevance-text').textContent = ref.relevance_note || 'No relevance note drafted.';
+      
+      // Highlights list
+      const hlist = document.getElementById('drawer-highlights');
+      const highlights = ref.key_highlights || [];
+      hlist.innerHTML = highlights.map(h => `<li>${h}</li>`).join('');
+
+      // Quotes list
+      const qlist = document.getElementById('drawer-quotes-list');
+      const quotes = ref.quotes || [];
+      if (quotes.length === 0) {
+        qlist.innerHTML = `<div class="text-muted" style="font-size:0.88rem;">No quotations stored for this reference.</div>`;
+      } else {
+        qlist.innerHTML = quotes.map(q => `
+          <div class="quote-item">
+            <div class="quote-text">"${q.text}"</div>
+            <div class="quote-meta">
+              <span>Location: ${q.page_or_location || 'Not specified'}</span>
+              <span class="tag tag-validated" style="${q.verification_status === 'Verified' ? '' : 'background:rgba(244,63,94,0.1); color:#fda4af; border-color:rgba(244,63,94,0.3);'}">${q.verification_status}</span>
+            </div>
+            ${q.why_it_matters ? `<div style="font-size:0.8rem; margin-top:8px; color:var(--text-muted);"><strong>Relevance:</strong> ${q.why_it_matters}</div>` : ''}
+          </div>
+        `).join('');
+      }
+
+      // Tags list
+      const tlist = document.getElementById('drawer-tags');
+      const allTags = [
+        ...(ref.theory_tags || []),
+        ...(ref.method_tags || []),
+        ...(ref.equity_tags || []),
+        ...(ref.pedagogical_friction_tags || [])
+      ];
+      tlist.innerHTML = allTags.map(tag => `
+        <span class="tag ${tag.includes('ecology') || tag.includes('algorithmicity') ? 'tag-theory' : tag.includes('methods') ? 'tag-methods' : tag.includes('equity') ? 'tag-equity' : 'tag-friction'}">${tag}</span>
+      `).join('') + `<span class="tag tag-review">${ref.dissertation_role}</span>`;
+
+      document.getElementById('ref-drawer-overlay').classList.add('active');
+    }
+
+    function closeDrawer() {
+      document.getElementById('ref-drawer-overlay').classList.remove('active');
+    }
+
+    // Helper Functions
+    function refYear(ref) {
+      if (!ref.year) return "9999";
+      const match = ref.year.match(/\d{4}/);
+      return match ? match[0] : "9999";
+    }
+
+    function formatAuthorName(authors) {
+      if (!authors) return 'Unknown Author';
+      if (typeof authors === 'string') {
+        try {
+          const parsed = JSON.parse(authors);
+          return formatAuthorArray(parsed);
+        } catch(e) {
+          return authors;
+        }
+      }
+      return formatAuthorArray(authors);
+    }
+
+    function formatAuthorArray(arr) {
+      if (!Array.isArray(arr) || arr.length === 0) return 'Unknown Author';
+      if (arr.length === 1) {
+        const a = arr[0];
+        return typeof a === 'string' ? a : `${a.family || ''}, ${a.given || ''}`;
+      }
+      if (arr.length === 2) {
+        const a1 = arr[0];
+        const a2 = arr[1];
+        const a1Name = typeof a1 === 'string' ? a1 : `${a1.family || ''}`;
+        const a2Name = typeof a2 === 'string' ? a2 : `${a2.family || ''}`;
+        return `${a1Name} & ${a2Name}`;
+      }
+      const primary = arr[0];
+      const primaryName = typeof primary === 'string' ? primary : `${primary.family || ''}`;
+      return `${primaryName} et al.`;
+    }
+
+    // ==========================================================================
+    // VIS.JS CONCEPT MAP INITIALIZATION
+    // ==========================================================================
+    function initConceptMap() {
+      const concepts = [
+        { id: "algorithmic_secondary_orality", label: "Algorithmic Secondary Orality", definition: "A transitional phase where human-created content persists, but personalized ranking and recommendation algorithms dictate its circulation and distribution.", group: "construct" },
+        { id: "tertiary_algorithmicity", label: "Tertiary Algorithmicity", definition: "A condition where machines generate and curate symbolic content, rendering human authorship optional at scale.", group: "construct" },
+        { id: "noetic_displacement", label: "Noetic Displacement", definition: "Cognitive labor is externalized to external AI generators, substituting interpretive learning with frictionless generation.", group: "construct" },
+        { id: "rhetorical_saturation", label: "Rhetorical Saturation", definition: "Symbolic environments flood with synthetic text, degrading genuine peer critique and dialogic accountability.", group: "construct" },
+        { id: "existential_abstraction", label: "Existential Abstraction", definition: "Claims circulate without an accountable human claimant, severing authorial responsibility and investment.", group: "construct" },
+        { id: "pedagogical_friction", label: "Pedagogical Friction", definition: "Intentional preservation of cognitive, rhetorical, existential, and infrastructural resistance necessary for durable schema development.", group: "construct" },
+        { id: "productive_vs_exclusionary", label: "Productive vs. Exclusionary Friction", definition: "Equity boundary: productive struggle helps construct schema, while exclusionary friction forms unnecessary accessibility barriers.", group: "construct" },
+        
+        // Authors Nodes
+        { id: "ong", label: "Walter Ong", type: "author", group: "author" },
+        { id: "mcluhan", label: "Marshall McLuhan", type: "author", group: "author" },
+        { id: "papert", label: "Seymour Papert", type: "author", group: "author" },
+        { id: "postman", label: "Neil Postman", type: "author", group: "author" },
+        { id: "stiegler", label: "Bernard Stiegler", type: "author", group: "author" },
+        { id: "zuboff", label: "Shoshana Zuboff", type: "author", group: "author" },
+        { id: "shen", label: "Shen & Tamkin (2026)", type: "author", group: "author" },
+        { id: "petricini", label: "Tiffany Petricini", type: "author", group: "author" }
+      ];
+
+      const edges = [
+        { from: "ong", to: "algorithmic_secondary_orality", label: "Extended by" },
+        { from: "ong", to: "tertiary_algorithmicity", label: "Extended by" },
+        { from: "stiegler", to: "tertiary_algorithmicity", label: "Tertiary Retention" },
+        { from: "zuboff", to: "existential_abstraction", label: "Surveillance Logic" },
+        { from: "postman", to: "rhetorical_saturation", label: "Technopoly Critique" },
+        { from: "papert", to: "pedagogical_friction", label: "Constructivism" },
+        { from: "shen", to: "noetic_displacement", label: "Cognitive Delegation Study" },
+        { from: "petricini", to: "algorithmic_secondary_orality", label: "Secondary Orality Extension" },
+        { from: "algorithmic_secondary_orality", to: "tertiary_algorithmicity", label: "Transition" },
+        { from: "tertiary_algorithmicity", to: "noetic_displacement", label: "Triggers" },
+        { from: "tertiary_algorithmicity", to: "rhetorical_saturation", label: "Triggers" },
+        { from: "tertiary_algorithmicity", to: "existential_abstraction", label: "Triggers" },
+        { from: "noetic_displacement", to: "pedagogical_friction", label: "Demands" },
+        { from: "rhetorical_saturation", to: "pedagogical_friction", label: "Demands" },
+        { from: "existential_abstraction", to: "pedagogical_friction", label: "Demands" },
+        { from: "pedagogical_friction", to: "productive_vs_exclusionary", label: "Governed by" }
+      ];
+
+      const nodesDS = new vis.DataSet(concepts.map(c => {
+        const isAuthor = c.group === "author";
+        return {
+          id: c.id,
+          label: c.label,
+          shape: isAuthor ? "box" : "dot",
+          size: isAuthor ? undefined : 22,
+          color: {
+            background: isAuthor ? "rgba(14, 165, 233, 0.15)" : "rgba(244, 63, 94, 0.15)",
+            border: isAuthor ? "rgba(14, 165, 233, 0.6)" : "rgba(244, 63, 94, 0.6)",
+            highlight: {
+              background: isAuthor ? "rgba(14, 165, 233, 0.35)" : "rgba(244, 63, 94, 0.35)",
+              border: isAuthor ? "#0ea5e9" : "#f43f5e"
+            }
+          },
+          font: {
+            color: "#f8fafc",
+            face: "Inter",
+            size: 14,
+            weight: "600"
+          },
+          margin: isAuthor ? 10 : undefined,
+          borderWidth: 2
+        }
+      }));
+
+      const edgesDS = new vis.DataSet(edges.map(e => ({
+        ...e,
+        arrows: "to",
+        smooth: { type: "cubicBezier" },
+        color: { color: "rgba(255,255,255,0.08)", highlight: "#f43f5e" },
+        font: { color: "#94a3b8", size: 10, face: "Inter" }
+      })));
+
+      const container = document.getElementById('vis-graph');
+      const network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
+        physics: {
+          stabilization: true,
+          barnesHut: { springLength: 180, gravitationalConstant: -3000 }
+        },
+        interaction: { hover: true }
+      });
+
+      // Show concept info on click
+      network.on("click", (params) => {
+        if (params.nodes.length > 0) {
+          const selectedId = params.nodes[0];
+          const concept = concepts.find(c => c.id === selectedId);
+          if (concept) {
+            showConceptDetail(concept);
+          }
+        }
+      });
+    }
+
+    function showConceptDetail(concept) {
+      document.getElementById('concept-title').textContent = concept.label;
+      document.getElementById('concept-meta').textContent = concept.group || '';
+      document.getElementById('concept-definition').textContent = concept.definition;
+      
+      const pointsTitle = document.getElementById('concept-points-title');
+      const pointsList = document.getElementById('concept-points');
+      const refsTitle = document.getElementById('concept-refs-title');
+      const refsList = document.getElementById('concept-refs');
+      
+      pointsTitle.style.display = "none";
+      pointsList.innerHTML = "";
+      refsTitle.style.display = "none";
+      refsList.innerHTML = "";
+
+      // Add concept specific details
+      const points = {
+        'algorithmic_secondary_orality': [
+          "Information environment becomes hyper-personalized and fragmented.",
+          "Circulation is determined by engagement optimizations (likes, shares, watch time) rather than communal or professional verification."
+        ],
+        'tertiary_algorithmicity': [
+          "Machine systems take over symbolic production directly, rather than just acting as distribution channels.",
+          "Allows students to fully offload cognitive synthesis, posing a deep noetic risk to the learning cycle."
+        ],
+        'noetic_displacement': [
+          "Bypasses germane cognitive load and desirable difficulties.",
+          "Results in unproductive success: high grades on artifacts with low schema retention."
+        ],
+        'rhetorical_saturation': [
+          "Authentic feedback and critique from real human peers are replaced by simulated dialogue.",
+          "Students engage with AI agents, developing communication patterns isolated from shared public risk."
+        ],
+        'existential_abstraction': [
+          "Claims circulate detached from any claimant who takes responsibility for them.",
+          "Undermines intellectual accountability and deep investment in one's ideas."
+        ],
+        'pedagogical_friction': [
+          "Design response framework focused on preserving necessary intellectual struggle.",
+          "Guides curriculum design by introducing desirable difficulties across four dimensions: head, room, world, system."
+        ],
+        'productive_vs_exclusionary': [
+          "Exclusionary barriers (e.g. access limits, complex logins) should be minimized.",
+          "Productive struggles (e.g. source reconciliation, thesis revision) must be preserved for all students."
+        ]
+      };
+
+      if (points[concept.id]) {
+        pointsTitle.style.display = "block";
+        pointsList.innerHTML = points[concept.id].map(p => `<li>${p}</li>`).join('');
+      }
+
+      // Map concepts to actual literature references in the database
+      const literatureMapping = {
+        'algorithmic_secondary_orality': ['Petricini', 'Venturini', 'Ong'],
+        'tertiary_algorithmicity': ['Stiegler', 'Shen', 'Mishra'],
+        'noetic_displacement': ['Shen', 'Carr', 'Bellwether', 'Kulesa'],
+        'rhetorical_saturation': ['Postman', 'Turkle', 'Jandrić'],
+        'existential_abstraction': ['Zuboff', 'Birkerts', 'Freire'],
+        'pedagogical_friction': ['Papert', 'Bellwether', 'Ladson-Billings'],
+        'productive_vs_exclusionary': ['Ladson-Billings', 'Apple', 'Pinar']
+      };
+
+      const matchingKeys = literatureMapping[concept.id] || [];
+      if (matchingKeys.length > 0) {
+        // Find matching references in referenceData
+        const matches = referenceData.filter(ref => 
+          matchingKeys.some(k => 
+            ref.title.toLowerCase().includes(k.toLowerCase()) || 
+            ref.apa_citation.toLowerCase().includes(k.toLowerCase())
+          )
+        ).slice(0, 3); // Limit to 3
+
+        if (matches.length > 0) {
+          refsTitle.style.display = "block";
+          refsList.innerHTML = matches.map(ref => `
+            <div class="card-evidence-box" style="margin-top:0; cursor:pointer;" onclick="openRefDrawer('${ref.id}')">
+              <strong>${ref.title}</strong><br />
+              <span style="font-size:0.78rem; color:var(--text-muted);">${ref.apa_citation}</span>
+            </div>
+          `).join('');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

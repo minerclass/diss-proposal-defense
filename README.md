@@ -8,6 +8,8 @@ Interactive GitHub Pages-ready dissertation proposal defense workspace for:
 - separating public explanation from private research data,
 - exploring the intellectual history behind the reference set.
 
+The public studio also includes an expanded dissertation explorer at `explorer/`. Its public reference atlas intentionally excludes local file paths, full-text source extracts, and private research data.
+
 ## Project Status
 
 This first version is grounded in the local Phase 2 artifacts in this workspace:
