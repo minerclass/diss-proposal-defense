@@ -298,7 +298,7 @@ function updateReadiness() {
 }
 
 function bindEvents() {
-  qsa(".nav-item").forEach(button => {
+  qsa(".nav-item[data-view]").forEach(button => {
     button.addEventListener("click", () => showView(button.dataset.view));
   });
 

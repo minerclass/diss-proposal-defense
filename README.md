@@ -12,6 +12,8 @@ The public studio also includes an expanded dissertation explorer at `explorer/`
 
 Both intellectual-history views use the shared `intellectual-history.js` dataset so their source sequence, roles, proposal bridges, and verification language remain aligned.
 
+The standalone canonical experience is published from `intellectual-history/` and links back to both the Proposal Defense Studio and Expanded Explorer.
+
 ## Project Status
 
 This first version is grounded in the local Phase 2 artifacts in this workspace:
