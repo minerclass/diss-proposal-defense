@@ -14,6 +14,8 @@ Both intellectual-history views use the shared `intellectual-history.js` dataset
 
 The standalone canonical experience is published from `intellectual-history/` and links back to both the Proposal Defense Studio and Expanded Explorer.
 
+The separate [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) remains the polished argument and intellectual-lineage experience and is linked from all three repository experiences.
+
 ## Project Status
 
 This first version is grounded in the local Phase 2 artifacts in this workspace:
