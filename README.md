@@ -10,6 +10,8 @@ Interactive GitHub Pages-ready dissertation proposal defense workspace for:
 
 The public studio also includes an expanded dissertation explorer at `explorer/`. Its public reference atlas intentionally excludes local file paths, full-text source extracts, and private research data.
 
+Both intellectual-history views use the shared `intellectual-history.js` dataset so their source sequence, roles, proposal bridges, and verification language remain aligned.
+
 ## Project Status
 
 This first version is grounded in the local Phase 2 artifacts in this workspace:

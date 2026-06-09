@@ -1427,8 +1427,8 @@
           
           <!-- Timeline flow -->
           <div>
-            <h2 style="color: var(--accent-gold);">⏳ Chronological History of Ideas</h2>
-            <p class="text-muted" style="margin-top:-10px; margin-bottom: 20px;">Trace the intellectual heritage of your framework, from foundational orality/constructivism through critical media studies, surveillance, to contemporary Generative AI.</p>
+            <h2 style="color: var(--accent-gold);">⏳ Curated Proposal Intellectual History</h2>
+            <p class="text-muted" style="margin-top:-10px; margin-bottom: 20px;">The same proposal-defense sequence used in the Proposal Defense Studio, connecting media ecology, learning science, algorithm studies, AI education, and methods.</p>
             
             <div class="timeline-flow" id="timeline-flow-list">
               <!-- Dynamically populated -->
@@ -1572,6 +1572,7 @@
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
   <!-- Literature Database (enables file:// protocol access by avoiding CORS block) -->
+  <script src="../intellectual-history.js"></script>
   <script src="assets/references.js"></script>
 
   <!-- App Logic Script -->
@@ -1952,87 +1953,49 @@
     // Timeline Rendering
     function renderTimeline() {
       const flow = document.getElementById('timeline-flow-list');
-      
-      // Chronological sort
-      const sortedRefs = [...referenceData]
-        .filter(r => r.year && !isNaN(parseInt(refYear(r))))
-        .sort((a, b) => parseInt(refYear(a)) - parseInt(refYear(b)));
+      const historySources = window.intellectualHistorySources || [];
 
-      // Group into eras
-      const eras = {
-        "Foundational Roots (Pre-2000)": [],
-        "Digital Infrastructure & Curation (2000-2018)": [],
-        "Surveillance & Postdigital Eras (2019-2023)": [],
-        "Generative AI & Pedagogical Friction (2024+)": []
-      };
-
-      sortedRefs.forEach(ref => {
-        const year = parseInt(refYear(ref));
-        if (year < 2000) {
-          eras["Foundational Roots (Pre-2000)"].push(ref);
-        } else if (year >= 2000 && year <= 2018) {
-          eras["Digital Infrastructure & Curation (2000-2018)"].push(ref);
-        } else if (year >= 2019 && year <= 2023) {
-          eras["Surveillance & Postdigital Eras (2019-2023)"].push(ref);
-        } else {
-          eras["Generative AI & Pedagogical Friction (2024+)"].push(ref);
-        }
-      });
-
-      let html = '';
-      for (const [eraTitle, eraRefs] of Object.entries(eras)) {
-        if (eraRefs.length === 0) continue;
-        html += `<div class="timeline-group-header">${eraTitle}</div>`;
-        eraRefs.forEach(ref => {
-          const authorStr = formatAuthorName(ref.authors);
-          html += `
-            <div class="timeline-node" id="tl-node-${ref.id}" onclick="selectTimelineNode('${ref.id}')">
-              <div class="timeline-node-card">
-                <div class="timeline-node-header">
-                  <span class="timeline-node-title">${ref.title}</span>
-                  <span class="timeline-node-year">${ref.year}</span>
-                </div>
-                <div class="timeline-node-author">${authorStr}</div>
-                <div class="timeline-node-summary">${ref.summary}</div>
+      let html = '<div class="timeline-group-header">Proposal Defense Studio canonical sequence</div>';
+      historySources.forEach((source, index) => {
+        const sourceId = `history-source-${index}`;
+        html += `
+          <div class="timeline-node" id="${sourceId}" onclick="selectTimelineNode('${sourceId}')">
+            <div class="timeline-node-card">
+              <div class="timeline-node-header">
+                <span class="timeline-node-title">${source.title}</span>
+                <span class="timeline-node-year">${source.year}</span>
               </div>
+              <div class="timeline-node-author">${source.author} · ${source.cluster}</div>
+              <div class="timeline-node-summary">${source.role}</div>
             </div>
-          `;
-        });
-      }
+          </div>
+        `;
+      });
       flow.innerHTML = html;
-      
-      // Auto select first node in timeline
-      if (sortedRefs.length > 0) {
-        selectTimelineNode(sortedRefs[0].id);
+
+      if (historySources.length > 0) {
+        selectTimelineNode('history-source-0');
       }
     }
 
-    function selectTimelineNode(refId) {
+    function selectTimelineNode(sourceId) {
       document.querySelectorAll('.timeline-node').forEach(n => n.classList.remove('active-node'));
-      const node = document.getElementById(`tl-node-${refId}`);
+      const node = document.getElementById(sourceId);
       if (node) node.classList.add('active-node');
 
-      const ref = referenceData.find(r => r.id === refId);
-      if (!ref) return;
+      const sourceIndex = Number(sourceId.replace('history-source-', ''));
+      const source = (window.intellectualHistorySources || [])[sourceIndex];
+      if (!source) return;
 
-      document.getElementById('tl-title').textContent = ref.title;
-      document.getElementById('tl-author').textContent = formatAuthorName(ref.authors) + ` (${ref.year || 'n.d.'})`;
-      document.getElementById('tl-citation').innerHTML = `<em>APA Citation:</em><br />${ref.apa_citation}`;
-      document.getElementById('tl-summary').textContent = ref.summary || 'No summary loaded.';
-      
-      const quotesBox = document.getElementById('tl-quotes');
-      if (ref.quotes && ref.quotes.length > 0) {
-        quotesBox.innerHTML = `
-          <h4 style="font-family: var(--font-logo); font-size:0.95rem; margin-bottom: 8px;">Quotable Passages:</h4>
-          ${ref.quotes.map(q => `
-            <div class="card-evidence-box">
-              "${q.text}" (${q.page_or_location || 'p. X'})
-            </div>
-          `).join('')}
-        `;
-      } else {
-        quotesBox.innerHTML = '';
-      }
+      document.getElementById('tl-title').textContent = source.title;
+      document.getElementById('tl-author').textContent = `${source.author} (${source.year})`;
+      document.getElementById('tl-citation').innerHTML = `<em>${source.cluster}</em>`;
+      document.getElementById('tl-summary').innerHTML = `<strong>Role in intellectual history</strong><br />${source.role}`;
+      document.getElementById('tl-quotes').innerHTML = `
+        <div class="card-evidence-box"><strong>Bridge to the proposal</strong><br />${source.bridge}</div>
+        <div class="card-evidence-box"><strong>Verification status</strong><br />${source.status}. Check final APA 7 details against the proposal bibliography before publication as a reference list.</div>
+        <div class="card-evidence-box"><strong>Defense use</strong><br />Use this source to explain how the dissertation connects theory, learning, governance, and empirical design.</div>
+      `;
     }
 
     // Open/Close Drawers
