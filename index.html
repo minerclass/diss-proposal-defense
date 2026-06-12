@@ -31,17 +31,20 @@
         <button class="nav-item" type="button" data-view="history">
           <span aria-hidden="true">04</span> Intellectual History
         </button>
+        <button class="nav-item" type="button" data-view="challenges">
+          <span aria-hidden="true">05</span> Challenge Deck
+        </button>
         <button class="nav-item" type="button" data-view="committee">
-          <span aria-hidden="true">05</span> Committee Questions
+          <span aria-hidden="true">06</span> Committee Questions
         </button>
         <a class="nav-item nav-external" href="explorer/">
-          <span aria-hidden="true">06</span> Expanded Explorer
+          <span aria-hidden="true">07</span> Expanded Explorer
         </a>
         <a class="nav-item nav-external" href="intellectual-history/">
-          <span aria-hidden="true">07</span> Shared Intellectual History
+          <span aria-hidden="true">08</span> Shared Intellectual History
         </a>
         <a class="nav-item nav-external" href="https://minerclass.github.io/dissertation-proposal-studio/" target="_blank" rel="noopener">
-          <span aria-hidden="true">08</span> Pedagogical Friction Studio
+          <span aria-hidden="true">09</span> Pedagogical Friction Studio
         </a>
       </nav>
 
@@ -70,6 +73,7 @@
             <a href="https://docs.google.com/document/d/1ZtE5wDm3HvBcHt6LB7DyI1_oUZx5oc89CrKbRl_WAGY/edit?usp=sharing" target="_blank" rel="noopener">Qualifying paper</a>
             <a href="explorer/">Open expanded dissertation explorer</a>
             <a href="https://minerclass.github.io/dissertation-proposal-studio/" target="_blank" rel="noopener">Open Pedagogical Friction Studio</a>
+            <a href="methods-matrix/">Open one-page research matrix</a>
           </div>
         </div>
         <div class="top-actions" aria-label="Studio actions">
@@ -182,19 +186,20 @@
         <div class="toolbar panel">
           <div>
             <p class="section-label">Methods Map</p>
-            <h2 id="methods-title">Research questions, data sources, analysis, integration</h2>
+            <h2 id="methods-title">Research questions, participants, instruments, analysis, framework, integration</h2>
           </div>
-          <span class="status-chip caution">IRB-ready language needed</span>
+          <a href="methods-matrix/">Open printable one-page matrix</a>
         </div>
         <div class="method-matrix panel">
           <table>
             <thead>
               <tr>
-                <th>Question / strand</th>
-                <th>Data source</th>
+                <th>Research question</th>
+                <th>Participants / evidence</th>
+                <th>Instruments</th>
                 <th>Analysis</th>
+                <th>Framework dimensions</th>
                 <th>Integration point</th>
-                <th>Status</th>
               </tr>
             </thead>
             <tbody id="methodRows"></tbody>
@@ -243,6 +248,45 @@
         <div class="history-layout">
           <div class="timeline panel" id="historyTimeline" aria-label="Reference timeline"></div>
           <article class="source-detail panel" id="sourceDetail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-challenges" aria-labelledby="challenges-title">
+        <div class="toolbar panel">
+          <div>
+            <p class="section-label">Active Recall</p>
+            <h2 id="challenges-title">Challenge Deck</h2>
+          </div>
+          <span class="status-chip caution">Draft answers require source verification</span>
+        </div>
+        <div class="challenge-layout">
+          <aside class="panel challenge-categories" aria-label="Challenge categories" id="challengeCategories"></aside>
+          <article class="panel challenge-card" aria-live="polite">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label" id="challengeProgress"></p>
+                <h2 id="challengeHeading"></h2>
+              </div>
+            </div>
+            <div class="challenge-body">
+              <p class="challenge-question" id="challengeQuestion"></p>
+              <button class="primary-button" type="button" id="revealChallenge">Reveal rationale and response scaffold</button>
+              <div class="challenge-answer" id="challengeAnswer" hidden>
+                <section>
+                  <h3>Why the committee may ask</h3>
+                  <p id="challengeRationale"></p>
+                </section>
+                <section>
+                  <h3>Response scaffold</h3>
+                  <ul id="challengePoints"></ul>
+                </section>
+              </div>
+            </div>
+            <div class="challenge-controls">
+              <button class="icon-button" type="button" id="previousChallenge">Previous</button>
+              <button class="icon-button" type="button" id="nextChallenge">Next</button>
+            </div>
+          </article>
         </div>
       </section>
 

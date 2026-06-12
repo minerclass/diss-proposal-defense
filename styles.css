@@ -524,6 +524,7 @@ textarea {
 .claim-layout,
 .history-layout,
 .committee-layout,
+.challenge-layout,
 .methods-support-grid {
   display: grid;
   grid-template-columns: minmax(320px, .75fr) minmax(0, 1.25fr);
@@ -532,10 +533,106 @@ textarea {
   align-items: start;
 }
 
+.challenge-layout {
+  grid-template-columns: minmax(240px, .45fr) minmax(0, 1.55fr);
+}
+
 .claim-list,
 .timeline,
 .question-list {
   overflow: hidden;
+}
+
+.challenge-categories {
+  overflow: hidden;
+}
+
+.challenge-category {
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  background: #fff;
+  text-align: left;
+}
+
+.challenge-category:hover,
+.challenge-category.active {
+  background: var(--softer);
+  box-shadow: inset 4px 0 0 var(--teal);
+}
+
+.challenge-category strong,
+.challenge-category span {
+  display: block;
+}
+
+.challenge-category span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.challenge-body {
+  padding: 24px;
+}
+
+.challenge-question {
+  max-width: 900px;
+  margin: 0 0 22px;
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.18;
+}
+
+.challenge-answer {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.challenge-answer[hidden] {
+  display: none;
+}
+
+.challenge-answer section {
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--softer);
+}
+
+.challenge-answer h3 {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 21px;
+}
+
+.challenge-answer p,
+.challenge-answer li {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.challenge-answer li + li {
+  margin-top: 9px;
+}
+
+.challenge-answer strong {
+  color: var(--ink);
+}
+
+.challenge-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  border-top: 1px solid var(--line);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .45;
 }
 
 .claim-button,
@@ -739,6 +836,7 @@ td {
   .claim-layout,
   .history-layout,
   .committee-layout,
+  .challenge-layout,
   .methods-support-grid {
     grid-template-columns: 1fr;
   }
@@ -838,6 +936,7 @@ td {
   .claim-layout,
   .history-layout,
   .committee-layout,
+  .challenge-layout,
   .methods-support-grid {
     display: block;
   }

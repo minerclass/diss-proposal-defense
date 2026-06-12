@@ -48,7 +48,9 @@ For GitHub Pages:
 - **Defense Room:** core argument constellation and two-minute opening rehearsal.
 - **Claims Lab:** committee-facing claims with evidence anchors, likely challenges, and rehearsed answers.
 - **Methods Map:** RQ-to-data-source-to-analysis alignment plus sample-size and IRB readiness checks.
+- **One-Page Research Matrix:** print-ready alignment of the three primary research questions with participants, instruments, analysis, framework dimensions, and integration points at `methods-matrix/`.
 - **Intellectual History:** searchable source atlas connecting media ecology, learning science, algorithm studies, AI education, and methods.
+- **Challenge Deck:** active-recall rehearsal for adversarial theory, methodology, equity, positionality, and practice questions, with source-cautious response scaffolds.
 - **Committee Questions:** rehearsal prompts and a local scratchpad.
 
 ## Privacy Boundary

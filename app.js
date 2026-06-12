@@ -91,53 +91,28 @@ const claims = [
 
 const methodRows = [
   {
-    rq: "RQ1: How do K-12 classroom-facing educators understand and navigate the friction-reducing affordances of generative AI in academic work?",
-    data: "Classroom-facing educator interviews, card sort, and educator survey branch.",
-    analysis: "Thematic coding aligned to noetic, rhetorical, existential, and infrastructural friction.",
-    integration: "Primary qualitative findings anchor the joint displays and chapter narrative.",
-    status: "Core"
+    rq: "RQ1: How do K-12 classroom-facing educators understand and navigate the friction-reducing affordances of generative AI in academic work, particularly in relation to productive and exclusionary friction?",
+    participants: "Primary: classroom-facing educators. Supporting: adult university-student retrospective accounts and educator survey respondents.",
+    instruments: "Educator interview and card sort; student retrospective interview and card sort; dimension-organized educator survey.",
+    analysis: "Theoretical thematic analysis, card-sort reasoning, student temporal coding, descriptive/exploratory survey analysis, and negative-case analysis.",
+    dimensions: "Noetic, rhetorical, and existential; infrastructural as conditioning layer; productive/exclusionary friction and the threats of tertiary algorithmicity.",
+    integration: "RQ1 joint display compares classroom accounts, learner retrospectives, card-sort reasoning, and survey patterns."
   },
   {
-    rq: "RQ2: What institutional conditions, including policy, assessment design, professional development, and leadership disposition, enable or constrain friction-preserving pedagogy?",
-    data: "Administrator and leader interviews, institutional documents, leader survey branch, and secondary context such as NCES SPP.",
-    analysis: "Case-oriented document analysis and cross-role thematic comparison.",
-    integration: "Explains how teacher-level judgments meet district policy and governance conditions.",
-    status: "Core"
+    rq: "RQ2: What institutional conditions, including policy, assessment design, professional development, leadership disposition, and governance structures, enable or constrain friction-preserving pedagogy across classroom, building, and system levels?",
+    participants: "Primary: educators, building administrators, district/system leaders, and institutional documents. Contextual: educator survey, NCES, and RAND.",
+    instruments: "Role-specific interviews and card sorts; document analysis protocol; educator survey; secondary-data extraction and framework mapping.",
+    analysis: "Cross-role thematic comparison, document analysis, exploratory role comparisons, secondary-data trend/disaggregation analysis, and negative-case analysis.",
+    dimensions: "Infrastructural as primary; noetic, rhetorical, and existential as conditioned domains; policy, leadership, professional development, assessment, governance, and access.",
+    integration: "RQ2 joint display identifies enabling conditions, constraints, gaps, and equity patterns across sources."
   },
   {
-    rq: "RQ3: How can the Pedagogical Friction Framework inform AI policy development in K-12 contexts?",
-    data: "Synthesized findings across interviews, documents, and supporting quantitative evidence.",
-    analysis: "Framework application, cross-case synthesis, and meta-inference development.",
-    integration: "Produces the proposal's practitioner-scholar contribution.",
-    status: "Core"
-  },
-  {
-    rq: "SRQ: How do current university students who were in grades 10-12 when GenAI became publicly available describe changes in cognitive struggle, authorial ownership, and learning processes?",
-    data: "Retrospective university student accounts, if retained in the approved design.",
-    analysis: "Temporal qualitative analysis comparing pre-GenAI and post-GenAI schooling experiences.",
-    integration: "Illuminates the learner side of the transition without displacing the K-12 educator core.",
-    status: "Bound"
-  },
-  {
-    rq: "QRQ1-QRQ3: How do role, context, policy presence, professional development access, institutional support, and role differences relate to educator perceptions and pedagogical-friction domains?",
-    data: "Original K-12 educator survey.",
-    analysis: "Descriptive patterns, reliability checks, cautious domain-level comparisons; factor analysis only if N and item structure justify it.",
-    integration: "Contextualizes qualitative findings without overpowering the case study logic.",
-    status: "Revise"
-  },
-  {
-    rq: "QRQ4: At the national level, what is the magnitude of the gap between school neighborhood poverty categories in AI literacy instruction and written AI policy?",
-    data: "Secondary datasets such as the NCES School Pulse Panel, and related public datasets if approved.",
-    analysis: "Descriptive and disaggregated national context analysis.",
-    integration: "Tests whether institutional readiness and AI literacy opportunities are patterned by school context.",
-    status: "Revise"
-  },
-  {
-    rq: "SAQ: When AI systems respond as educators to the same protocol and instrument, how do their outputs differ structurally from human practitioner responses?",
-    data: "Bounded AI-generated responses to the same interview protocol and survey instrument.",
-    analysis: "Rhetorical and discourse comparison as artifact analysis, not human-subjects evidence.",
-    integration: "Illuminates rhetorical saturation, existential abstraction, and the limits of synthetic educator discourse.",
-    status: "Bound"
+    rq: "RQ3: How can educator and institutional sensemaking about pedagogical friction inform K-12 AI governance, assessment, and instructional design?",
+    participants: "Integrated findings and disconfirming evidence from all approved RQ1 and RQ2 sources; no additional participant group.",
+    instruments: "No new instrument. Uses the completed RQ1 and RQ2 protocols.",
+    analysis: "Cross-question synthesis, joint-display comparison, narrative weaving, framework application, meta-inference development, and review of divergence.",
+    dimensions: "All four friction dimensions, productive/exclusionary friction, threats of tertiary algorithmicity, and governance-assessment-instruction alignment.",
+    integration: "Cross-question meta-inference translates RQ1 experience and RQ2 institutional conditions into bounded implications."
   }
 ];
 
@@ -166,6 +141,114 @@ const questions = [
   ["How will you avoid overclaiming?", "By making supporting strands bounded, treating AI artifacts as illustrative discourse artifacts, and avoiding claims about findings before data collection."],
   ["What needs chair guidance?", "Question hierarchy, participant groups, sample targets, student strand status, AI comparison placement, instrument appendices, and proposal hearing expectations."]
 ];
+
+const challengeCategories = [
+  {
+    title: "Theory and Media Ecology",
+    challenges: [
+      {
+        title: "Default is not destiny",
+        question: "If tertiary algorithmicity describes an environment that defaults toward removing cognitive resistance, how does the study avoid technological determinism and preserve educator and learner agency?",
+        rationale: "Media ecology arguments can sound deterministic unless the defense clearly distinguishes environmental pressures from inevitable outcomes.",
+        points: [
+          "<strong>Distinguish default from destiny.</strong> Generative AI can make frictionless output the path of least resistance without making it the only possible path.",
+          "<strong>Use pedagogical friction as evidence of agency.</strong> Educators, learners, designers, and policymakers can intentionally preserve or restore interpretive labor.",
+          "<strong>Keep the empirical claim bounded.</strong> The study examines how educators and institutions make sense of these conditions; it does not claim that technology produces one universal effect."
+        ]
+      },
+      {
+        title: "Why extend Ong now?",
+        question: "Why use Ong's media ecology to explain generative AI, and how do you avoid stretching a framework developed before contemporary algorithmic systems beyond its useful limits?",
+        rationale: "The defense must show that Ong is an intentional theoretical choice, while also demonstrating where his framework requires extension.",
+        points: [
+          "<strong>Lead with fit.</strong> Ong is useful because the dissertation asks how communication technologies reorganize consciousness, authorship, interpretation, and learning.",
+          "<strong>Name the rupture.</strong> The qualifying paper identifies assumptions that no longer hold when algorithmic systems curate and generate symbolic content.",
+          "<strong>Present an extension, not a transplant.</strong> Algorithmic secondary orality and tertiary algorithmicity preserve Ong's media-ecological question while revising its account of authorship and circulation."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Methodology and Design",
+    challenges: [
+      {
+        title: "Bound the case",
+        question: "With several role groups and supporting evidence strands, what is inside the bounded case, and what remains contextual or supplemental?",
+        rationale: "A case study needs a clear boundary, especially when a qualitative-dominant mixed methods design includes multiple forms of evidence.",
+        points: [
+          "<strong>Name the case positively.</strong> The case is educator and institutional sensemaking about pedagogical friction under conditions of generative AI within the approved K-12 study boundary.",
+          "<strong>Treat role groups as vantage points.</strong> Classroom, building, and system-level perspectives illuminate the same bounded phenomenon while remaining available for careful within-case comparison.",
+          "<strong>Bound supporting strands.</strong> Survey, secondary, learner-retrospective, document, and artifact evidence should contextualize, challenge, or extend the core qualitative interpretation rather than become separate studies."
+        ]
+      },
+      {
+        title: "Reconcile pragmatism and constructivism",
+        question: "How does a pragmatist mixed methods rationale operate within a Merriam-aligned constructivist case study, and where does integration actually occur?",
+        rationale: "The committee may ask whether the philosophical and methodological layers reinforce one another or create an unresolved epistemological clash.",
+        points: [
+          "<strong>Separate the jobs.</strong> Pragmatism explains why multiple forms of evidence are useful for the research questions; constructivism guides how the bounded case and participant meaning-making are interpreted.",
+          "<strong>Keep QUAL primary.</strong> The qualitative case logic governs the study, while quantitative and supporting strands supply bounded context.",
+          "<strong>Name integration procedures.</strong> Joint displays, narrative weaving, divergence review, and cross-question meta-inferences connect the strands."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Pedagogical Friction",
+    challenges: [
+      {
+        title: "Make the dimensions observable",
+        question: "How will the study distinguish noetic, rhetorical, existential, and infrastructural friction in actual data rather than treating them as elegant but overlapping concepts?",
+        rationale: "A conceptual framework becomes empirically useful only when the proposal explains what counts as evidence and how ambiguity will be handled.",
+        points: [
+          "<strong>Noetic friction</strong> concerns the cognitive and interpretive work a task requires.",
+          "<strong>Rhetorical friction</strong> concerns dialogue, audience, explanation, and the testing of claims.",
+          "<strong>Existential friction</strong> concerns authorship, ownership, accountability, and whether a learner stands behind the work.",
+          "<strong>Infrastructural friction</strong> concerns the institutional conditions that enable or constrain classroom-level practice.",
+          "<strong>Allow overlap.</strong> Coding and memoing should document when an episode reasonably expresses more than one dimension."
+        ]
+      },
+      {
+        title: "Protect the equity distinction",
+        question: "How will the study keep productive friction from becoming a justification for barriers that are exclusionary for learners who need access, accommodation, or support?",
+        rationale: "The productive-versus-exclusionary distinction is central to the framework's ethical and practical credibility.",
+        points: [
+          "<strong>Do not presume difficulty is beneficial.</strong> The framework asks what work supports learning and what barriers merely block participation.",
+          "<strong>Study sensemaking and conditions.</strong> The research examines how educators distinguish these forms of friction and what institutional supports shape those judgments.",
+          "<strong>Treat misclassification as a finding.</strong> Tensions, disagreement, and disconfirming evidence are analytically important rather than problems to hide."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Positionality and Practice",
+    challenges: [
+      {
+        title: "Manage technoskeptical positionality",
+        question: "How will you prevent a technoskeptical practitioner stance from turning the analysis into confirmation of the cognitive costs you already expect to find?",
+        rationale: "A strong positionality defense names both the interpretive value of the researcher's experience and concrete safeguards against confirmation bias.",
+        points: [
+          "<strong>Define the stance carefully.</strong> Technoskepticism asks what is lost alongside what is gained; it is not an anti-technology conclusion.",
+          "<strong>Use visible safeguards.</strong> Reflexive memoing, transparent coding decisions, disconfirming-case analysis, and review of divergent evidence make the stance examinable.",
+          "<strong>Protect the recruitment boundary.</strong> Recruiting outside the researcher's supervisory context reduces authority and role-conflict risks."
+        ]
+      },
+      {
+        title: "Translate theory to governance",
+        question: "What would a friction-centered approach change in district AI governance, assessment, or instructional design without claiming findings before the study is complete?",
+        rationale: "An Ed.D. defense needs a credible route from theory and inquiry to practice while keeping implications proportionate to the eventual evidence.",
+        points: [
+          "<strong>Shift the governance question.</strong> Move beyond only asking whether use is allowed or compliant to asking what human learning work an activity should preserve.",
+          "<strong>Connect policy and assessment.</strong> Institutions may need to support process evidence, oral explanation, iterative drafts, and other demonstrations of reasoning.",
+          "<strong>Keep implications conditional.</strong> The dissertation can offer evidence-supported principles and bounded recommendations after analysis, not universal prescriptions in advance."
+        ]
+      }
+    ]
+  }
+];
+
+let currentChallengeCategory = 0;
+let currentChallenge = 0;
 
 function qs(selector) {
   return document.querySelector(selector);
@@ -220,11 +303,12 @@ function renderClaimDetail(claim) {
 function renderMethods() {
   qs("#methodRows").innerHTML = methodRows.map(row => `
     <tr>
-      <td data-label="Question / strand">${row.rq}</td>
-      <td data-label="Data source">${row.data}</td>
+      <td data-label="Research question">${row.rq}</td>
+      <td data-label="Participants / evidence">${row.participants}</td>
+      <td data-label="Instruments">${row.instruments}</td>
       <td data-label="Analysis">${row.analysis}</td>
+      <td data-label="Framework dimensions">${row.dimensions}</td>
       <td data-label="Integration point">${row.integration}</td>
-      <td data-label="Status"><span class="status-chip ${row.status === "Core" ? "verified" : "caution"}">${row.status}</span></td>
     </tr>
   `).join("");
 
@@ -288,6 +372,28 @@ function renderQuestions() {
   `).join("");
 }
 
+function renderChallengeDeck() {
+  const category = challengeCategories[currentChallengeCategory];
+  const challenge = category.challenges[currentChallenge];
+
+  qs("#challengeCategories").innerHTML = challengeCategories.map((item, index) => `
+    <button class="challenge-category ${index === currentChallengeCategory ? "active" : ""}" type="button" data-challenge-category="${index}">
+      <strong>${item.title}</strong>
+      <span>${item.challenges.length} challenges</span>
+    </button>
+  `).join("");
+
+  qs("#challengeProgress").textContent = `${category.title} | ${currentChallenge + 1} of ${category.challenges.length}`;
+  qs("#challengeHeading").textContent = challenge.title;
+  qs("#challengeQuestion").textContent = challenge.question;
+  qs("#challengeRationale").textContent = challenge.rationale;
+  qs("#challengePoints").innerHTML = challenge.points.map(point => `<li>${point}</li>`).join("");
+  qs("#challengeAnswer").hidden = true;
+  qs("#revealChallenge").textContent = "Reveal rationale and response scaffold";
+  qs("#previousChallenge").disabled = currentChallenge === 0;
+  qs("#nextChallenge").disabled = currentChallenge === category.challenges.length - 1;
+}
+
 function updateReadiness() {
   const savedChecks = JSON.parse(localStorage.getItem(storage.checks) || "{}");
   const completedChecks = Object.values(savedChecks).filter(Boolean).length;
@@ -335,6 +441,33 @@ function bindEvents() {
     qsa(".source-button").forEach(item => item.classList.remove("active"));
     button.classList.add("active");
     renderSourceDetail(sources.find(source => `${source.author}-${source.year}` === button.dataset.source));
+  });
+
+  qs("#challengeCategories").addEventListener("click", event => {
+    const button = event.target.closest("[data-challenge-category]");
+    if (!button) return;
+    currentChallengeCategory = Number(button.dataset.challengeCategory);
+    currentChallenge = 0;
+    renderChallengeDeck();
+  });
+
+  qs("#revealChallenge").addEventListener("click", () => {
+    const answer = qs("#challengeAnswer");
+    answer.hidden = !answer.hidden;
+    qs("#revealChallenge").textContent = answer.hidden ? "Reveal rationale and response scaffold" : "Hide response scaffold";
+  });
+
+  qs("#previousChallenge").addEventListener("click", () => {
+    if (currentChallenge === 0) return;
+    currentChallenge -= 1;
+    renderChallengeDeck();
+  });
+
+  qs("#nextChallenge").addEventListener("click", () => {
+    const finalIndex = challengeCategories[currentChallengeCategory].challenges.length - 1;
+    if (currentChallenge === finalIndex) return;
+    currentChallenge += 1;
+    renderChallengeDeck();
   });
 
   qs("#sampleChecks").addEventListener("change", event => {
@@ -407,6 +540,7 @@ function init() {
   renderClaims();
   renderMethods();
   renderHistory();
+  renderChallengeDeck();
   renderQuestions();
   bindEvents();
   updateReadiness();
