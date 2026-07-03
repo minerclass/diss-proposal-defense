@@ -27,7 +27,7 @@ const nodes = {
   },
   "Merriam-Aligned Case Study": {
     claim: "The design transitions from Stake's useful collective instrumental framing toward Merriam's constructivist educational case study approach as the methodological center.",
-    evidence: "Merriam aligns the bounded study with applied educational inquiry through particularistic focus, thick description, and heuristic understanding, while QUAL + quan integration supplies complementary structural context.",
+    evidence: "Merriam aligns the bounded study with interpretive educational inquiry through particularistic focus, thick description, and heuristic understanding, while QUAL + quan integration supplies complementary structural context.",
     risk: "The defense must explain what the bounded case is, how participant groups relate to it, and how mixed methods integration supports rather than overrides constructivist case interpretation."
   }
 };
@@ -73,10 +73,10 @@ const claims = [
     id: "method-fit",
     type: "method",
     title: "The methods design fits because the problem is interpretive and institutional.",
-    defense: "The proposal uses a convergent mixed methods design embedded within a constructivist educational case study. Stake supplies the initial collective instrumental logic; Merriam supplies the stronger methodological center for applied educational meaning-making.",
+    defense: "The proposal uses a convergent mixed methods design embedded within a constructivist educational case study. Stake supplies the initial collective instrumental logic; Merriam supplies the stronger methodological center for interpretive educational meaning-making.",
     evidence: "The Stake-to-Merriam transition clarifies that the study seeks a particularistic, descriptive, and heuristic understanding of a bounded educational phenomenon, while joint displays and meta-inferences integrate bounded quantitative context.",
     challenge: "Why move from Stake to Merriam?",
-    answer: "Stake helps explain why multiple participant groups illuminate a shared issue. Merriam more directly aligns the study with applied educational research, bounded-case definition, thick description, and participants' constructed meanings."
+    answer: "Stake helps explain why multiple participant groups illuminate a shared issue. Merriam more directly aligns the study with interpretive educational research, bounded-case definition, thick description, and participants' constructed meanings."
   },
   {
     id: "ethics-public-private",
