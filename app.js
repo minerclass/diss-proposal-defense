@@ -107,7 +107,7 @@ const methodRows = [
     integration: "RQ2 joint display identifies enabling conditions, constraints, gaps, and equity patterns across sources."
   },
   {
-    rq: "RQ3: How can educator and institutional sensemaking about pedagogical friction inform K-12 AI governance, assessment, and instructional design?",
+    rq: "RQ3: What framework-aligned policy language, assessment expectations, and instructional-design supports do K-12 educators and school-system leaders describe as necessary to preserve productive friction while reducing exclusionary friction under conditions of generative AI?",
     participants: "Integrated findings and disconfirming evidence from all approved RQ1 and RQ2 sources; no additional participant group.",
     instruments: "No new instrument. Uses the completed RQ1 and RQ2 protocols.",
     analysis: "Cross-question synthesis, joint-display comparison, narrative weaving, framework application, meta-inference development, and review of divergence.",
