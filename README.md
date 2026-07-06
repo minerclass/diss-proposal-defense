@@ -29,7 +29,7 @@ The Google Drive folder should be re-ingested when the Drive connector is availa
 
 ## Authoritative Google Docs
 
-- Chapters 1-3 proposal draft: <https://docs.google.com/document/d/1i8C03IS1cGkFbdFCDGZfwzQkMFggcA4eqG9WsAYMlPU/edit?usp=sharing>
+- Chapters 1-3 proposal draft: <https://docs.google.com/document/d/1Sy2CiYLFRq_s8d7Cbna3oEvFYaTQBdWGRoewDyP13CM/edit?usp=sharing>
 - Qualifying paper: <https://docs.google.com/document/d/1ZtE5wDm3HvBcHt6LB7DyI1_oUZx5oc89CrKbRl_WAGY/edit?usp=sharing>
 
 ## How to Use

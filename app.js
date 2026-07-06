@@ -73,10 +73,10 @@ const claims = [
     id: "method-fit",
     type: "method",
     title: "The methods design fits because the problem is interpretive and institutional.",
-    defense: "The proposal uses a convergent mixed methods design embedded within a constructivist educational case study. Stake supplies the initial collective instrumental logic; Merriam supplies the stronger methodological center for interpretive educational meaning-making.",
-    evidence: "The Stake-to-Merriam transition clarifies that the study seeks a particularistic, descriptive, and heuristic understanding of a bounded educational phenomenon, while joint displays and meta-inferences integrate bounded quantitative context.",
-    challenge: "Why move from Stake to Merriam?",
-    answer: "Stake helps explain why multiple participant groups illuminate a shared issue. Merriam more directly aligns the study with interpretive educational research, bounded-case definition, thick description, and participants' constructed meanings."
+    defense: "The proposal uses a qualitative-dominant convergent mixed methods design aligned with Merriam's interpretive case study tradition. The study explicitly rejects Stake's collective instrumental logic in favor of a single bounded case examined through role-based perspectives.",
+    evidence: "The study relies entirely on Merriam's tradition for a particularistic, descriptive, and heuristic understanding of a bounded educational phenomenon, while joint displays and meta-inferences integrate bounded quantitative context.",
+    challenge: "Why explicitly reject Stake's collective case study model?",
+    answer: "Stake's model implies multiple distinct cases. Merriam more directly aligns the study with an interpretive, single bounded-case definition where participants offer role-based perspectives on a shared phenomenon."
   },
   {
     id: "ethics-public-private",
