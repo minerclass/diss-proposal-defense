@@ -46,46 +46,71 @@ const claims = [
     id: "problem-polished-output",
     type: "problem",
     title: "Polished output is not reliable evidence of learning.",
-    defense: "The dissertation's central problem is the widening gap between product quality and evidence of interpretation, authorship, judgment, and durable understanding.",
-    evidence: "Grounded in the current Chapters 1-3 review and the practitioner-facing phrase, output looks like learning.",
-    challenge: "How will you avoid treating all AI-supported production as shallow?",
-    answer: "By distinguishing the appearance of learning from verified learning processes, and by asking educators how they preserve evidence of reasoning rather than assuming AI use is always harmful."
+    claim: "Polished output is not reliable evidence of learning under tertiary algorithmicity.",
+    warrant: "Generative AI can produce text that mimics the markers of deep cognitive processing without the student having performed that processing.",
+    literatureFunction: "Draws on learning sciences and cognitive psychology to distinguish performance from durable learning.",
+    empiricalStatus: "Proposal-stage conceptual claim.",
+    evidenceToBeCollected: "Interview accounts of how teachers assess understanding when products are unreliable.",
+    possibleDisconfirmation: "Educators might find that polished output remains a reliable proxy for learning if paired with AI-assisted reflection.",
+    consequenceIfUnsupported: "The premise of 'unproductive success' would be weakened, shifting the focus entirely to instructional design.",
+    relationshipToRQs: "RQ1 (educator sensemaking) and RQ2 (assessment policy).",
+    limitations: "Focuses on written/produced artifacts; may not apply to performance-based or oral assessments."
   },
   {
     id: "framework-friction",
     type: "framework",
     title: "Pedagogical friction is a design and governance concept.",
-    defense: "The framework helps educators decide which difficulties support learning and which difficulties should be removed for access, equity, or clarity.",
-    evidence: "The Phase 2 review names productive versus exclusionary friction as a key conceptual safeguard.",
-    challenge: "Is friction just a new name for productive struggle?",
-    answer: "It draws from productive struggle and desirable difficulties, but extends the idea into media ecology, AI governance, institutional policy, authorship, and professional judgment."
+    claim: "Pedagogical friction helps distinguish learning-supportive struggle from access barriers.",
+    warrant: "Not all difficulty is educationally productive; institutions must govern which forms of friction to preserve and which to reduce.",
+    literatureFunction: "Extends 'desirable difficulties' into media ecology, AI governance, and institutional policy.",
+    empiricalStatus: "Methodological assumption and proposed framework.",
+    evidenceToBeCollected: "Card sorts and interviews categorizing AI use as productive or exclusionary.",
+    possibleDisconfirmation: "Educators may reject the framework, finding it indistinguishable from existing concepts of productive struggle.",
+    consequenceIfUnsupported: "The framework would require significant revision or abandonment in favor of existing pedagogical terminology.",
+    relationshipToRQs: "RQ1, RQ2, and RQ3.",
+    limitations: "Friction is contextually situated; what is productive for one learner may be exclusionary for another."
   },
   {
     id: "framework-tertiary",
     type: "framework",
     title: "Tertiary algorithmicity gives the study a theoretical contribution.",
-    defense: "The dissertation is not only an AI adoption study. It studies how generative systems alter the conditions under which students and educators encounter language, authorship, and cognition.",
-    evidence: "The qualifying paper is treated as the theoretical spine, with Ong, McLuhan, Postman, Stiegler, algorithm studies, and learning science carrying the external literature base.",
-    challenge: "Will the committee see this as too theoretical for an Ed.D. proposal?",
-    answer: "The defense should present theory as the reason the practical problem matters, then immediately show how it maps to instruments, coding, and policy implications."
+    claim: "Generative systems alter the conditions under which students and educators encounter language and cognition.",
+    warrant: "Algorithmic generation shifts the primary site of meaning-making from human interpretation to machine-shaped conditions.",
+    literatureFunction: "Extends Ong's media ecology into the generative AI era.",
+    empiricalStatus: "Theoretical proposition providing structural context.",
+    evidenceToBeCollected: "No direct participant evidence; serves as the interpretive lens for educator sensemaking.",
+    possibleDisconfirmation: "Educators may experience GenAI merely as an advanced tool rather than an ecological shift.",
+    consequenceIfUnsupported: "The theoretical scope would narrow, making it an adoption study rather than a media-ecology study.",
+    relationshipToRQs: "Frames the structural context for RQ1 and RQ2.",
+    limitations: "May overstate historical discontinuity."
   },
   {
     id: "method-fit",
     type: "method",
     title: "The methods design fits because the problem is interpretive and institutional.",
-    defense: "The proposal uses a qualitative-dominant convergent mixed methods design aligned with Merriam's interpretive case study tradition. The study explicitly rejects Stake's collective instrumental logic in favor of a single bounded case examined through role-based perspectives.",
-    evidence: "The study relies entirely on Merriam's tradition for a particularistic, descriptive, and heuristic understanding of a bounded educational phenomenon, while joint displays and meta-inferences integrate bounded quantitative context.",
-    challenge: "Why explicitly reject Stake's collective case study model?",
-    answer: "Stake's model implies multiple distinct cases. Merriam more directly aligns the study with an interpretive, single bounded-case definition where participants offer role-based perspectives on a shared phenomenon."
+    claim: "A qualitative-dominant convergent mixed methods design embedded in a Merriam-aligned case study is appropriate.",
+    warrant: "The research problem requires particularistic, descriptive, and heuristic understanding of a bounded phenomenon, supplemented by quantitative context.",
+    literatureFunction: "Aligns with Merriam's constructivist case study tradition.",
+    empiricalStatus: "Methodological design.",
+    evidenceToBeCollected: "Interviews, card sorts, surveys, and documents across role groups.",
+    possibleDisconfirmation: "Divergence between qualitative and quantitative strands during integration.",
+    consequenceIfUnsupported: "Integration meta-inferences would highlight contradictions rather than convergence.",
+    relationshipToRQs: "Directly structures RQ3's integration logic.",
+    limitations: "Single bounded case limits generalizability."
   },
   {
     id: "ethics-public-private",
     type: "ethics",
     title: "GitHub Pages is for explanation and rehearsal, not participant data.",
-    defense: "The public site can support defense preparation, source mapping, and study explanation, but approved secure systems must handle consent, survey data, transcripts, and identifiable notes.",
-    evidence: "Repository review guardrails and Phase 2 planning both warn against storing human-subjects data in public GitHub infrastructure.",
-    challenge: "Can public research infrastructure bias participants?",
-    answer: "Participant-facing materials should be reviewed separately, use neutral language, and avoid leading claims. This defense studio is primarily researcher-facing unless later adapted after IRB review."
+    claim: "Public research infrastructure must be strictly separated from participant data collection and analysis.",
+    warrant: "Protecting participant confidentiality and institutional trust requires secure, IRB-approved environments.",
+    literatureFunction: "Aligns with human-subjects research ethics and data governance best practices.",
+    empiricalStatus: "Ethical and procedural boundary.",
+    evidenceToBeCollected: "Not applicable.",
+    possibleDisconfirmation: "Not applicable.",
+    consequenceIfUnsupported: "Breach of research ethics and IRB protocol.",
+    relationshipToRQs: "Governs data handling for all RQs.",
+    limitations: "Requires technical vigilance to prevent accidental data leakage."
   }
 ];
 
@@ -95,24 +120,27 @@ const methodRows = [
     participants: "Primary: classroom-facing educators. Supporting: adult university-student retrospective accounts and educator survey respondents.",
     instruments: "Educator interview and card sort; student retrospective interview and card sort; dimension-organized educator survey.",
     analysis: "Theoretical thematic analysis, card-sort reasoning, student temporal coding, descriptive/exploratory survey analysis, and negative-case analysis.",
-    dimensions: "Noetic, rhetorical, and existential; infrastructural as conditioning layer; productive/exclusionary friction and the threats of tertiary algorithmicity.",
-    integration: "RQ1 joint display compares classroom accounts, learner retrospectives, card-sort reasoning, and survey patterns."
+    constructs: "Noetic, rhetorical, and existential friction.",
+    integration: "RQ1 joint display compares classroom accounts, learner retrospectives, card-sort reasoning, and survey patterns.",
+    limitations: "Self-reported perceptions, not direct student learning outcomes."
   },
   {
     rq: "RQ2: What institutional conditions, including policy, assessment design, professional development, leadership disposition, and governance structures, enable or constrain friction-preserving pedagogy across classroom, building, and system levels?",
     participants: "Primary: educators, building administrators, district/system leaders, and institutional documents. Contextual: educator survey, NCES, and RAND.",
     instruments: "Role-specific interviews and card sorts; document analysis protocol; educator survey; secondary-data extraction and framework mapping.",
     analysis: "Cross-role thematic comparison, document analysis, exploratory role comparisons, secondary-data trend/disaggregation analysis, and negative-case analysis.",
-    dimensions: "Infrastructural as primary; noetic, rhetorical, and existential as conditioned domains; policy, leadership, professional development, assessment, governance, and access.",
-    integration: "RQ2 joint display identifies enabling conditions, constraints, gaps, and equity patterns across sources."
+    constructs: "Infrastructural friction as primary condition.",
+    integration: "RQ2 joint display identifies enabling conditions, constraints, gaps, and equity patterns across sources.",
+    limitations: "Policies and stated strategies may not reflect actual classroom implementation."
   },
   {
     rq: "RQ3: What framework-aligned policy language, assessment expectations, and instructional-design supports do K-12 educators and school-system leaders describe as necessary to preserve productive friction while reducing exclusionary friction under conditions of generative AI?",
     participants: "Integrated findings and disconfirming evidence from all approved RQ1 and RQ2 sources; no additional participant group.",
-    instruments: "No new instrument. Uses the completed RQ1 and RQ2 protocols.",
-    analysis: "Cross-question synthesis, joint-display comparison, narrative weaving, framework application, meta-inference development, and review of divergence.",
-    dimensions: "All four friction dimensions, productive/exclusionary friction, threats of tertiary algorithmicity, and governance-assessment-instruction alignment.",
-    integration: "Cross-question meta-inference translates RQ1 experience and RQ2 institutional conditions into bounded implications."
+    instruments: "Integrated RQ1 and RQ2 analysis, structural-context evidence.",
+    analysis: "Cross-role synthesis, joint-display comparison, narrative weaving, meta-inference development, and negative-case testing.",
+    constructs: "Productive vs. Exclusionary friction, threats of tertiary algorithmicity.",
+    integration: "Final case assertions translating experience and institutional conditions into bounded implications.",
+    limitations: "Contextual boundaries of a single bounded case study; findings are heuristic rather than universal."
   }
 ];
 
@@ -290,12 +318,16 @@ function renderClaimDetail(claim) {
   qs("#claimDetail").innerHTML = `
     <p class="section-label">${claim.type} claim</p>
     <h3>${claim.title}</h3>
-    <p>${claim.defense}</p>
     <div class="detail-grid">
-      <div class="detail-box"><strong>Evidence anchor</strong><p>${claim.evidence}</p></div>
-      <div class="detail-box"><strong>Likely challenge</strong><p>${claim.challenge}</p></div>
-      <div class="detail-box"><strong>Rehearsed answer</strong><p>${claim.answer}</p></div>
-      <div class="detail-box"><strong>Proposal move</strong><p>Show where this claim appears in Chapters 1-3 and how it maps to the methods matrix.</p></div>
+      <div class="detail-box"><strong>Claim</strong><p>${claim.claim}</p></div>
+      <div class="detail-box"><strong>Warrant</strong><p>${claim.warrant}</p></div>
+      <div class="detail-box"><strong>Literature Function</strong><p>${claim.literatureFunction}</p></div>
+      <div class="detail-box"><strong>Empirical Status</strong><p>${claim.empiricalStatus}</p></div>
+      <div class="detail-box"><strong>Evidence to be Collected</strong><p>${claim.evidenceToBeCollected}</p></div>
+      <div class="detail-box"><strong>Possible Disconfirmation</strong><p>${claim.possibleDisconfirmation}</p></div>
+      <div class="detail-box"><strong>Consequence if Unsupported</strong><p>${claim.consequenceIfUnsupported}</p></div>
+      <div class="detail-box"><strong>Relationship to RQs</strong><p>${claim.relationshipToRQs}</p></div>
+      <div class="detail-box" style="grid-column: 1 / -1;"><strong>Relevant Limitations</strong><p>${claim.limitations}</p></div>
     </div>
   `;
 }
@@ -307,8 +339,9 @@ function renderMethods() {
       <td data-label="Participants / evidence">${row.participants}</td>
       <td data-label="Instruments">${row.instruments}</td>
       <td data-label="Analysis">${row.analysis}</td>
-      <td data-label="Framework dimensions">${row.dimensions}</td>
+      <td data-label="Constructs">${row.constructs}</td>
       <td data-label="Integration point">${row.integration}</td>
+      <td data-label="Limitations">${row.limitations}</td>
     </tr>
   `).join("");
 

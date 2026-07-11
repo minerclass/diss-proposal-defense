@@ -26,7 +26,7 @@
           <span aria-hidden="true">02</span> Claims Lab
         </button>
         <button class="nav-item" type="button" data-view="methods">
-          <span aria-hidden="true">03</span> Methods Map
+          <span aria-hidden="true">03</span> Traceability Matrix
         </button>
         <button class="nav-item" type="button" data-view="history">
           <span aria-hidden="true">04</span> Intellectual History
@@ -34,17 +34,23 @@
         <button class="nav-item" type="button" data-view="challenges">
           <span aria-hidden="true">05</span> Challenge Deck
         </button>
-        <button class="nav-item" type="button" data-view="committee">
-          <span aria-hidden="true">06</span> Committee Questions
+        <button class="nav-item" type="button" data-view="boundaries">
+          <span aria-hidden="true">06</span> Boundaries & Revisions
         </button>
+        <button class="nav-item" type="button" data-view="committee">
+          <span aria-hidden="true">07</span> Committee Questions
+        </button>
+        <a class="nav-item nav-external" href="committee-brief.html" target="_blank">
+          <span aria-hidden="true">08</span> Printable Committee Brief
+        </a>
         <a class="nav-item nav-external" href="explorer/">
-          <span aria-hidden="true">07</span> Expanded Explorer
+          <span aria-hidden="true">09</span> Expanded Explorer
         </a>
         <a class="nav-item nav-external" href="intellectual-history/">
-          <span aria-hidden="true">08</span> Shared Intellectual History
+          <span aria-hidden="true">10</span> Shared Intellectual History
         </a>
         <a class="nav-item nav-external" href="https://minerclass.github.io/dissertation-proposal-studio/" target="_blank" rel="noopener">
-          <span aria-hidden="true">09</span> Pedagogical Friction Studio
+          <span aria-hidden="true">11</span> Pedagogical Friction Studio
         </a>
       </nav>
 
@@ -65,10 +71,11 @@
     <main class="workspace">
       <header class="topbar">
         <div>
-          <p class="section-label">Dissertation Proposal Preparation</p>
+          <p class="section-label">Dissertation Proposal Preparation <span class="status-chip caution" style="margin-left:8px; font-size:0.75rem;">Proposal stage; no dissertation participant findings</span></p>
           <h1>Pedagogical Friction in the Age of Generative AI</h1>
           <p class="lede">A convergent mixed methods study embedded in a Merriam-aligned constructivist case study of how K-12 educators understand, preserve, and govern the forms of difficulty that still matter for learning.</p>
           <div class="source-links" aria-label="Authoritative source documents">
+            <a href="../dissertationquestionsbeta/index.html" style="font-weight: 600;">← Ecosystem Hub</a>
             <a href="https://docs.google.com/document/d/1i8C03IS1cGkFbdFCDGZfwzQkMFggcA4eqG9WsAYMlPU/edit?usp=sharing" target="_blank" rel="noopener">Chapters 1-3 draft</a>
             <a href="https://docs.google.com/document/d/1ZtE5wDm3HvBcHt6LB7DyI1_oUZx5oc89CrKbRl_WAGY/edit?usp=sharing" target="_blank" rel="noopener">Qualifying paper</a>
             <a href="explorer/">Open expanded dissertation explorer</a>
@@ -180,17 +187,42 @@
           <div class="claim-list panel" id="claimList" aria-label="Claim list"></div>
           <article class="claim-detail panel" id="claimDetail" aria-live="polite"></article>
         </div>
+        <div class="panel" style="margin-top: 2rem;">
+          <div class="panel-heading compact">
+            <div>
+              <p class="section-label">Best Counterarguments</p>
+              <h2>The strongest reasons to doubt the study</h2>
+            </div>
+          </div>
+          <div class="detail-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="detail-box">
+              <strong>Technological Determinism</strong>
+              <p>Generative AI does not force noetic bypass; it merely offers the option. The framework may over-attribute causality to the technology rather than to the instructional design or student motivation.</p>
+              <em>Rebuttal: The study explicitly bounds causality by using "tertiary algorithmicity" as a conditioning environment, not a determinant force. It studies how educators navigate the affordances, not how the tool overrides agency.</em>
+            </div>
+            <div class="detail-box">
+              <strong>Romanticizing Difficulty</strong>
+              <p>The distinction between productive and exclusionary friction is subjective. What is called "productive" by an educator may still be an exclusionary barrier for neurodivergent or disabled learners.</p>
+              <em>Rebuttal: The framework centers this very tension. RQ1 investigates how educators make sense of this distinction, capturing when and how they get it wrong. The study is not prescribing universal difficulty, but examining the governance of difficulty.</em>
+            </div>
+            <div class="detail-box">
+              <strong>Unproductive Success is just traditional cheating</strong>
+              <p>We already have frameworks for academic dishonesty and shortcut-taking. "Pedagogical friction" is just new jargon for older problems.</p>
+              <em>Rebuttal: Academic integrity frameworks focus on the origin of the text. Friction focuses on the origin of the learning. GenAI produces text without the traditional markers of cheating (plagiarism), fundamentally severing the link between output quality and cognitive labor.</em>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="view" id="view-methods" aria-labelledby="methods-title">
         <div class="toolbar panel">
           <div>
-            <p class="section-label">Methods Map</p>
-            <h2 id="methods-title">Research questions, participants, instruments, analysis, framework, integration</h2>
+            <p class="section-label">Interactive Traceability Matrix</p>
+            <h2 id="methods-title">Linking research questions to evidence, analysis, and limitations</h2>
           </div>
           <a href="methods-matrix/">Open printable one-page matrix</a>
         </div>
-        <div class="method-matrix panel">
+        <div class="method-matrix panel" style="overflow-x: auto;">
           <table>
             <thead>
               <tr>
@@ -198,8 +230,9 @@
                 <th>Participants / evidence</th>
                 <th>Instruments</th>
                 <th>Analysis</th>
-                <th>Framework dimensions</th>
+                <th>Constructs</th>
                 <th>Integration point</th>
+                <th>Limitations</th>
               </tr>
             </thead>
             <tbody id="methodRows"></tbody>
@@ -223,6 +256,66 @@
               </div>
             </div>
             <div class="boundary-grid" id="boundaryGrid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-boundaries" aria-labelledby="boundaries-title">
+        <div class="toolbar panel">
+          <div>
+            <p class="section-label">Boundaries & Revisions</p>
+            <h2 id="boundaries-title">Scope limitations and framework evolution</h2>
+          </div>
+        </div>
+        <div class="methods-support-grid">
+          <section class="panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-label">Scope Limits</p>
+                <h2>What this study cannot claim</h2>
+              </div>
+            </div>
+            <ul class="check-list" style="list-style: none; padding-left: 0;">
+              <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <strong>It cannot evaluate student learning outcomes.</strong><br>
+                The study captures educator perceptions of learning and proxy measures (grades, artifacts, teacher judgment), not direct causal impacts on student cognition.
+              </li>
+              <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <strong>It cannot provide universal K-12 generalizations.</strong><br>
+                As a bounded case study, the findings provide heuristic transferability to similar contexts, not universal statistical generalizability.
+              </li>
+              <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <strong>It cannot assess long-term AI impacts.</strong><br>
+                The study captures a specific historical moment (the initial integration of generative systems). It does not predict how normalization will shape schooling a decade from now.
+              </li>
+              <li>
+                <strong>It cannot resolve the AI integrity debate.</strong><br>
+                The study deliberately pivots from integrity to learning process; it cannot definitively tell schools how to handle discipline or academic misconduct policies.
+              </li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-label">Framework Revision</p>
+                <h2>How the framework has evolved</h2>
+              </div>
+            </div>
+            <div class="timeline" style="margin-top: 1rem;">
+              <article class="boundary-item" style="margin-bottom: 1rem;">
+                <strong>From "Cognitive" to "Noetic"</strong>
+                <p>Initially framed as "cognitive friction", the terminology was updated to "noetic friction" to better align with the canonical framework and distinguish interpretive labor from raw mental effort.</p>
+              </article>
+              <article class="boundary-item" style="margin-bottom: 1rem;">
+                <strong>Addition of Infrastructural Dimension</strong>
+                <p>The original triad (Noetic, Rhetorical, Existential) lacked an account of the systemic conditions that enable them. The "Infrastructural" dimension was added to capture policy, assessment, and governance.</p>
+              </article>
+              <article class="boundary-item" style="margin-bottom: 1rem;">
+                <strong>Stake vs. Merriam</strong>
+                <p>The methodology transitioned from Stake's collective instrumental framing to Merriam's constructivist educational case study to better support the bounded, single-case nature of the inquiry.</p>
+              </article>
+            </div>
           </section>
         </div>
       </section>
