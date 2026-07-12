@@ -26,7 +26,7 @@ const nodes = {
     risk: "Public-facing GitHub materials must not collect participant data or expose district-sensitive material."
   },
   "Merriam-Aligned Case Study": {
-    claim: "The design transitions from Stake's useful collective instrumental framing toward Merriam's constructivist educational case study approach as the methodological center.",
+    claim: "The design transitions from Stake's superseded collective instrumental framing toward Merriam's constructivist educational case study approach as the methodological center.",
     evidence: "Merriam aligns the bounded study with interpretive educational inquiry through particularistic focus, thick description, and heuristic understanding, while QUAL + quan integration supplies complementary structural context.",
     risk: "The defense must explain what the bounded case is, how participant groups relate to it, and how mixed methods integration supports rather than overrides constructivist case interpretation."
   }

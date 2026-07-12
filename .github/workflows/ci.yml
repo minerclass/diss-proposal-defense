@@ -26,15 +26,23 @@ jobs:
           
           for file in $FILES; do
             for term in "${FORBIDDEN[@]}"; do
-              if grep -in "$term" "$file"; then
-                echo "::error file=$file::Forbidden term found: '$term'."
+              MATCHES=$(grep -in "$term" "$file" | grep -iv "terminology-allow" || true)
+              if [ -n "$MATCHES" ]; then
+                echo "$MATCHES" | while read -r line; do
+                  line_num=$(echo "$line" | cut -d: -f1)
+                  echo "::error file=$file,line=$line_num::Forbidden term found: '$term' (Rule: FORBIDDEN, Disposition: Blocked)"
+                done
                 ERRORS=$((ERRORS+1))
               fi
             done
             
             for term in "${REVIEW[@]}"; do
-              if grep -in "$term" "$file"; then
-                echo "::warning file=$file::Review required term found: '$term'. Check context/allow-list."
+              MATCHES=$(grep -in "$term" "$file" | grep -iv "terminology-allow" || true)
+              if [ -n "$MATCHES" ]; then
+                echo "$MATCHES" | while read -r line; do
+                  line_num=$(echo "$line" | cut -d: -f1)
+                  echo "::warning file=$file,line=$line_num::Review required term found: '$term' (Rule: REVIEW, Disposition: Warning - Check context/allow-list)"
+                done
                 WARNINGS=$((WARNINGS+1))
               fi
             done
