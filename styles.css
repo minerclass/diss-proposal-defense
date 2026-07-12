@@ -520,7 +520,7 @@ textarea {
 
 .status-chip.review,
 .status-chip.caution {
-  color: var(--gold);
+  color: #8c6014;
   border-color: rgba(169, 120, 29, .28);
   background: rgba(169, 120, 29, .09);
 }
