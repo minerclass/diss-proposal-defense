@@ -1235,14 +1235,14 @@
                 <button class="rq-btn active" onclick="simulateJoint('RQ1')">RQ1</button>
                 <button class="rq-btn" onclick="simulateJoint('RQ2')">RQ2</button>
                 <button class="rq-btn" onclick="simulateJoint('RQ3')">RQ3</button>
-                <button class="rq-btn" onclick="simulateJoint('SRQ')">SRQ</button>
-                <button class="rq-btn" onclick="simulateJoint('SAQ')">SAQ</button>
+                <button class="rq-btn" onclick="simulateJoint('SRQ')">Learner</button>
+                <button class="rq-btn" onclick="simulateJoint('SAQ')">AI Text</button>
               </div>
 
               <div class="joint-display-view">
                 <div style="font-weight: 700; color: var(--text-main);" id="joint-title">Research Question 1 (RQ1)</div>
                 <div class="text-muted" style="font-size:0.82rem; margin-top:4px;" id="joint-rq-desc">
-                  How do K-12 teachers understand and navigate the friction-reducing affordances of generative AI in academic work?
+                  How do classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students make sense of the ways generative AI changes the effort, dialogue, authorship, judgment, and participation involved in teaching and learning?
                 </div>
                 
                 <div class="joint-grid">
@@ -1313,7 +1313,7 @@
                   <p>School districts are rushing to adopt policy, purchase tools, or direct acceptable use for Generative AI, but their approaches are structured around a false framing. By viewing AI primarily as an academic integrity/cheating crisis, they miss the deeper threat: how friction-reducing technologies bypass the cognitive and interpretive struggles necessary to restructure human consciousness.</p>
                   
                   <h3>Purpose of the Study</h3>
-                  <p>This mixed-methods case study investigates how K–12 practitioners navigate, resist, or design for "pedagogical friction" in the writing process, capturing the perspectives of educators and retrospective accounts of university students who experienced the pre/post-GAI transition.</p>
+                  <p>This qualitative-dominant mixed methods study investigates how educators, school-system leaders, and adult university students make sense of pedagogical friction under generative AI.</p>
                 </div>
                 <div>
                   <h3>Significance & Researcher Positionality</h3>
@@ -1387,29 +1387,29 @@
 
           <div class="accordion-section">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-              Chapter 3: Case Study Methodology
+              Chapter 3: Constructivist Qualitative Methodology
             </div>
             <div class="accordion-body">
               <div class="grid-2">
                 <div>
-                  <h3>Pragmatist & Case Study Design</h3>
-                  <p>The proposed research is organized as a qualitative-dominant convergent mixed methods case study. The study relies entirely on <strong>Sharan Merriam's interpretive case study tradition (1998, 2016)</strong>, explicitly rejecting Stake's collective case design and Yin's postpositivist framing. The participant groups—classroom-facing educators, building-level administrators, and district or system-level leaders—serve as role-based perspectives within a single bounded case, rather than as separate cases.</p>
-                  <p>Merriam's approach is suited for interpretive educational settings because it is <strong>particularistic</strong> (focusing on the bounded phenomenon of pedagogical friction), <strong>descriptive</strong> (producing thick descriptions of educator sensemaking), and <strong>heuristic</strong> (illuminating how educators and institutions understand learning struggle).</p>
+                  <h3>Constructivist Qualitative-Dominant Design</h3>
+                  <p>The proposed research is organized as a qualitative-dominant convergent mixed methods study grounded in constructivist qualitative inquiry. Classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students contribute situated participant perspectives.</p>
+                  <p>Constructivism treats meaning as situated and co-constructed. Sensemaking directs attention to how participants notice cues in ambiguous conditions, interpret them through available frames, form plausible accounts, and act on those accounts.</p>
                   
                   <h3>Data Sources Overview</h3>
                   <ul>
-                    <li><strong>Proposed QUAL Practitioner:</strong> Merriam-style semi-structured interviews, a card sort protocol, and institutional document analysis.</li>
-                    <li><strong>Proposed QUAL Retrospective:</strong> University students recounting their high school transition (2022-2023) as a contextual supplement outside the bounded case.</li>
+                    <li><strong>Proposed qualitative core:</strong> Semi-structured interviews, card-sort explanations, institutional documents, and open-ended survey responses.</li>
+                    <li><strong>Adult university students:</strong> Participant accounts providing a learner perspective within RQ1 and the qualitative analysis.</li>
                     <li><strong>quan (Educator Survey):</strong> Exploratory survey of K-12 educators' perceived rigor vs. AI convenience.</li>
                     <li><strong>quan (Secondary Datasets):</strong> Analyzing NCES School Pulse Panel data and RAND American Educator Panels on national K-12 AI integration for structural context.</li>
-                    <li><strong>Supplementary AI comparison:</strong> Negative control comparing AI-generated artifacts to human practitioner responses to outline human-specific pedagogical reasoning (appendix-level only).</li>
+                    <li><strong>AI-generated text comparison:</strong> A distinct nonparticipant evidence source within the study, analyzed separately and never treated as human experience.</li>
                   </ul>
                 </div>
                 <div>
-                  <h3>Methodology Flowchart (Merriam-Aligned)</h3>
+                  <h3>Methodology Flowchart</h3>
                   <div class="joint-display-view" style="border-left: 3px solid var(--accent-emerald);">
-                    <strong>Phase 1: Bounded Case Ingestion</strong><br />
-                    • Establish boundaries of the case (K-12 writing instruction & teacher policy).<br />
+                    <strong>Phase 1: Concurrent Evidence Collection</strong><br />
+                    • Collect evidence according to the research questions and each source's analytic role.<br />
                     • Collect QUAL interviews & card sorts alongside quan surveys & NCES datasets.<br />
                     <br />
                     <strong>Phase 2: Inductive Interpretative Analysis</strong><br />
@@ -1595,36 +1595,36 @@
     const jointSimData = {
       'RQ1': {
         title: 'Research Question 1 (RQ1)',
-        desc: 'How do K-12 teachers understand and navigate the friction-reducing affordances of generative AI in academic work?',
-        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Merriam-style semi-structured interviews<br />• Card Sort protocol (constructivist categorization of struggle)<br />• Transcripts coded inductively for meaning-making and noetic, rhetorical, and existential friction.',
+        desc: 'How do classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students make sense of the ways generative AI changes the effort, dialogue, authorship, judgment, and participation involved in teaching and learning?',
+        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Semi-structured interviews with all participant groups<br />• Card-sort explanations, documents, and open-ended survey responses<br />• First-pass coding close to participant language and second-pass theme development.',
         quan: '<strong>PROPOSED quan STRAND (Context)</strong>• Original educator survey instrument<br />• Descriptive and conditional comparative analyses of AI use and perceived task rigor.',
         integration: '<strong>Mixed Methods Integration</strong>Joint display presenting side-by-side narrative findings matching survey frequencies with interview accounts of cognitive delegation vs. preservation.'
       },
       'RQ2': {
         title: 'Research Question 2 (RQ2)',
-        desc: 'What institutional conditions, such as policy, assessment design, professional development, and leadership disposition, enable or constrain friction-preserving pedagogy?',
+        desc: 'How do educators and school-system leaders make sense of and respond to the policy, professional-learning, assessment, access, and governance conditions surrounding generative AI?',
         qual: '<strong>QUAL STRAND (Evidence)</strong>• Semi-structured interviews with principals & district technology leaders<br />• Analysis of local district AI policy documents and student handbooks.',
         quan: '<strong>quan STRAND (Context)</strong>• NCES School Pulse Panel data (December 2024 release)<br />• Frequency distribution of policy adoption types across K-12 demographics.',
         integration: '<strong>Mixed Methods Integration</strong>Bivariate mapping of policy type (restrictive/open) against teachers\' reporting of professional agency in design.'
       },
       'RQ3': {
         title: 'Research Question 3 (RQ3)',
-        desc: 'What framework-aligned policy language, assessment expectations, and instructional-design supports do educators and leaders describe as necessary to preserve productive and reduce exclusionary friction?',
+        desc: 'What language, assessment expectations, instructional practices, professional supports, and leadership approaches do participants identify as important for preserving forms of friction that support learning while reducing unnecessary barriers?',
         qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Leader interviews and institutional document analysis<br />• Textual analysis of policy drafts using the friction framework.',
         quan: '<strong>quan STRAND (Context)</strong>• Original survey feedback on policy effectiveness metrics from district leaders.',
         integration: '<strong>Mixed Methods Integration</strong>Policy drafting crosswalk mapping specific policy clauses directly to the noetic, rhetorical, existential, and infrastructural dimensions.'
       },
       'SRQ': {
-        title: 'Supplementary Retrospective Question (SRQ)',
-        desc: 'How do current university students describe changes in their experiences of cognitive struggle, authorial ownership, and learning processes across the pre-GenAI and post-GenAI transition?',
+        title: 'Adult University-Student Perspective',
+        desc: 'Adult university students are included as participants in RQ1 and provide a learner perspective on teaching and learning under generative AI.',
         qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Retrospective interviews with university students who transitioned during 2022-2023<br />• Narrative reflection on writing and cognitive delegation.',
-        quan: '<strong>quan STRAND (Context)</strong>• Student survey ratings of perceived cognitive effort, ownership, and learning depth.',
+        quan: '<strong>quan STRAND (Context)</strong>• Supporting survey context where applicable.',
         integration: '<strong>Mixed Methods Integration</strong>Profile analysis mapping students\' narrative transition categories against their quantitative ratings of authorial ownership.'
       },
       'SAQ': {
-        title: 'Supplementary Agentic Question (SAQ)',
-        desc: 'When agentic AI systems are prompted to respond as educators, how do their outputs differ structurally from human practitioner responses?',
-        qual: '<strong>QUAL STRAND (Evidence)</strong>• Structural coding analysis comparing AI-simulated teacher responses to human Merriam-style interviews.',
+        title: 'AI-Generated Text Status',
+        desc: 'AI-generated texts are analyzed as a distinct nonparticipant comparison source within the study.',
+        qual: '<strong>QUAL STRAND (Evidence)</strong>• Separate analysis comparing AI-generated texts with participant evidence without treating the texts as human experience.',
         quan: '<strong>quan STRAND (Context)</strong>• Structural coding analysis (counts of local context mentions, ambivalent phrases, and uncertainty flags).',
         integration: '<strong>Mixed Methods Integration</strong>Lexical and structural joint display comparing counts and kinds of pedagogical reasoning indicators between AI outputs and human practitioners.'
       }
@@ -1659,18 +1659,18 @@
       {
         lens: 'Methodology Transition',
         index: 'Card 4 of 7',
-        question: 'Why did you transition your case study methodology?',
+        question: 'Why use constructivist qualitative inquiry without anchoring the study in one historical tradition?',
         answerTitle: 'Core Argument: Interpretive Educational Constructivism',
-        answerBody: '<p>The study relies entirely on Sharan Merriam\'s interpretive case study tradition (1998), explicitly rejecting Stake\'s collective case design and Yin\'s postpositivist framing. The three participant groups are treated as role-based perspectives within a single bounded case, rather than as separate cases. Merriam emphasizes case studies as <strong>particularistic</strong> (focusing on an educational phenomenon), <strong>descriptive</strong> (developing thick qualitative accounts), and <strong>heuristic</strong> (deepening understanding of learning processes).</p>',
-        evidence: '"The proposed study uses a convergent mixed methods design embedded within a qualitative case study, transitioning away from the superseded Stake collective instrumental framing to Merriam\'s (2009/2016) particularistic, descriptive, and heuristic framework." (Chapter 3, Research Design)'
+        answerBody: '<p>The research questions ask how participants make meaning under ambiguous educational conditions. Constructivist qualitative inquiry provides the interpretive stance, sensemaking guides the questions, and thematic analysis develops patterns across accounts without requiring an unnecessary case label.</p>',
+        evidence: '"The proposed study uses a qualitative-dominant convergent mixed methods design grounded in constructivist qualitative inquiry." (Chapter 3, Research Design)'
       },
       {
         lens: 'Methodology & Design',
         index: 'Card 5 of 7',
         question: 'Why did you choose a convergent mixed methods design? How do the strands integrate?',
         answerTitle: 'Core Argument: Convergent parallel QUAL + quan Integration',
-        answerBody: '<p>Pragmatism dictates that research questions drive method selection. The QUAL strand (Merriam-style interviews, card sorts) uncovers the lived experience of teachers and students in a bounded system. The quan strand (NCES/RAND secondary data, original survey) establishes structural context. They integrate through Joint Displays matching QUAL descriptive themes with quan statistics.</p>',
-        evidence: '"A convergent mixed methods design embeds quantitative context within a qualitative case study, integrating through joint displays organized by research question." (Chapter 3, Research Design)'
+        answerBody: '<p>The research questions drive method selection. Interviews and other open-ended evidence address participant meaning directly. Closed-ended survey items and NCES/RAND data provide supporting context. Integration examines convergence, divergence, expansion, and silence without using quantitative patterns to validate participant meaning.</p>',
+        evidence: '"Qualitative and quantitative evidence retain distinct purposes and are brought together through displays organized by research question." (Chapter 3, Research Design)'
       },
       {
         lens: 'Committee Focus (Dr. Smith)',
