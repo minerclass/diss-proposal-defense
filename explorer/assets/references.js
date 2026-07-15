@@ -1,4 +1,4 @@
-﻿window.referenceData = [
+window.referenceData = [
     {
         "id":  "981630bc4567ce9e",
         "title":  "Qualifying Paper   Initial Review (1)",
@@ -3695,77 +3695,4 @@
                    ],
         "verification_status":  "Needs verification",
         "review_status":  "Drafted"
-    },
-    {
-        "id":  "ad01904b7caf26d7",
-        "title":  "Case Study Research and Applications",
-        "authors":  null,
-        "year":  "",
-        "source_type":  "other",
-        "journal_or_source":  "",
-        "publisher":  "",
-        "doi":  "",
-        "apa_citation":  "(n.d.). Case Study Research and Applications.",
-        "qualifying_paper_section":  "Section II: Ong\u0027s media ecology and assumptions",
-        "dissertation_role":  "methods support",
-        "theory_tags":  [
-                            "Ong/media ecology"
-                        ],
-        "method_tags":  [
-                            "methods/mixed methods"
-                        ],
-        "equity_tags":  [
-
-                        ],
-        "pedagogical_friction_tags":  [
-                                          "existential friction",
-                                          "rhetorical friction"
-                                      ],
-        "summary":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
-        "relevance_note":  "Drafted for dissertation use as methods support. Most aligned with Ong/media ecology, methods/mixed methods and Section II: Ong\u0027s media ecology and assumptions.",
-        "key_highlights":  [
-
-                           ],
-        "quotes":  [
-
-                   ],
-        "verification_status":  "Needs verification",
-        "review_status":  "Drafted"
-    },
-    {
-        "id":  "908f36780e648e6c",
-        "title":  "Qualitative Research: A Guide to Design and Implementation (4th ed.)",
-        "authors":  null,
-        "year":  "2015",
-        "source_type":  "book",
-        "journal_or_source":  "",
-        "publisher":  "Jossey-Bass",
-        "doi":  "",
-        "apa_citation":  "Merriam, S. B., \u0026 Tisdell, E. J. (2015). *Qualitative research: A guide to design and implementation* (4th ed.). Jossey-Bass.",
-        "qualifying_paper_section":  "Section V: pedagogical friction framework",
-        "dissertation_role":  "methods support",
-        "theory_tags":  [
-                            "learning sciences",
-                            "pedagogical friction"
-                        ],
-        "method_tags":  [
-                            "methods/mixed methods"
-                        ],
-        "equity_tags":  [
-
-                        ],
-        "pedagogical_friction_tags":  [
-                                          "infrastructural friction"
-                                      ],
-        "summary":  "Provides the core qualitative case study methodology framework, enabling an interpretive analysis of teachers\u0027 and students\u0027 experiences of learning struggle in K-12 classrooms. Supports the transition away from Yin\u0027s positivism to a constructivist case study model.",
-        "relevance_note":  "Provides the core qualitative case study methodology framework, enabling an interpretive analysis of teachers\u0027 and students\u0027 experiences of learning struggle in K-12 classrooms. Supports the transition away from Yin\u0027s positivism to a constructivist case study model.",
-        "key_highlights":  [
-
-                           ],
-        "quotes":  [
-
-                   ],
-        "verification_status":  "Verified",
-        "review_status":  "Verified"
-    }
-];
+    }];

@@ -25,10 +25,10 @@ const nodes = {
     evidence: "The proposal is situated in Curriculum, Advocacy, and Policy and focuses on institutional conditions that enable or constrain friction-preserving pedagogy.",
     risk: "Public-facing GitHub materials must not collect participant data or expose district-sensitive material."
   },
-  "Merriam-Aligned Case Study": {
-    claim: "The design transitions from Stake's superseded collective instrumental framing toward Merriam's constructivist educational case study approach as the methodological center.",
-    evidence: "Merriam aligns the bounded study with interpretive educational inquiry through particularistic focus, thick description, and heuristic understanding, while QUAL + quan integration supplies complementary structural context.",
-    risk: "The defense must explain what the bounded case is, how participant groups relate to it, and how mixed methods integration supports rather than overrides constructivist case interpretation."
+  "Constructivist Qualitative Inquiry": {
+    claim: "The design is grounded in constructivist qualitative inquiry, with sensemaking connecting ambiguous educational conditions to the cues, frames, accounts, and actions participants describe.",
+    evidence: "Constructivism treats meaning as situated and co-constructed, while the qualitative-dominant mixed methods design keeps open-ended evidence central and uses quantitative evidence as supporting context.",
+    risk: "The defense must explain how constructivism drives interpretation, how all participant groups relate to the questions, and how quantitative evidence supports rather than validates qualitative meaning."
   }
 };
 
@@ -36,8 +36,8 @@ const defenseSequence = [
   ["Purpose", "Investigate how K-12 educators respond to friction-reducing GenAI affordances, what institutional conditions shape that work, and how the framework can inform AI policy."],
   ["Problem", "Generative AI can make schoolwork appear successful while bypassing interpretive labor, authorial ownership, and durable learning processes."],
   ["Framework", "Pedagogical friction responds to noetic displacement, rhetorical saturation, and existential abstraction without romanticizing exclusionary difficulty."],
-  ["Design", "A convergent QUAL + quan design embedded in a Merriam-aligned constructivist case study can examine professional reasoning, institutional conditions, learner retrospection, and bounded quantitative context."],
-  ["Boundary", "The student strand, quantitative strands, secondary datasets, and AI artifact strand support the core qualitative questions rather than becoming separate dissertations."],
+  ["Design", "A qualitative-dominant convergent QUAL + quan design grounded in constructivism can examine professional reasoning, institutional conditions, learner experience, and supporting quantitative context."],
+  ["Boundary", "Adult university students are participants. Quantitative sources provide supporting context, and AI-generated texts remain a distinct nonparticipant comparison source."],
   ["Contribution", "The study can inform K-12 AI policy, assessment, instructional design, and media-ecological scholarship while avoiding claims before data collection."]
 ];
 
@@ -88,15 +88,15 @@ const claims = [
     id: "method-fit",
     type: "method",
     title: "The methods design fits because the problem is interpretive and institutional.",
-    claim: "A qualitative-dominant convergent mixed methods design embedded in a Merriam-aligned case study is appropriate.",
+    claim: "A qualitative-dominant convergent mixed methods design grounded in constructivist qualitative inquiry is appropriate.",
     warrant: "The research problem requires particularistic, descriptive, and heuristic understanding of a bounded phenomenon, supplemented by quantitative context.",
-    literatureFunction: "Aligns with Merriam's constructivist case study tradition.",
+    literatureFunction: "Aligns constructivist interpretation, sensemaking questions, and thematic analysis.",
     empiricalStatus: "Methodological design.",
     evidenceToBeCollected: "Interviews, card sorts, surveys, and documents across role groups.",
     possibleDisconfirmation: "Divergence between qualitative and quantitative strands during integration.",
     consequenceIfUnsupported: "Integration meta-inferences would highlight contradictions rather than convergence.",
     relationshipToRQs: "Directly structures RQ3's integration logic.",
-    limitations: "Single bounded case limits generalizability."
+    limitations: "Situated interpretive evidence limits universal generalizability."
   },
   {
     id: "ethics-public-private",
@@ -140,7 +140,7 @@ const methodRows = [
     analysis: "Cross-role synthesis, joint-display comparison, narrative weaving, meta-inference development, and negative-case testing.",
     constructs: "Productive vs. Exclusionary friction, threats of tertiary algorithmicity.",
     integration: "Final case assertions translating experience and institutional conditions into bounded implications.",
-    limitations: "Contextual boundaries of a single bounded case study; findings are heuristic rather than universal."
+    limitations: "Situated interpretive evidence supports reasoned transfer rather than universal claims."
   }
 ];
 
@@ -148,7 +148,7 @@ const sampleChecks = [
   "Set one target survey range and remove conflicting N values.",
   "Define minimum useful N, target N, and stretch N.",
   "Make exploratory factor analysis conditional rather than promised.",
-  "Clarify whether university student retrospectives are main, supporting, or future-study material.",
+  "Explain clearly that adult university students are participants included in RQ1 and qualitative analysis.",
   "List inclusion criteria and recruitment channels by participant group.",
   "Move all instruments into appendices or separate IRB attachments once chair preference is known."
 ];
@@ -164,7 +164,7 @@ const sources = window.intellectualHistorySources;
 
 const questions = [
   ["Why this study now?", "Because GenAI changes not only what students can produce, but how schools infer learning, authorship, judgment, and effort from educational artifacts."],
-  ["What is the unit of analysis?", "The study should name the bounded K-12 case logic clearly: educator reasoning, institutional conditions, and friction-preserving practice within selected K-12 contexts."],
+  ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
   ["How will you avoid overclaiming?", "By making supporting strands bounded, treating AI artifacts as illustrative discourse artifacts, and avoiding claims about findings before data collection."],
   ["What needs chair guidance?", "Question hierarchy, participant groups, sample targets, student strand status, AI comparison placement, instrument appendices, and proposal hearing expectations."]
@@ -201,20 +201,20 @@ const challengeCategories = [
     challenges: [
       {
         title: "Bound the case",
-        question: "With several role groups and supporting evidence strands, what is inside the bounded case, and what remains contextual or supplemental?",
-        rationale: "A case study needs a clear boundary, especially when a qualitative-dominant mixed methods design includes multiple forms of evidence.",
+        question: "With several role groups and evidence sources, what is part of the qualitative core, what provides supporting context, and what remains distinct nonparticipant evidence?",
+        rationale: "A qualitative-dominant mixed methods study needs a clear evidence hierarchy so each source retains an appropriate interpretive status.",
         points: [
           "<strong>Name the case positively.</strong> The case is educator and institutional sensemaking about pedagogical friction under conditions of generative AI within the approved K-12 study boundary.",
-          "<strong>Treat role groups as vantage points.</strong> Classroom, building, and system-level perspectives illuminate the same bounded phenomenon while remaining available for careful within-case comparison.",
+          "<strong>Treat role groups as situated perspectives.</strong> Classroom, building, system-level, and adult university-student accounts illuminate the questions from different educational positions and remain available for careful comparison.",
           "<strong>Bound supporting strands.</strong> Survey, secondary, learner-retrospective, document, and artifact evidence should contextualize, challenge, or extend the core qualitative interpretation rather than become separate studies."
         ]
       },
       {
         title: "Reconcile pragmatism and constructivism",
-        question: "How does a pragmatist mixed methods rationale operate within a Merriam-aligned constructivist case study, and where does integration actually occur?",
+        question: "How does mixed methods support a constructivist qualitative inquiry, and where does integration occur?",
         rationale: "The committee may ask whether the philosophical and methodological layers reinforce one another or create an unresolved epistemological clash.",
         points: [
-          "<strong>Separate the jobs.</strong> Pragmatism explains why multiple forms of evidence are useful for the research questions; constructivism guides how the bounded case and participant meaning-making are interpreted.",
+          "<strong>Separate the jobs.</strong> Constructivism guides how participant meaning is interpreted. Open-ended evidence addresses that meaning directly, while quantitative evidence provides descriptive and structural context.",
           "<strong>Keep QUAL primary.</strong> The qualitative case logic governs the study, while quantitative and supporting strands supply bounded context.",
           "<strong>Name integration procedures.</strong> Joint displays, narrative weaving, divergence review, and cross-question meta-inferences connect the strands."
         ]
@@ -512,7 +512,7 @@ function bindEvents() {
     updateReadiness();
   });
 
-  qs("#openingAnswer").value = localStorage.getItem(storage.opening) || "This dissertation asks how K-12 educators can preserve the forms of interpretive labor that still matter for learning when generative AI can produce polished academic artifacts quickly. The study is necessary because schools need more than acceptable-use rules; they need a way to distinguish productive friction from barriers that should be removed. A convergent mixed methods design embedded in a Merriam-aligned constructivist case study fits because the problem is interpretive, institutional, educational, and policy-facing.";
+  qs("#openingAnswer").value = localStorage.getItem(storage.opening) || "This dissertation asks how educators, school-system leaders, and adult university students make sense of the forms of interpretive labor that still matter for learning when generative AI can produce polished academic artifacts quickly. Schools need more than acceptable-use rules; they need a way to distinguish productive friction from barriers that should be removed. A qualitative-dominant convergent mixed methods design grounded in constructivism fits because the problem is interpretive, institutional, educational, and policy-facing.";
   qs("#openingAnswer").addEventListener("input", event => localStorage.setItem(storage.opening, event.target.value));
 
   qs("#committeeNotes").value = localStorage.getItem(storage.committee) || [
@@ -520,7 +520,7 @@ function bindEvents() {
     "- Should RQ1-RQ3 be the only core question set?",
     "- Should the student retrospective strand remain in the proposal?",
     "- What target survey N is acceptable?",
-    "- Where should the AI artifact comparison live?",
+    "- How will AI-generated texts remain distinct from participant evidence?",
     "- Which appendices or IRB attachments should hold instruments?"
   ].join("\n");
   qs("#committeeNotes").addEventListener("input", event => localStorage.setItem(storage.committee, event.target.value));
