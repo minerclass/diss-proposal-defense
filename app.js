@@ -89,7 +89,7 @@ const claims = [
     type: "method",
     title: "The methods design fits because the problem is interpretive and institutional.",
     claim: "A qualitative-dominant convergent mixed methods design grounded in constructivist qualitative inquiry is appropriate.",
-    warrant: "The research problem requires particularistic, descriptive, and heuristic understanding of a bounded phenomenon, supplemented by quantitative context.",
+    warrant: "The research problem asks how situated participants interpret ambiguous educational conditions. Qualitative evidence addresses that meaning directly, while quantitative evidence provides supporting context.",
     literatureFunction: "Aligns constructivist interpretation, sensemaking questions, and thematic analysis.",
     empiricalStatus: "Methodological design.",
     evidenceToBeCollected: "Interviews, card sorts, surveys, and documents across role groups.",
@@ -116,30 +116,30 @@ const claims = [
 
 const methodRows = [
   {
-    rq: "RQ1: How do K-12 classroom-facing educators understand and navigate the friction-reducing affordances of generative AI in academic work, particularly in relation to productive and exclusionary friction?",
-    participants: "Primary: classroom-facing educators. Supporting: adult university-student retrospective accounts and educator survey respondents.",
-    instruments: "Educator interview and card sort; student retrospective interview and card sort; dimension-organized educator survey.",
-    analysis: "Theoretical thematic analysis, card-sort reasoning, student temporal coding, descriptive/exploratory survey analysis, and negative-case analysis.",
+    rq: "RQ1: How do classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students make sense of the ways generative AI changes the effort, dialogue, authorship, judgment, and participation involved in teaching and learning?",
+    participants: "Classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students.",
+    instruments: "Role-specific interviews and card sorts; educator survey; institutional documents; and adult university-student retrospective interviews and card sorts.",
+    analysis: "First-cycle coding close to participant language, second-cycle theme development, card-sort reasoning, descriptive and exploratory survey analysis, and attention to discrepant accounts.",
     constructs: "Noetic, rhetorical, and existential friction.",
     integration: "RQ1 joint display compares classroom accounts, learner retrospectives, card-sort reasoning, and survey patterns.",
     limitations: "Self-reported perceptions, not direct student learning outcomes."
   },
   {
-    rq: "RQ2: What institutional conditions, including policy, assessment design, professional development, leadership disposition, and governance structures, enable or constrain friction-preserving pedagogy across classroom, building, and system levels?",
-    participants: "Primary: educators, building administrators, district/system leaders, and institutional documents. Contextual: educator survey, NCES, and RAND.",
+    rq: "RQ2: How do educators and school-system leaders make sense of and respond to the policy, professional-learning, assessment, access, and governance conditions surrounding generative AI?",
+    participants: "Educators, building-level administrators, and district or system-level leaders. Institutional documents, educator survey responses, NCES, and RAND provide additional evidence and context.",
     instruments: "Role-specific interviews and card sorts; document analysis protocol; educator survey; secondary-data extraction and framework mapping.",
-    analysis: "Cross-role thematic comparison, document analysis, exploratory role comparisons, secondary-data trend/disaggregation analysis, and negative-case analysis.",
+    analysis: "Cross-role thematic comparison, document analysis, exploratory role comparisons, secondary-data trend/disaggregation analysis, and attention to discrepant accounts.",
     constructs: "Infrastructural friction as primary condition.",
     integration: "RQ2 joint display identifies enabling conditions, constraints, gaps, and equity patterns across sources.",
     limitations: "Policies and stated strategies may not reflect actual classroom implementation."
   },
   {
-    rq: "RQ3: What framework-aligned policy language, assessment expectations, and instructional-design supports do K-12 educators and school-system leaders describe as necessary to preserve productive friction while reducing exclusionary friction under conditions of generative AI?",
-    participants: "Integrated findings and disconfirming evidence from all approved RQ1 and RQ2 sources; no additional participant group.",
+    rq: "RQ3: What language, assessment expectations, instructional practices, professional supports, and leadership approaches do educators and school-system leaders identify as important for preserving forms of friction that support learning while reducing unnecessary barriers?",
+    participants: "Educator and school-system leader evidence integrated across the approved RQ1 and RQ2 sources; no additional participant group.",
     instruments: "Integrated RQ1 and RQ2 analysis, structural-context evidence.",
-    analysis: "Cross-role synthesis, joint-display comparison, narrative weaving, meta-inference development, and negative-case testing.",
+    analysis: "Cross-role synthesis, joint-display comparison, narrative weaving, meta-inference development, and attention to discrepant accounts.",
     constructs: "Productive vs. Exclusionary friction, threats of tertiary algorithmicity.",
-    integration: "Final case assertions translating experience and institutional conditions into bounded implications.",
+    integration: "Final meta-inferences translating experience and institutional conditions into situated implications.",
     limitations: "Situated interpretive evidence supports reasoned transfer rather than universal claims."
   }
 ];
@@ -166,8 +166,8 @@ const questions = [
   ["Why this study now?", "Because GenAI changes not only what students can produce, but how schools infer learning, authorship, judgment, and effort from educational artifacts."],
   ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
-  ["How will you avoid overclaiming?", "By making supporting strands bounded, treating AI artifacts as illustrative discourse artifacts, and avoiding claims about findings before data collection."],
-  ["What needs chair guidance?", "Question hierarchy, participant groups, sample targets, student strand status, AI comparison placement, instrument appendices, and proposal hearing expectations."]
+  ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI texts as limited nonparticipant comparison artifacts, and avoiding claims about findings before data collection."],
+  ["What needs chair guidance?", "Sample targets, recruitment boundaries, final instrument appendices, and proposal-hearing expectations."]
 ];
 
 const challengeCategories = [
@@ -181,7 +181,7 @@ const challengeCategories = [
         points: [
           "<strong>Distinguish default from destiny.</strong> Generative AI can make frictionless output the path of least resistance without making it the only possible path.",
           "<strong>Use pedagogical friction as evidence of agency.</strong> Educators, learners, designers, and policymakers can intentionally preserve or restore interpretive labor.",
-          "<strong>Keep the empirical claim bounded.</strong> The study examines how educators and institutions make sense of these conditions; it does not claim that technology produces one universal effect."
+          "<strong>Keep the empirical claim appropriately limited.</strong> The study examines how educators and institutions make sense of these conditions; it does not claim that technology produces one universal effect."
         ]
       },
       {
@@ -200,13 +200,13 @@ const challengeCategories = [
     title: "Methodology and Design",
     challenges: [
       {
-        title: "Bound the case",
+        title: "Clarify the evidence hierarchy",
         question: "With several role groups and evidence sources, what is part of the qualitative core, what provides supporting context, and what remains distinct nonparticipant evidence?",
         rationale: "A qualitative-dominant mixed methods study needs a clear evidence hierarchy so each source retains an appropriate interpretive status.",
         points: [
-          "<strong>Name the case positively.</strong> The case is educator and institutional sensemaking about pedagogical friction under conditions of generative AI within the approved K-12 study boundary.",
+          "<strong>Name the qualitative core.</strong> Semistructured interviews provide the primary evidence for understanding educator, leader, and adult university-student sensemaking.",
           "<strong>Treat role groups as situated perspectives.</strong> Classroom, building, system-level, and adult university-student accounts illuminate the questions from different educational positions and remain available for careful comparison.",
-          "<strong>Bound supporting strands.</strong> Survey, secondary, learner-retrospective, document, and artifact evidence should contextualize, challenge, or extend the core qualitative interpretation rather than become separate studies."
+          "<strong>Keep supporting strands proportionate.</strong> Survey, secondary, document, and nonparticipant artifact evidence should contextualize, challenge, or extend the core qualitative interpretation rather than become separate studies."
         ]
       },
       {
@@ -215,7 +215,7 @@ const challengeCategories = [
         rationale: "The committee may ask whether the philosophical and methodological layers reinforce one another or create an unresolved epistemological clash.",
         points: [
           "<strong>Separate the jobs.</strong> Constructivism guides how participant meaning is interpreted. Open-ended evidence addresses that meaning directly, while quantitative evidence provides descriptive and structural context.",
-          "<strong>Keep QUAL primary.</strong> The qualitative case logic governs the study, while quantitative and supporting strands supply bounded context.",
+          "<strong>Keep QUAL primary.</strong> Constructivist interpretation governs the study, while quantitative and other supporting evidence supplies context.",
           "<strong>Name integration procedures.</strong> Joint displays, narrative weaving, divergence review, and cross-question meta-inferences connect the strands."
         ]
       }
@@ -257,7 +257,7 @@ const challengeCategories = [
         rationale: "A strong positionality defense names both the interpretive value of the researcher's experience and concrete safeguards against confirmation bias.",
         points: [
           "<strong>Define the stance carefully.</strong> Technoskepticism asks what is lost alongside what is gained; it is not an anti-technology conclusion.",
-          "<strong>Use visible safeguards.</strong> Reflexive memoing, transparent coding decisions, disconfirming-case analysis, and review of divergent evidence make the stance examinable.",
+          "<strong>Use visible safeguards.</strong> Reflexive memoing, transparent coding decisions, attention to discrepant accounts, and review of divergent evidence make the stance examinable.",
           "<strong>Protect the recruitment boundary.</strong> Recruiting outside the researcher's supervisory context reduces authority and role-conflict risks."
         ]
       },
@@ -268,7 +268,7 @@ const challengeCategories = [
         points: [
           "<strong>Shift the governance question.</strong> Move beyond only asking whether use is allowed or compliant to asking what human learning work an activity should preserve.",
           "<strong>Connect policy and assessment.</strong> Institutions may need to support process evidence, oral explanation, iterative drafts, and other demonstrations of reasoning.",
-          "<strong>Keep implications conditional.</strong> The dissertation can offer evidence-supported principles and bounded recommendations after analysis, not universal prescriptions in advance."
+          "<strong>Keep implications conditional.</strong> The dissertation can offer evidence-supported principles and situated recommendations after analysis, not universal prescriptions in advance."
         ]
       }
     ]
