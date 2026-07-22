@@ -89,27 +89,86 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v4
+      - name: Sync ChromeDriver to the runner's Chrome
+        run: |
+          # @axe-core/cli bundles a ChromeDriver pinned to one Chrome major
+          # version. When the runner image updates Chrome the two drift apart,
+          # the browser session never starts, and every page is reported as
+          # failing without a single check having run. That silently broke this
+          # job between 2026-07-17 and 2026-07-22. Pin ChromeDriver to whatever
+          # Chrome the runner actually has instead.
+          CHROME_MAJOR=$(google-chrome --version | sed -E 's/[^0-9]*([0-9]+).*/\1/')
+          echo "Runner Chrome major version: $CHROME_MAJOR"
+          npm install -g "chromedriver@^${CHROME_MAJOR}.0.0"
+          echo "CHROMEDRIVER_PATH=$(command -v chromedriver)" >> "$GITHUB_ENV"
       - name: Run axe-core CLI
         run: |
           npm install -g @axe-core/cli serve wait-on
-          # Start a static server
           npx serve -l 3000 &
           SERVER_PID=$!
-          # Wait for it to be ready
           npx wait-on http://localhost:3000
-          
-          ERRORS=0
-          # Find all HTML files, remove leading ./, and run axe against them via the server
+
+          # Gate on real WCAG barriers only. axe also ships advisory
+          # best-practice rules (page-has-heading-one, landmark-one-main,
+          # region, landmark-complementary-is-top-level). Those are useful
+          # review notes but should not block a push, and mixing them with
+          # genuine failures makes a red check impossible to read.
+          TAGS=wcag2a,wcag2aa,wcag21a,wcag21aa
+
+          # Optional .a11yignore: one path per line, '#' for comments. Use only
+          # for generated bundles that cannot be fixed in this repo, and record
+          # the reason in AGENT_LOG.md.
+          should_skip() {
+            [ -f .a11yignore ] || return 1
+            while IFS= read -r pattern; do
+              case "$pattern" in ''|\#*) continue ;; esac
+              [ "$1" = "$pattern" ] && return 0
+            done < .a11yignore
+            return 1
+          }
+
+          FAILED=""
+          SKIPPED=""
+          TOOL_ERROR=0
           FILES=$(find . -type f -name "*.html" | sed 's|^./||')
+
           for file in $FILES; do
-            echo "Testing http://localhost:3000/$file"
-            # We don't fail immediately, we collect errors
-            axe "http://localhost:3000/$file" --exit || ERRORS=$((ERRORS+1))
+            if should_skip "$file"; then
+              echo "::notice file=$file::Skipped by .a11yignore"
+              SKIPPED="$SKIPPED $file"
+              continue
+            fi
+            echo "::group::axe $file"
+            set +e
+            OUT=$(axe "http://localhost:3000/$file" \
+              --chromedriver-path "$CHROMEDRIVER_PATH" \
+              --tags "$TAGS" --exit 2>&1)
+            CODE=$?
+            set -e
+            echo "$OUT"
+            echo "::endgroup::"
+
+            if echo "$OUT" | grep -qiE "session not created|only supports Chrome version|browser-driver-manager"; then
+              echo "::error::axe could not start a browser for $file. This is a tooling failure, not an accessibility result."
+              TOOL_ERROR=1
+            elif [ "$CODE" -ne 0 ]; then
+              echo "::error file=$file::axe found WCAG A/AA violations in $file"
+              FAILED="$FAILED $file"
+            fi
           done
-          
-          kill $SERVER_PID
-          
-          if [ "$ERRORS" -gt 0 ]; then
-            echo "Axe accessibility checks failed on $ERRORS files."
+
+          kill $SERVER_PID || true
+
+          [ -n "$SKIPPED" ] && echo "Skipped (see .a11yignore):$SKIPPED"
+
+          if [ "$TOOL_ERROR" -ne 0 ]; then
+            echo "Accessibility checks could not run. Fix the Chrome and ChromeDriver pairing before trusting this job."
             exit 1
           fi
+
+          if [ -n "$FAILED" ]; then
+            echo "WCAG A/AA violations found in:$FAILED"
+            exit 1
+          fi
+
+          echo "All checked pages passed WCAG A/AA."
