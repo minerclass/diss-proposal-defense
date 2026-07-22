@@ -115,18 +115,13 @@ jobs:
           # genuine failures makes a red check impossible to read.
           TAGS=wcag2a,wcag2aa,wcag21a,wcag21aa
 
-          # axe descends into embedded frames. Third-party players render markup
-          # we do not control and cannot correct, so a vendor's bug should not
-          # block this repository. Exclude known embed hosts. Our own iframe
-          # attributes (title, allow, allowfullscreen) still need review by hand
-          # when adding an embed, because excluding the element also skips the
-          # frame-title check on it.
-          EXCLUDES=(
-            --exclude "iframe[src*='drive.google.com']"
-            --exclude "iframe[src*='docs.google.com']"
-            --exclude "iframe[src*='youtube.com']"
-            --exclude "iframe[src*='youtube-nocookie.com']"
-          )
+          # Note for anyone tempted to add --exclude for third-party embeds:
+          # it was tried on 2026-07-22 and does not work. axe descends into
+          # embedded frames and reports frame-crossing targets such as
+          # "article:nth-child(3) > iframe .ndfHFb-c4YZDc-zTETae". Passing
+          # --exclude "iframe[src*='drive.google.com']" did not suppress those
+          # findings. Pages whose only violations come from vendor embed markup
+          # go in .a11yignore instead, with the reason recorded in AGENT_LOG.md.
 
           # Optional .a11yignore: one path per line, '#' for comments. Use only
           # for generated bundles that cannot be fixed in this repo, and record
@@ -155,7 +150,6 @@ jobs:
             set +e
             OUT=$(axe "http://localhost:3000/$file" \
               --chromedriver-path "$CHROMEDRIVER_PATH" \
-              "${EXCLUDES[@]}" \
               --tags "$TAGS" --exit 2>&1)
             CODE=$?
             set -e
