@@ -33,11 +33,11 @@ const nodes = {
 };
 
 const defenseSequence = [
-  ["Purpose", "Investigate how K-12 educators respond to friction-reducing GenAI affordances, what institutional conditions shape that work, and how the framework can inform AI policy."],
+  ["Purpose", "Investigate how classroom-facing educators, school-system leaders, and adult university students make sense of friction-reducing GenAI affordances, and what institutional conditions shape that work."],
   ["Problem", "Generative AI can make schoolwork appear successful while bypassing interpretive labor, authorial ownership, and durable learning processes."],
   ["Framework", "Pedagogical friction responds to noetic displacement, rhetorical saturation, and existential abstraction without romanticizing exclusionary difficulty."],
   ["Design", "A qualitative-dominant convergent QUAL + quan design grounded in constructivism can examine professional reasoning, institutional conditions, learner experience, and supporting quantitative context."],
-  ["Boundary", "Adult university students are participants. Quantitative sources provide supporting context, and AI-generated texts remain a distinct nonparticipant comparison source."],
+  ["Boundary", "Adult university students are participants. Quantitative sources provide supporting context. AI-generated texts and agentic artifacts remain a distinct nonparticipant comparison that retains at least one bounded, prespecified agentic-artifact task."],
   ["Contribution", "The study can inform K-12 AI policy, assessment, instructional design, and media-ecological scholarship while avoiding claims before data collection."]
 ];
 
@@ -164,9 +164,9 @@ const sources = window.intellectualHistorySources;
 
 const questions = [
   ["Why this study now?", "Because GenAI changes not only what students can produce, but how schools infer learning, authorship, judgment, and effort from educational artifacts."],
-  ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts retain a distinct nonparticipant status."],
+  ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts and agentic artifacts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
-  ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI texts as limited nonparticipant comparison artifacts, and avoiding claims about findings before data collection."],
+  ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI and agentic artifacts as limited nonparticipant evidence, reporting counterexamples, and avoiding claims about findings before data collection."],
   ["What needs chair guidance?", "Sample targets, recruitment boundaries, final instrument appendices, and proposal-hearing expectations."]
 ];
 
@@ -206,7 +206,7 @@ const challengeCategories = [
         points: [
           "<strong>Name the qualitative core.</strong> Semistructured interviews provide the primary evidence for understanding educator, leader, and adult university-student sensemaking.",
           "<strong>Treat role groups as situated perspectives.</strong> Classroom, building, system-level, and adult university-student accounts illuminate the questions from different educational positions and remain available for careful comparison.",
-          "<strong>Keep supporting strands proportionate.</strong> Survey, secondary, document, and nonparticipant artifact evidence should contextualize, challenge, or extend the core qualitative interpretation rather than become separate studies."
+          "<strong>Keep supporting strands proportionate.</strong> Survey, secondary, document, and nonparticipant artifact evidence should contextualize, challenge, or extend the core qualitative interpretation rather than become separate studies. If scope is reduced, at least one bounded, prespecified agentic-artifact task remains."
         ]
       },
       {
@@ -232,7 +232,7 @@ const challengeCategories = [
           "<strong>Noetic friction</strong> concerns the cognitive and interpretive work a task requires.",
           "<strong>Rhetorical friction</strong> concerns dialogue, audience, explanation, and the testing of claims.",
           "<strong>Existential friction</strong> concerns authorship, ownership, accountability, and whether a learner stands behind the work.",
-          "<strong>Infrastructural friction</strong> concerns the institutional conditions that enable or constrain classroom-level practice.",
+          "<strong>Infrastructural friction</strong> names the active system-level constraints and supports that enable or constrain classroom-level practice. The institutional environment is not a neutral backdrop.",
           "<strong>Allow overlap.</strong> Coding and memoing should document when an episode reasonably expresses more than one dimension."
         ]
       },
@@ -520,7 +520,7 @@ function bindEvents() {
     "- Should RQ1-RQ3 be the only core question set?",
     "- Should the student retrospective strand remain in the proposal?",
     "- What target survey N is acceptable?",
-    "- How will AI-generated texts remain distinct from participant evidence?",
+    "- How will the bounded agentic-artifact task remain distinct from participant evidence?",
     "- Which appendices or IRB attachments should hold instruments?"
   ].join("\n");
   qs("#committeeNotes").addEventListener("input", event => localStorage.setItem(storage.committee, event.target.value));

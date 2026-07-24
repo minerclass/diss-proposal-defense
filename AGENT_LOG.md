@@ -19,6 +19,20 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-07-24 - Agentic-artifact and framework alignment
+
+Agent: OpenAI Codex, working from the revised Chapters 1-3 proposal and a
+cross-site consistency review.
+
+- Updated defense prompts and the explorer to retain at least one bounded,
+  prespecified agentic-artifact task within the distinct nonparticipant
+  comparison.
+- Made the comparison explicitly open to counterexamples and qualities that may
+  challenge the framework.
+- Clarified infrastructural friction as an active system-level source of
+  constraint and enablement rather than a neutral backdrop.
+- Kept adult university students identified as participants and preserved the
+  proposal-stage boundary.
 ## 2026-07-22 - Weekly Pages review, accessibility and CI repair
 
 Agent: Claude Opus 4.8 (Claude Code), working from a weekly review of the
