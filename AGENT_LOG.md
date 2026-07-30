@@ -19,6 +19,23 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-07-30 - Proposal-defense readiness and source alignment
+
+Agent: OpenAI Codex, working from the July 24 Chapters 1-3 proposal working
+copy and a live audit of the proposal-defense pages.
+
+- Replaced older proposal links with the current July 24 working-copy link.
+- Replaced the hard-coded readiness percentage with a user-confirmed defense
+  preparation checklist that does not score scholarly readiness.
+- Corrected participant and instrument mappings, interpretive codebook thematic
+  analysis language, survey thresholds, mixed methods integration terms, and
+  proposal-stage claims across the Studio, Explorer, and committee brief.
+- Restored a current, printable research alignment matrix at `methods-matrix/`.
+- Added a readable Explorer fallback when the external concept-map library is unavailable, preventing a blank panel and JavaScript exception.
+- Added explicit CITI, IRB, data-security, public-site, and nonparticipant
+  artifact boundaries without implying that approvals, recruitment, data
+  collection, analysis, or findings are complete.
+
 ## 2026-07-24 - Agentic-artifact and framework alignment
 
 Agent: OpenAI Codex, working from the revised Chapters 1-3 proposal and a

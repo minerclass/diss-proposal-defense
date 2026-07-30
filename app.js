@@ -1,13 +1,13 @@
 const storage = {
   opening: "proposalDefenseStudio.openingAnswer.v1",
   committee: "proposalDefenseStudio.committeeNotes.v1",
-  checks: "proposalDefenseStudio.sampleChecks.v1"
+  checks: "proposalDefenseStudio.defenseChecks.v2"
 };
 
 const nodes = {
   "Pedagogical Friction": {
     claim: "The study is not arguing that all difficulty is good. It distinguishes productive friction that supports interpretation, authorship, and judgment from exclusionary friction that blocks access.",
-    evidence: "Phase 2 reviews identify this distinction as a major strength because it keeps the proposal from romanticizing struggle.",
+    evidence: "The current proposal treats the distinction as an ethical and analytic boundary that keeps the study from romanticizing struggle.",
     risk: "Committee members may ask how the framework becomes observable in interviews, survey domains, and document analysis."
   },
   "Tertiary Algorithmicity": {
@@ -45,8 +45,8 @@ const claims = [
   {
     id: "problem-polished-output",
     type: "problem",
-    title: "Polished output is not reliable evidence of learning.",
-    claim: "Polished output is not reliable evidence of learning under tertiary algorithmicity.",
+    title: "Polished output cannot be assumed to be reliable evidence of learning.",
+    claim: "Under tertiary algorithmicity, polished output may not reliably demonstrate the learning process on its own.",
     warrant: "Generative AI can produce text that mimics the markers of deep cognitive processing without the student having performed that processing.",
     literatureFunction: "Draws on learning sciences and cognitive psychology to distinguish performance from durable learning.",
     empiricalStatus: "Proposal-stage conceptual claim.",
@@ -92,10 +92,10 @@ const claims = [
     warrant: "The research problem asks how situated participants interpret ambiguous educational conditions. Qualitative evidence addresses that meaning directly, while quantitative evidence provides supporting context.",
     literatureFunction: "Aligns constructivist interpretation, sensemaking questions, and thematic analysis.",
     empiricalStatus: "Methodological design.",
-    evidenceToBeCollected: "Interviews, card sorts, surveys, and documents across role groups.",
+    evidenceToBeCollected: "Interviews across all four participant groups; card-sort explanations from classroom-facing educators and adult university students; institutional documents; and open- and closed-ended survey evidence.",
     possibleDisconfirmation: "Divergence between qualitative and quantitative strands during integration.",
     consequenceIfUnsupported: "Integration meta-inferences would highlight contradictions rather than convergence.",
-    relationshipToRQs: "Directly structures RQ3's integration logic.",
+    relationshipToRQs: "Structures the evidence and integration logic for RQ1, RQ2, and RQ3.",
     limitations: "Situated interpretive evidence limits universal generalizability."
   },
   {
@@ -118,8 +118,8 @@ const methodRows = [
   {
     rq: "RQ1: How do classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students make sense of the ways generative AI changes the effort, dialogue, authorship, judgment, and participation involved in teaching and learning?",
     participants: "Classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students.",
-    instruments: "Role-specific interviews and card sorts; educator survey; institutional documents; and adult university-student retrospective interviews and card sorts.",
-    analysis: "First-cycle coding close to participant language, second-cycle theme development, card-sort reasoning, descriptive and exploratory survey analysis, and attention to discrepant accounts.",
+    instruments: "Interviews across all four participant groups; card sorts for classroom-facing educators and adult university students only; educator survey; institutional documents; and supporting national context.",
+    analysis: "Interpretive codebook thematic analysis with first-cycle coding close to participant language, second-cycle theme development, card-sort reasoning, descriptive and exploratory survey analysis, and attention to discrepant accounts.",
     constructs: "Noetic, rhetorical, and existential friction.",
     integration: "RQ1 joint display compares classroom accounts, learner retrospectives, card-sort reasoning, and survey patterns.",
     limitations: "Self-reported perceptions, not direct student learning outcomes."
@@ -127,8 +127,8 @@ const methodRows = [
   {
     rq: "RQ2: How do educators and school-system leaders make sense of and respond to the policy, professional-learning, assessment, access, and governance conditions surrounding generative AI?",
     participants: "Educators, building-level administrators, and district or system-level leaders. Institutional documents, educator survey responses, NCES, and RAND provide additional evidence and context.",
-    instruments: "Role-specific interviews and card sorts; document analysis protocol; educator survey; secondary-data extraction and framework mapping.",
-    analysis: "Cross-role thematic comparison, document analysis, exploratory role comparisons, secondary-data trend/disaggregation analysis, and attention to discrepant accounts.",
+    instruments: "Educator and leader interviews; classroom-facing educator card-sort explanations where relevant; document analysis protocol; educator survey; and secondary-data extraction.",
+    analysis: "Interpretive codebook thematic analysis, cross-role comparison, document analysis, descriptive and conditional survey comparisons, secondary-data context, and attention to discrepant accounts.",
     constructs: "Infrastructural friction as primary condition.",
     integration: "RQ2 joint display identifies enabling conditions, constraints, gaps, and equity patterns across sources.",
     limitations: "Policies and stated strategies may not reflect actual classroom implementation."
@@ -136,7 +136,7 @@ const methodRows = [
   {
     rq: "RQ3: What language, assessment expectations, instructional practices, professional supports, and leadership approaches do educators and school-system leaders identify as important for preserving forms of friction that support learning while reducing unnecessary barriers?",
     participants: "Educator and school-system leader evidence integrated across the approved RQ1 and RQ2 sources; no additional participant group.",
-    instruments: "Integrated RQ1 and RQ2 analysis, structural-context evidence.",
+    instruments: "Integrated RQ1 and RQ2 evidence; no additional participant group or instrument.",
     analysis: "Cross-role synthesis, joint-display comparison, narrative weaving, meta-inference development, and attention to discrepant accounts.",
     constructs: "Productive vs. Exclusionary friction, threats of tertiary algorithmicity.",
     integration: "Final meta-inferences translating experience and institutional conditions into situated implications.",
@@ -145,14 +145,14 @@ const methodRows = [
 ];
 
 const sampleChecks = [
-  "Set one target survey range and remove conflicting N values.",
-  "Define minimum useful N, target N, and stretch N.",
-  "Make exploratory factor analysis conditional rather than promised.",
-  "Explain clearly that adult university students are participants included in RQ1 and qualitative analysis.",
-  "List inclusion criteria and recruitment channels by participant group.",
-  "Move all instruments into appendices or separate IRB attachments once chair preference is known."
+  "Confirm that the July 24 Chapters 1-3 working proposal is the committee-circulated version.",
+  "Confirm chair and committee authorization, the defense date, the required reader window, and any dean's representative requirement.",
+  "Document CITI completion before the hearing and keep IRB approval as a prerequisite for recruitment and data collection.",
+  "Rehearse a 20- to 30-minute narrative using the exact RQ1-RQ3 wording and the qualitative-dominant evidence hierarchy.",
+  "Explain the participant and instrument mapping: interviews across all four groups; card sorts only for classroom-facing educators and adult university students.",
+  "Explain interpretive codebook thematic analysis, the below-80 descriptive survey rule, and integration through convergence, divergence, expansion, or silence.",
+  "Verify the printable brief, research matrix, public links, and backup pages before freezing the defense materials."
 ];
-
 const boundaries = [
   ["Public GitHub Pages", "Defense rehearsal, concept map, source atlas, non-participant study explanation, presentation support."],
   ["Private Research Storage", "Consent records, identifiable interviews, transcripts, raw survey data, recruitment logs, analytic memos with identities."],
@@ -167,7 +167,7 @@ const questions = [
   ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts and agentic artifacts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
   ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI and agentic artifacts as limited nonparticipant evidence, reporting counterexamples, and avoiding claims about findings before data collection."],
-  ["What needs chair guidance?", "Sample targets, recruitment boundaries, final instrument appendices, and proposal-hearing expectations."]
+  ["What still needs confirmation?", "Committee authorization and scheduling, the reader window, any dean's representative requirement, CITI documentation, and the institution's current signature and proposal-hearing procedures."]
 ];
 
 const challengeCategories = [
@@ -429,11 +429,13 @@ function renderChallengeDeck() {
 
 function updateReadiness() {
   const savedChecks = JSON.parse(localStorage.getItem(storage.checks) || "{}");
-  const completedChecks = Object.values(savedChecks).filter(Boolean).length;
-  const base = 52;
-  const score = Math.min(100, base + Math.round((completedChecks / sampleChecks.length) * 28));
-  qs("#readinessBar").style.width = `${score}%`;
-  qs("#readinessText").textContent = `${score}% ready: strongest next work is scope, sample size, instruments, and IRB language.`;
+  const completedChecks = sampleChecks.reduce(
+    (total, _item, index) => total + (savedChecks[index] ? 1 : 0),
+    0
+  );
+  const completion = Math.round((completedChecks / sampleChecks.length) * 100);
+  qs("#readinessBar").style.width = `${completion}%`;
+  qs("#readinessText").textContent = `${completedChecks} of ${sampleChecks.length} preparation checks confirmed. This tracker does not score scholarly readiness.`;
 }
 
 function bindEvents() {
@@ -516,12 +518,13 @@ function bindEvents() {
   qs("#openingAnswer").addEventListener("input", event => localStorage.setItem(storage.opening, event.target.value));
 
   qs("#committeeNotes").value = localStorage.getItem(storage.committee) || [
-    "Chair-facing questions:",
-    "- Should RQ1-RQ3 be the only core question set?",
-    "- Should the student retrospective strand remain in the proposal?",
-    "- What target survey N is acceptable?",
-    "- How will the bounded agentic-artifact task remain distinct from participant evidence?",
-    "- Which appendices or IRB attachments should hold instruments?"
+    "Items to confirm before the proposal hearing:",
+    "- Is the July 24 Chapters 1-3 working proposal authorized for committee circulation?",
+    "- What are the current scheduling, reader-window, dean's representative, and signature requirements?",
+    "- Is CITI completion documented before the hearing?",
+    "- Is the participant and instrument mapping clear across RQ1-RQ3?",
+    "- Is the below-80 descriptive survey rule defensible and feasible?",
+    "- How will the bounded agentic-artifact task remain separate from participant evidence and participant data?"
   ].join("\n");
   qs("#committeeNotes").addEventListener("input", event => localStorage.setItem(storage.committee, event.target.value));
 

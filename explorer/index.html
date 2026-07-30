@@ -1208,7 +1208,7 @@
                     Core Argument: Unproductive Success & Cognitive Labor Bypass
                   </div>
                   <div class="card-answer-body" id="card-answer-body-text">
-                    <p>GenAI bypasses the interpretive, cognitive, and rhetorical labor necessary for learning. The central educational problem is "unproductive success"—students producing correct academic artifacts without experiencing the cognitive struggle that restructures consciousness and builds durable schemas.</p>
+                    <p>GenAI can bypass interpretive, cognitive, and rhetorical labor that may be necessary for learning. The central educational problem is "unproductive success"—students may produce correct academic artifacts without experiencing the cognitive struggle that restructures consciousness and builds durable schemas.</p>
                   </div>
                   <div class="card-evidence-box" id="card-evidence-text">
                     "The central educational problem posed by generative AI is the bypassing of interpretive labor, intellectual accountability, and the developmental conditions for learning rather than academic integrity." (Chapter 1, Statement of the Problem)
@@ -1235,8 +1235,6 @@
                 <button class="rq-btn active" onclick="simulateJoint('RQ1')">RQ1</button>
                 <button class="rq-btn" onclick="simulateJoint('RQ2')">RQ2</button>
                 <button class="rq-btn" onclick="simulateJoint('RQ3')">RQ3</button>
-                <button class="rq-btn" onclick="simulateJoint('SRQ')">Learner</button>
-                <button class="rq-btn" onclick="simulateJoint('SAQ')">AI Text</button>
               </div>
 
               <div class="joint-display-view">
@@ -1248,20 +1246,20 @@
                 <div class="joint-grid">
                   <div class="joint-box" id="joint-qual">
                     <strong>QUAL STRAND (Evidence)</strong>
-                    • Practitioner Interviews<br />
-                    • Card Sort protocol<br />
-                    • Transcripts coded for noetic, rhetorical, and existential friction.
+                    • Interviews across all four participant groups<br />
+                    • Card sorts for classroom-facing educators and adult university students only<br />
+                    • First-cycle coding close to participant language before second-cycle theme development.
                   </div>
                   <div class="joint-box" id="joint-quan">
                     <strong>quan STRAND (Context)</strong>
-                    • RAND American Educator Panel surveys<br />
-                    • Original educator survey instrument (frequency of AI use, perceived rigor).
+                    • Original educator survey<br />
+                    • Selected NCES and RAND evidence as supporting structural context.
                   </div>
                 </div>
                 
                 <div class="joint-box" style="margin-top: 12px;" id="joint-integration">
                   <strong>Mixed Methods Integration</strong>
-                  Joint display presenting side-by-side narrative findings matching survey frequencies with interview accounts of cognitive delegation vs. preservation.
+                  Joint displays and narrative weaving will identify convergence, divergence, expansion, or silence while preserving the limits of each source.
                 </div>
               </div>
             </div>
@@ -1271,19 +1269,27 @@
             <div class="glass-card" style="padding: 20px;">
               <label class="checklist-item">
                 <input type="checkbox" id="chk-1" checked onchange="saveChecklist()" />
-                <span>Outline Chapters 1-3 (Completed & Synthesized)</span>
+                <span>Prepare the current Chapters 1-3 proposal and exact RQ1-RQ3 wording</span>
               </label>
               <label class="checklist-item">
                 <input type="checkbox" id="chk-2" checked onchange="saveChecklist()" />
-                <span>Ingest 100 Literature Sources into local database (Completed)</span>
+                <span>Prepare participant instruments in Appendices E-G and the memoing protocol in Appendix H</span>
               </label>
               <label class="checklist-item">
                 <input type="checkbox" id="chk-3" onchange="saveChecklist()" />
-                <span>Submit IRB Application (Adult consent for student strand)</span>
+                <span>Confirm committee authorization, scheduling, and the required reader window</span>
               </label>
               <label class="checklist-item">
                 <input type="checkbox" id="chk-4" onchange="saveChecklist()" />
-                <span>Practice Defense Deck with Chair Terri Jo Smith</span>
+                <span>Document CITI completion before the proposal hearing</span>
+              </label>
+              <label class="checklist-item">
+                <input type="checkbox" id="chk-5" onchange="saveChecklist()" />
+                <span>Complete a timed 20- to 30-minute defense rehearsal</span>
+              </label>
+              <label class="checklist-item">
+                <input type="checkbox" id="chk-6" onchange="saveChecklist()" />
+                <span>After proposal approval, secure IRB approval before recruitment or data collection</span>
               </label>
             </div>
           </div>
@@ -1410,14 +1416,14 @@
                   <div class="joint-display-view" style="border-left: 3px solid var(--accent-emerald);">
                     <strong>Phase 1: Concurrent Evidence Collection</strong><br />
                     • Collect evidence according to the research questions and each source's analytic role.<br />
-                    • Collect QUAL interviews & card sorts alongside quan surveys & NCES datasets.<br />
+                    • Collect interviews across all four groups and card sorts from classroom-facing educators and adult university students alongside survey and structural-context evidence.<br />
                     <br />
-                    <strong>Phase 2: Inductive Interpretative Analysis</strong><br />
-                    • Code QUAL transcripts for meaning-making, focusing on noetic, rhetorical, and existential dimensions.<br />
-                        • Run appropriate quan descriptive and conditional comparative analyses.<br />
+                    <strong>Phase 2: Separate, Source-Appropriate Analysis</strong><br />
+                    • Use interpretive codebook thematic analysis: participant-near first-cycle coding, revisable sensitizing concepts, inductive codes, and second-cycle theme development.<br />
+                    • Run appropriate quan descriptive and conditional comparative analyses; if the shared-core survey sample is below 80, keep the survey analysis descriptive.<br />
                     <br />
                     <strong>Phase 3: Mixed Methods Integration</strong><br />
-                    • Construct side-by-side Joint Displays tracing each RQ, matching qualitative descriptions with quantitative frequencies.
+                    • Construct joint displays and narrative weaving that record convergence, divergence, expansion, or silence without allowing one source to validate or override another.
                   </div>
                 </div>
               </div>
@@ -1596,37 +1602,23 @@
       'RQ1': {
         title: 'Research Question 1 (RQ1)',
         desc: 'How do classroom-facing educators, building-level administrators, district or system-level leaders, and adult university students make sense of the ways generative AI changes the effort, dialogue, authorship, judgment, and participation involved in teaching and learning?',
-        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Semi-structured interviews with all participant groups<br />• Card-sort explanations, documents, and open-ended survey responses<br />• First-cycle coding close to participant language and second-cycle theme development.',
-        quan: '<strong>PROPOSED quan STRAND (Context)</strong>• Original educator survey instrument<br />• Descriptive and conditional comparative analyses of AI use and perceived task rigor.',
-        integration: '<strong>Mixed Methods Integration</strong>Joint display presenting side-by-side narrative findings matching survey frequencies with interview accounts of cognitive delegation vs. preservation.'
+        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Semi-structured interviews with all four participant groups<br />• Card-sort explanations from classroom-facing educators and adult university students only<br />• Institutional documents and open-ended survey responses<br />• Interpretive codebook thematic analysis with participant-near first-cycle coding and second-cycle theme development.',
+        quan: '<strong>PROPOSED quan STRAND (Context)</strong>• Original educator survey instrument<br />• Descriptive and conditional comparative analyses<br />• Selected NCES and RAND evidence as supporting structural context.',
+        integration: '<strong>Mixed Methods Integration</strong>Joint displays and narrative weaving identify convergence, divergence, expansion, or silence while keeping each source\'s scope visible.'
       },
       'RQ2': {
         title: 'Research Question 2 (RQ2)',
         desc: 'How do educators and school-system leaders make sense of and respond to the policy, professional-learning, assessment, access, and governance conditions surrounding generative AI?',
-        qual: '<strong>QUAL STRAND (Evidence)</strong>• Semi-structured interviews with principals & district technology leaders<br />• Analysis of local district AI policy documents and student handbooks.',
-        quan: '<strong>quan STRAND (Context)</strong>• NCES School Pulse Panel data (December 2024 release)<br />• Frequency distribution of policy adoption types across K-12 demographics.',
-        integration: '<strong>Mixed Methods Integration</strong>Bivariate mapping of policy type (restrictive/open) against teachers\' reporting of professional agency in design.'
+        qual: '<strong>QUAL STRAND (Evidence)</strong>• Educator and school-system leader interviews<br />• Classroom-facing educator card-sort explanations where relevant<br />• Institutional documents and open-ended survey responses.',
+        quan: '<strong>quan STRAND (Context)</strong>• Original educator survey<br />• Selected NCES and RAND evidence as supporting structural context.',
+        integration: '<strong>Mixed Methods Integration</strong>RQ2 joint displays identify convergence, divergence, expansion, or silence across policy, perception, practice, and structural context.'
       },
       'RQ3': {
         title: 'Research Question 3 (RQ3)',
         desc: 'What language, assessment expectations, instructional practices, professional supports, and leadership approaches do educators and school-system leaders identify as important for preserving forms of friction that support learning while reducing unnecessary barriers?',
-        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Leader interviews and institutional document analysis<br />• Textual analysis of policy drafts using the friction framework.',
-        quan: '<strong>quan STRAND (Context)</strong>• Original survey feedback on policy effectiveness metrics from district leaders.',
-        integration: '<strong>Mixed Methods Integration</strong>Policy drafting crosswalk mapping specific policy clauses directly to the noetic, rhetorical, existential, and infrastructural dimensions.'
-      },
-      'SRQ': {
-        title: 'Adult University-Student Perspective',
-        desc: 'Adult university students are included as participants in RQ1 and provide a learner perspective on teaching and learning under generative AI.',
-        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Retrospective interviews with university students who transitioned during 2022-2023<br />• Narrative reflection on writing and cognitive delegation.',
-        quan: '<strong>quan STRAND (Context)</strong>• Supporting survey context where applicable.',
-        integration: '<strong>Mixed Methods Integration</strong>Profile analysis mapping students\' narrative transition categories against their quantitative ratings of authorial ownership.'
-      },
-      'SAQ': {
-        title: 'AI and Agentic Artifact Status',
-        desc: 'AI-generated texts and agentic artifacts are analyzed as a distinct nonparticipant comparison source that retains at least one bounded, prespecified agentic-artifact task.',
-        qual: '<strong>QUAL STRAND (Evidence)</strong>• Separate analysis comparing AI-generated texts and agentic artifacts with participant evidence without treating the artifacts as human experience.',
-        quan: '<strong>quan STRAND (Context)</strong>• Structural coding analysis (counts of local context mentions, ambivalent phrases, and uncertainty flags).',
-        integration: '<strong>Mixed Methods Integration</strong>Open empirical contrast that also reports outputs displaying situated judgment, calibrated uncertainty, institutional memory, or productive counter-friction.'
+        qual: '<strong>PROPOSED QUAL STRAND (Evidence)</strong>• Integrated educator and school-system leader evidence developed under RQ1 and RQ2<br />• No additional participant group or instrument.',
+        quan: '<strong>PROPOSED quan STRAND (Context)</strong>• Supporting survey and structural-context evidence already analyzed for RQ1 and RQ2.',
+        integration: '<strong>Mixed Methods Integration</strong>Cross-role synthesis and meta-inferences translate situated experience and institutional conditions without claiming universal prescriptions.'
       }
     };
 
@@ -1637,7 +1629,7 @@
         index: 'Card 1 of 7',
         question: 'How is Generative AI a curriculum and pedagogy issue, rather than just an academic integrity/cheating issue?',
         answerTitle: 'Core Argument: Unproductive Success & Cognitive Labor Bypass',
-        answerBody: '<p>GenAI bypasses the interpretive, cognitive, and rhetorical labor necessary for learning. The central educational problem is "unproductive success"—students producing correct academic artifacts without experiencing the cognitive struggle that restructures consciousness and builds durable schemas.</p>',
+        answerBody: '<p>GenAI can bypass interpretive, cognitive, and rhetorical labor that may be necessary for learning. The central educational problem is "unproductive success"—students may produce correct academic artifacts without experiencing the cognitive struggle that restructures consciousness and builds durable schemas.</p>',
         evidence: '"The central educational problem posed by generative AI is the bypassing of interpretive labor, intellectual accountability, and the developmental conditions for learning rather than academic integrity." (Chapter 1, Statement of the Problem)'
       },
       {
@@ -1832,7 +1824,7 @@
 
     // Checklist save/load
     function initChecklist() {
-      const items = ['chk-1', 'chk-2', 'chk-3', 'chk-4'];
+      const items = ['chk-1', 'chk-2', 'chk-3', 'chk-4', 'chk-5', 'chk-6'];
       items.forEach(id => {
         const val = localStorage.getItem(id);
         if (val !== null) {
@@ -1842,7 +1834,7 @@
     }
 
     function saveChecklist() {
-      const items = ['chk-1', 'chk-2', 'chk-3', 'chk-4'];
+      const items = ['chk-1', 'chk-2', 'chk-3', 'chk-4', 'chk-5', 'chk-6'];
       items.forEach(id => {
         localStorage.setItem(id, document.getElementById(id).checked);
       });
@@ -2102,6 +2094,14 @@
     // VIS.JS CONCEPT MAP INITIALIZATION
     // ==========================================================================
     function initConceptMap() {
+      const container = document.getElementById('vis-graph');
+      if (!container) return;
+
+      if (!window.vis) {
+        container.innerHTML = '<div class="concept-detail"><strong>Concept map unavailable.</strong><p>The external visualization library did not load. Use the Intellectual History timeline and reference filters on this page to review the same conceptual relationships.</p></div>';
+        return;
+      }
+
       const concepts = [
         { id: "algorithmic_secondary_orality", label: "Algorithmic Secondary Orality", definition: "A transitional phase where human-created content persists, but personalized ranking and recommendation algorithms dictate its circulation and distribution.", group: "construct" },
         { id: "tertiary_algorithmicity", label: "Tertiary Algorithmicity", definition: "A condition where machines generate and curate symbolic content, rendering human authorship optional at scale.", group: "construct" },
@@ -2175,7 +2175,6 @@
         font: { color: "#94a3b8", size: 10, face: "Inter" }
       })));
 
-      const container = document.getElementById('vis-graph');
       const network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
         physics: {
           stabilization: true,

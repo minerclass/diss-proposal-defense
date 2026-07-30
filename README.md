@@ -29,7 +29,7 @@ The Google Drive folder should be re-ingested when the Drive connector is availa
 
 ## Authoritative Google Docs
 
-- Chapters 1-3 proposal draft: <https://docs.google.com/document/d/1Sy2CiYLFRq_s8d7Cbna3oEvFYaTQBdWGRoewDyP13CM/edit?usp=sharing>
+- Current Chapters 1-3 proposal working copy (July 24, 2026): <https://docs.google.com/document/d/1hzdzhrsTSO3E5iAsoAszn5bniFNMIn25h7RMwnd0Lzg/edit>
 - Qualifying paper: <https://docs.google.com/document/d/1ZtE5wDm3HvBcHt6LB7DyI1_oUZx5oc89CrKbRl_WAGY/edit?usp=sharing>
 
 ## How to Use
@@ -39,7 +39,7 @@ Open `index.html` in a browser. No build step is required.
 For GitHub Pages:
 
 1. Create or choose a repository.
-2. Commit `index.html`, `styles.css`, `app.js`, `README.md`, and `SOURCES_AND_PRIVACY.md`.
+2. Commit the full repository contents, including the committee brief, Explorer, intellectual history, and research matrix.
 3. Enable GitHub Pages from the repository root.
 4. Review the published page for privacy boundaries before sharing.
 
@@ -47,7 +47,7 @@ For GitHub Pages:
 
 - **Defense Room:** core argument constellation and two-minute opening rehearsal.
 - **Claims Lab:** committee-facing claims with evidence anchors, likely challenges, and rehearsed answers.
-- **Methods Map:** RQ-to-data-source-to-analysis alignment plus sample-size and IRB readiness checks.
+- **Methods Map:** RQ-to-data-source-to-analysis alignment plus evidence-based defense preparation checks.
 - **One-Page Research Matrix:** print-ready alignment of the three primary research questions with participants, instruments, analysis, framework dimensions, and integration points at `methods-matrix/`.
 - **Intellectual History:** searchable source atlas connecting media ecology, learning science, algorithm studies, AI education, and methods.
 - **Challenge Deck:** active-recall rehearsal for adversarial theory, methodology, equity, positionality, and practice questions, with source-cautious response scaffolds.
