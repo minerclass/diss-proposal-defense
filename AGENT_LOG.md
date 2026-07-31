@@ -19,6 +19,38 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-07-31 - Presentation visual and layout review
+
+Agent: OpenAI Codex, completing the visual review handed off after the content
+accuracy audit.
+
+- Completed a slide-by-slide aesthetic and layout pass across all 17 slides
+  without changing or removing visible wording.
+- Re-composed slide 2 as an asymmetric statement-and-equation layout, giving
+  the opening tension a clearer focal point and stronger visual balance.
+- Reworked the five-stage timelines on slides 4 and 16 with prominent sequence
+  numerals, lower-aligned descriptions, and a clearer final/current stage.
+- Improved hierarchy elsewhere by widening the usable title measure, removing
+  unnecessary inset space on the evidence slide, emphasizing the bypassed
+  learner process, increasing the framework source-line contrast, and giving
+  the agentic safeguards equal vertical weight.
+- Kept the existing palette, typography, decorative arcs, and restrained
+  academic tone. No new assets or dependencies were added.
+
+Verified: fetched `origin/main` before editing and confirmed no divergence;
+rendered every slide at 1920 x 1080 and 1280 x 720; ran 34 DOM fit checks with
+no slide-field clipping, out-of-bounds descendants, or horizontal page
+overflow; visually reviewed the full deck and both target sizes; tested Home,
+End, and ArrowRight navigation plus overview, presenter notes, and fullscreen
+fallback modes; browser console had no warnings or errors; print export produced
+17 landscape 960 x 540 point pages and the rendered pages showed no clipping or
+overlap. The local terminology scan found zero forbidden terms and three
+pre-existing review warnings. The changed CSS produced no sensitive-pattern
+hits, and `git diff --check` passed apart from the existing line-ending notice.
+
+Not verified: GitHub Actions had not run at the time of local validation. Open
+items: none in the visual review scope.
+
 ## 2026-07-31 - Committee-facing presentation deck
 
 Agent: Claude Code, working from the July 24 Chapters 1-3 proposal working copy
