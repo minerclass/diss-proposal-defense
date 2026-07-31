@@ -23,7 +23,7 @@ This first version is grounded in the local Phase 2 artifacts in this workspace:
 - `DISSERTATION_DRIVE_REVIEW_PHASE2.md`
 - `PHASE_2_DISSERTATION_PROPOSAL_ALIGNMENT_MAP.md`
 - `CHAPTER_1_3_RUBRIC_REVIEW_PHASE2.md`
-- local Research folder inventory under `C:\Users\mminer\OneDrive - bpd3.org\Desktop\Research`
+- an inventory of the local research folder (not committed)
 
 The Google Drive folder should be re-ingested when the Drive connector is available. Do not treat the source atlas as a final APA reference list until citation details are verified against the controlling proposal bibliography.
 
@@ -45,6 +45,7 @@ For GitHub Pages:
 
 ## Modes
 
+- **Proposal Presentation:** 17-slide, keyboard-navigable HTML defense presentation with presenter notes, source blocks, overview mode, fullscreen mode, and print-to-PDF support at `presentation/`.
 - **Defense Room:** core argument constellation and two-minute opening rehearsal.
 - **Claims Lab:** committee-facing claims with evidence anchors, likely challenges, and rehearsed answers.
 - **Methods Map:** RQ-to-data-source-to-analysis alignment plus evidence-based defense preparation checks.

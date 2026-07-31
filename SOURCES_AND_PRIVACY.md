@@ -6,7 +6,7 @@ The current studio content is grounded in local proposal-planning artifacts and 
 
 Authoritative current-source links:
 
-- Chapters 1-3 proposal draft: <https://docs.google.com/document/d/1i8C03IS1cGkFbdFCDGZfwzQkMFggcA4eqG9WsAYMlPU/edit?usp=sharing>
+- Current Chapters 1-3 proposal working copy (July 24, 2026): <https://docs.google.com/document/d/1hzdzhrsTSO3E5iAsoAszn5bniFNMIn25h7RMwnd0Lzg/edit>
 - Qualifying paper: <https://docs.google.com/document/d/1ZtE5wDm3HvBcHt6LB7DyI1_oUZx5oc89CrKbRl_WAGY/edit?usp=sharing>
 
 Before publishing the atlas as a formal reference resource:
