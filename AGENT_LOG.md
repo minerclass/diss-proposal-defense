@@ -19,6 +19,67 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-07-31 - Progressive reveals
+
+Agent: Claude Code, closing the last open item from the redesign handoff.
+
+Added stepped reveals to six slides: 5 (bypass, then the three pressures, then
+the diagnosis), 6 (the three learner-facing forms, then the field that holds
+them), 8 (one research question at a time), 12 (strands apart, joined, then the
+four relationships), 14 (rule, guardrails, then the limit on the claim), and 16
+(sequence, then the boundary it starts from).
+
+Design decisions worth keeping:
+
+- **Opacity only, never display or visibility.** Slides use `overflow: hidden`,
+  so a reveal that changed layout could push content out of a slide that
+  currently fits. Unrevealed elements sit at `opacity: .12` and animate to 1.
+- **Content stays in the DOM and in the accessibility tree.** Nothing is hidden
+  from assistive technology, so no claim exists only behind a reveal. The steps
+  are a pacing device for the presenter, not a content gate.
+- Inactive slides are forced to their finished state, so overview mode and any
+  direct jump by hash show the complete argument.
+- Arriving at a slide backwards lands on its completed state rather than an
+  empty one; arriving forwards starts at step 0.
+- Print and `prefers-reduced-motion` both force the fully revealed state.
+
+Verified: reveal behaviour confirmed from a render of slide 6 showing the three
+learner-facing nodes at full opacity with the infrastructural field label, note,
+and source line still dimmed; `presentation.js` braces balanced; 20 step markers
+present; with every step force-revealed, 17/17 slides clear the out-of-bounds and
+scroll probe at 1280x720.
+
+Not verified this pass: the same fully-revealed probe at 1920x1080 returned no
+result after repeated headless-Chrome hangs. 17/17 was confirmed at 1920x1080
+earlier in the session before reveals were added, and because reveals change
+only opacity they cannot alter layout, so the risk is low. It has not been
+directly measured. Also unmeasured since adding reveals: a fresh print export.
+
+Operational note: headless Chrome accumulated 52 stray processes across this
+session's many `--user-data-dir` invocations and began hanging. Kill stray
+`chrome` processes if renders start timing out.
+
+Concurrency note: another agent modified `index.html`, `styles.css`, and this log
+while this work was in progress. Those changes were left untouched; the reveal
+work is confined to `presentation/`.
+
+## 2026-07-31 - Boundaries scope-limit layout repair
+
+Agent: OpenAI Codex.
+
+- Replaced the Boundaries panel's reused checkbox-grid markup with a dedicated
+  semantic list for the four scope limitations.
+- Preserved every claim and explanation while separating headings from body
+  copy and adding consistent dividers, spacing, line height, and text color.
+- Kept the checklist component unchanged for the preparation tracker that still
+  uses its intended checkbox-and-label structure.
+
+Verified: direct `#boundaries` load; visual review at the default viewport and
+at 1920x1080; responsive measurement at 390x844; no item overlap, clipped text,
+or horizontal page overflow; browser console reported no warnings or errors;
+`git diff --check` passed. This repair is local and has not been committed or
+pushed.
+
 ## 2026-07-31 - Visual storytelling redesign, first section
 
 Agent: Claude Code, working the art-direction redesign handoff. **Partial: the

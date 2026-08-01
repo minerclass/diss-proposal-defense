@@ -42,7 +42,7 @@
     return slide.querySelector("h1, h2")?.textContent.trim() || `Slide ${currentIndex + 1}`;
   }
 
-  function showSlide(index, announce = true) {
+  function showSlide(index, announce = true, enterCompleted = false) {
     currentIndex = Math.max(0, Math.min(index, slides.length - 1));
 
     slides.forEach((slide, slideIndex) => {
@@ -52,9 +52,19 @@
       if ("inert" in slide) {
         slide.inert = !overviewOpen && !active;
       }
+      // Slides we are not on always sit in their finished state, so overview
+      // and any direct jump show the complete argument.
+      if (!active) {
+        revealAll(slide);
+      }
     });
 
     const currentSlide = slides[currentIndex];
+
+    if (stepCount(currentSlide)) {
+      setStep(currentSlide, enterCompleted ? stepCount(currentSlide) : 0);
+    }
+
     const heading = getSlideHeading(currentSlide);
     const section = currentSlide.dataset.section || "Presentation";
     const progress = ((currentIndex + 1) / slides.length) * 100;
@@ -77,15 +87,60 @@
     }
   }
 
+  function stepCount(slide) {
+    return Number.parseInt(slide.dataset.steps || "0", 10) || 0;
+  }
+
+  // Reveals are a pacing device. Content stays in the DOM and in the
+  // accessibility tree; only opacity changes, so nothing reflows.
+  function applySteps(slide, step) {
+    slide.querySelectorAll("[data-step]").forEach((el) => {
+      const at = Number.parseInt(el.dataset.step || "1", 10);
+      el.classList.toggle("revealed", at <= step);
+    });
+  }
+
+  function setStep(slide, step) {
+    const max = stepCount(slide);
+    const next = Math.max(0, Math.min(step, max));
+    slide.dataset.currentStep = String(next);
+    applySteps(slide, next);
+    return next;
+  }
+
+  function revealAll(slide) {
+    setStep(slide, stepCount(slide));
+  }
+
   function nextSlide() {
+    const slide = slides[currentIndex];
+    const max = stepCount(slide);
+    const step = Number.parseInt(slide.dataset.currentStep || "0", 10);
+
+    if (max && step < max) {
+      const now = setStep(slide, step + 1);
+      slideAnnouncement.textContent = `Step ${now} of ${max}.`;
+      return;
+    }
+
     if (currentIndex < slides.length - 1) {
       showSlide(currentIndex + 1);
     }
   }
 
   function previousSlide() {
+    const slide = slides[currentIndex];
+    const step = Number.parseInt(slide.dataset.currentStep || "0", 10);
+
+    if (stepCount(slide) && step > 0) {
+      const now = setStep(slide, step - 1);
+      slideAnnouncement.textContent = `Step ${now} of ${stepCount(slide)}.`;
+      return;
+    }
+
     if (currentIndex > 0) {
-      showSlide(currentIndex - 1);
+      // Arriving backwards should land on a completed slide, not an empty one.
+      showSlide(currentIndex - 1, true, true);
     }
   }
 

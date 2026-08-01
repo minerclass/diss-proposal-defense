@@ -793,6 +793,43 @@ td {
   margin-top: 2px;
 }
 
+.scope-limit-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 18px 20px 22px;
+  list-style: none;
+}
+
+.scope-limit-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.scope-limit-list li:first-child {
+  padding-top: 0;
+}
+
+.scope-limit-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.scope-limit-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.scope-limit-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .boundary-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

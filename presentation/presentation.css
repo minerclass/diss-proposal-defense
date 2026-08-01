@@ -2427,3 +2427,38 @@ body.fullscreen .notes-drawer {
 .closing-links a:focus-visible { color: var(--white); }
 
 .closing-criteria span { color: var(--gold); }
+
+/* ============================================================
+   Progressive reveals.
+   Opacity-only so revealing never reflows a slide that clips.
+   Content stays in the DOM and in the accessibility tree, so no
+   claim is hidden from assistive technology; the reveal is a
+   pacing device for the presenter, not a content gate.
+   ============================================================ */
+.slide[data-steps] [data-step] {
+  opacity: .12;
+  transition: opacity .34s ease;
+}
+
+.slide[data-steps] [data-step].revealed {
+  opacity: 1;
+}
+
+/* Overview, print, and reduced-motion all show the final state. */
+.deck.overview .slide [data-step],
+.slide:not(.active) [data-step] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide[data-steps] [data-step] {
+    transition: none;
+  }
+}
+
+@media print {
+  .slide[data-steps] [data-step] {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
