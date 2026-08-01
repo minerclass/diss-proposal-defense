@@ -19,6 +19,118 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-07-31 - Visual storytelling redesign, first section
+
+Agent: Claude Code, working the art-direction redesign handoff. **Partial: the
+design system and two of four flagged slides are done. Slides 2 and 13 are not.**
+
+**Rendering is now solved for this machine.** There is no Node, playwright, or
+selenium, and the in-app browser blocks localhost and cannot introspect
+`file://`. But Chrome is installed at
+`C:\Program Files\Google\Chrome\Application\chrome.exe` and headless mode works:
+`--headless --disable-gpu --no-sandbox --virtual-time-budget=3000
+--window-size=W,H --screenshot=out.png "file:///...#slide-N"`. The deck's JS
+reads `location.hash`, so any slide can be targeted directly. `--dump-dom` with
+an injected measurement script gives automated overflow checks. Previous entries
+recording "cannot verify visually" are superseded.
+
+- Captured and inspected all 17 baseline slides at 1920x1080 before editing.
+  Confirmed the reported problems are real rather than inferred, and found the
+  root typographic cause: the global `h1`/`h2` rule applied
+  `letter-spacing: -.035em` and `line-height: .98` to every title regardless of
+  length, so long titles bunched while short ones looked intentional.
+- Added `presentation/STORYBOARD.md` recording the diagnosis, the design system,
+  the six visual primitives, and per-slide targets. Written before CSS changes.
+- Built a length-aware title system: default tracking relaxed to `-.022em` and
+  leading to `1.04`, plus `data-title="short"` and `data-title="long"` scales,
+  plus `.t-lead` / `.t-quiet` spans so a title can be a reading sequence rather
+  than a uniform block. Tagged slides 15 and 17 as long.
+- **Slide 1 re-conceived.** Title staged as "Pedagogical Friction" dominant over
+  a quieter qualifier; added a concentric aperture so the right-hand negative
+  space frames the composition instead of sitting inert.
+- **Slide 6 re-conceived.** Replaced three mostly-empty cards plus a filled
+  foundation bar with a constellation: head, room, and world arranged around a
+  central learning event, all enclosed by a dashed infrastructural field. This
+  was also a correctness fix, not only aesthetics: the old filled bar read as a
+  fourth peer card, contradicting the framework's stated asymmetry.
+- No visible wording was changed on any slide.
+
+Verified: all 17 slides pass an automated out-of-bounds and scroll-overflow probe
+at both 1920x1080 and 1280x720; slides 1 and 6 visually reviewed as rendered
+images; 17 sections with sequential IDs intact; local terminology scan passes.
+
+Caught and fixed during the work: the staged title initially collapsed its
+`textContent`, so the control-dock caption read "Pedagogical Frictionin the
+Age...". `presentation.js` builds that caption from `textContent`, so block-level
+spans inside a heading need literal whitespace between them.
+
+**Slides 2 and 13 completed in a follow-up pass**, so all four flagged slides are
+now re-conceived:
+
+- **Slide 2 — trace.** Replaced the floating equation with a vertical trace in
+  the right column: "Polished product" as six solid, crisp bars above the hinge,
+  "Durable learning" below as irregular marks fading stepwise to nothing. The
+  slide now shows what disappears rather than only naming it. The three existing
+  text strings and the `aria-label` are unchanged; the marks and bars are
+  decorative and `aria-hidden`.
+- **Slide 13 — audit spine.** The quote anchors mid-left against a gold rule
+  while the six safeguards became numbered nodes on a full-height vertical spine,
+  distributed with `justify-content: space-between`. This removed the dead middle
+  band and makes the safeguards read as a traceable chain of challenge rather
+  than a floating checklist.
+
+Verified after this pass: 17/17 slides clear an automated out-of-bounds and
+scroll-overflow probe at both 1920x1080 and 1280x720; slides 1, 2, 6, and 13
+reviewed as rendered images; sequential IDs and `aria-labelledby` resolution
+intact; terminology scan passes.
+
+Caught during verification: the first attempt to re-probe silently ran against a
+stale copy of the deck because the probe-rebuild step failed on a missing marker
+and the failure did not stop the run. The rebuild now asserts that the source
+contains the new markup before probing. Treat a probe result as meaningless
+unless the probe file is known to have been rebuilt.
+
+**Remaining slides completed in a third pass** as a consolidated CSS-only change
+reusing existing class names, so no markup or wording changed:
+
+- s3 widening clarity gap via a gradient wedge off the divider, with the second
+  figure recoloured rust against the first in teal.
+- s4 and s16 gained a hinge/gate rule on `.timeline-current`, marking the
+  authorship rupture and the no-data-before-approval boundary.
+- s7 boundary marker became a threshold with connectors above and below, and the
+  two sides took teal/rust to separate preserve from remove.
+- s8 questions gained connectors so the three read as a movement.
+- s9 the quantitative side is now visibly subordinate in weight and type size
+  rather than an equal card.
+- s10 vantage points offset alternately, with the student group dashed and blue
+  to mark it as a distinct perspective.
+- s11 evidence bands took a weight order: solid teal primary, blue supporting,
+  dashed rust nonparticipant comparison.
+- s12 an overlap bracket above the join shows the strands meeting only at
+  integration.
+- s14 the rule became an entry condition with a gold rule and the sequencing
+  safeguard highlighted.
+- s15 middle contribution offset into a constellation; the falsifiability line
+  now sits above a rule.
+- s17 links demoted to a quiet utility layer so the decision dominates.
+
+Verified: 17/17 clear the out-of-bounds and scroll probe at 1920x1080 and
+1280x720, using a probe rebuilt from the current file with an assertion that the
+new markup is present.
+
+Honest limits on this third pass: only slide 3 was spot-checked as a rendered
+image; the other twelve were verified for fit but not reviewed visually. The s3
+wedge is subtle enough that the teal/rust colour contrast, not the shape, is
+doing most of the work, and it may deserve a stronger treatment. These are
+refinements to existing compositions rather than the ground-up re-conceptions
+applied to slides 1, 2, 6, and 13, so the "no more than three adjacent slides
+share a silhouette" criterion is improved but probably not fully met.
+
+Still not done: no progressive reveals were added anywhere. Print output has not
+been re-verified since the redesign began, and the print stylesheet has its own
+`@page` geometry that these changes could disturb. Nothing was committed or
+pushed, per the handoff.
+
 ## 2026-07-31 - Presentation visual and layout review
 
 Agent: OpenAI Codex, completing the visual review handed off after the content
