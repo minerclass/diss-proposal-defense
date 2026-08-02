@@ -167,7 +167,7 @@ const questions = [
   ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts and agentic artifacts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
   ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI and agentic artifacts as limited nonparticipant evidence, reporting counterexamples, and avoiding claims about findings before data collection."],
-  ["What still needs confirmation?", "Committee authorization and scheduling, the reader window, any dean's representative requirement, CITI documentation, and the institution's current signature and proposal-hearing procedures."]
+  ["What still needs confirmation?", "The proposal defense is set for August 13, 2026 and CITI training is complete. What remains is the reader window, any dean's representative requirement, current signature procedures, the IRB submission sequence after the defense, and scheduling for a final dissertation defense that is still TBD."]
 ];
 
 const challengeCategories = [
@@ -518,13 +518,31 @@ function bindEvents() {
   qs("#openingAnswer").addEventListener("input", event => localStorage.setItem(storage.opening, event.target.value));
 
   qs("#committeeNotes").value = localStorage.getItem(storage.committee) || [
-    "Items to confirm before the proposal hearing:",
-    "- Is the July 24 Chapters 1-3 working proposal authorized for committee circulation?",
-    "- What are the current scheduling, reader-window, dean's representative, and signature requirements?",
-    "- Is CITI completion documented before the hearing?",
-    "- Is the participant and instrument mapping clear across RQ1-RQ3?",
-    "- Is the below-80 descriptive survey rule defensible and feasible?",
-    "- How will the bounded agentic-artifact task remain separate from participant evidence and participant data?"
+    "Proposal defense is August 13, 2026. The final dissertation defense date is TBD and must fall on or before April 30, 2027.",
+    "CITI human-subjects training is complete; the certificate goes in the IRB file.",
+    "",
+    "Settled in the July 24, 2026 Chapters 1-3 working proposal (say these the same way every time):",
+    "- Qualitative-dominant convergent mixed methods grounded in constructivist qualitative inquiry; the qualitative strand answers the questions and the quantitative strand supplies supporting context.",
+    "- Interviews run across all four participant groups; card sorts are limited to classroom-facing educators and adult university students.",
+    "- RQ3 adds no participant group and no instrument; it integrates the RQ1 and RQ2 evidence into meta-inferences.",
+    "- Survey analysis stays descriptive and exploratory under the below-80 rule, and national datasets provide context rather than inference about participants.",
+    "- AI-generated texts and the one bounded, prespecified agentic-artifact task hold nonparticipant status and stay separate from participant evidence and participant data.",
+    "- Public pages carry explanation and rehearsal only; consent records, transcripts, and raw survey data live in approved secure storage.",
+    "- No recruitment or data collection begins before proposal approval and IRB approval, and recruitment excludes the researcher's own district.",
+    "",
+    "Asks for the chair (procedural, not conceptual):",
+    "- Confirm the July 24 draft is the version the committee is reading for August 13 and the format they want it in.",
+    "- Confirm the reader window, dean's representative, and signature requirements that apply before August 13.",
+    "- Confirm whether the Appendix A instruments must be final at the defense or can be revised during IRB review.",
+    "- Confirm how soon after the defense the IRB application should go in, and what revisions must clear first.",
+    "- Confirm the scheduling window for the final dissertation defense so it lands on or before April 30, 2027.",
+    "",
+    "Dates:",
+    "- Proposal defense: August 13, 2026",
+    "- CITI training: complete",
+    "- Final dissertation defense: TBD, on or before April 30, 2027",
+    "- Materials to committee by ____",
+    "- IRB submission target ____"
   ].join("\n");
   qs("#committeeNotes").addEventListener("input", event => localStorage.setItem(storage.committee, event.target.value));
 
