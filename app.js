@@ -146,8 +146,8 @@ const methodRows = [
 
 const sampleChecks = [
   "Confirm that the July 24 Chapters 1-3 working proposal is the committee-circulated version.",
-  "Confirm chair and committee authorization, the defense date, the required reader window, and any dean's representative requirement.",
-  "Document CITI completion before the hearing and keep IRB approval as a prerequisite for recruitment and data collection.",
+  "Confirm chair and committee authorization for the August 13, 2026 defense, the required reader window, and any dean's representative requirement.",
+  "File the completed CITI certificate with the IRB materials, and keep proposal approval and IRB approval as prerequisites for recruitment and data collection.",
   "Rehearse a 20- to 30-minute narrative using the exact RQ1-RQ3 wording and the qualitative-dominant evidence hierarchy.",
   "Explain the participant and instrument mapping: interviews across all four groups; card sorts only for classroom-facing educators and adult university students.",
   "Explain interpretive codebook thematic analysis, the below-80 descriptive survey rule, and integration through convergence, divergence, expansion, or silence.",
