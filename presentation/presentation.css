@@ -2431,12 +2431,14 @@ body.fullscreen .notes-drawer {
 /* ============================================================
    Progressive reveals.
    Opacity-only so revealing never reflows a slide that clips.
+   Pending steps remain readable at presentation scale while the
+   fully revealed step still receives a visible emphasis change.
    Content stays in the DOM and in the accessibility tree, so no
    claim is hidden from assistive technology; the reveal is a
    pacing device for the presenter, not a content gate.
    ============================================================ */
 .slide[data-steps] [data-step] {
-  opacity: .12;
+  opacity: .78;
   transition: opacity .34s ease;
 }
 

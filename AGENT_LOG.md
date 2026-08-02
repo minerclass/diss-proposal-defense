@@ -19,6 +19,28 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-02 - Progressive-reveal contrast repair
+
+Agent: OpenAI Codex.
+
+Raised the pending-step opacity in presentation/presentation.css from .12
+to .78. The former value made the three pressure labels and the
+Unproductive success coda on slide 5 look disabled and rendered their text
+at roughly 1.2:1 contrast against the cream slide. The revised value keeps the
+step-by-step emphasis change without making unrevealed content illegible; the
+same repair applies consistently to all six slides with progressive reveals.
+
+No slide copy, research-status language, reveal order, navigation behavior, or
+layout geometry changed.
+
+Validated locally through Playwright at 1920 x 987. The slide 5 pressure row
+and coda remained inside the slide bounds at pending opacity .78. Advancing the
+reveal raised the pressure row to full opacity without changing layout. The
+accessibility snapshot retained all slide content and controls. The only console
+error was the pre-existing missing favicon.ico response from the local server.
+
+---
+
 ## 2026-07-31 - Progressive reveals
 
 Agent: Claude Code, closing the last open item from the redesign handoff.
