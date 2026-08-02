@@ -147,7 +147,7 @@ const methodRows = [
 const sampleChecks = [
   "Confirm that the July 24 Chapters 1-3 working proposal is the committee-circulated version.",
   "Confirm chair and committee authorization for the August 13, 2026 defense, the required reader window, and any dean's representative requirement.",
-  "File the completed CITI certificate with the IRB materials, and keep proposal approval and IRB approval as prerequisites for recruitment and data collection.",
+  "File the current CITI certificate with the IRB materials, and keep proposal approval and IRB approval as prerequisites for recruitment and data collection.",
   "Rehearse a 20- to 30-minute narrative using the exact RQ1-RQ3 wording and the qualitative-dominant evidence hierarchy.",
   "Explain the participant and instrument mapping: interviews across all four groups; card sorts only for classroom-facing educators and adult university students.",
   "Explain interpretive codebook thematic analysis, the below-80 descriptive survey rule, and integration through convergence, divergence, expansion, or silence.",
@@ -167,7 +167,7 @@ const questions = [
   ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts and agentic artifacts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
   ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI and agentic artifacts as limited nonparticipant evidence, reporting counterexamples, and avoiding claims about findings before data collection."],
-  ["What still needs confirmation?", "The proposal defense is set for August 13, 2026 and CITI training is complete. What remains is the reader window, any dean's representative requirement, current signature procedures, the IRB submission sequence after the defense, and scheduling for a final dissertation defense that is still TBD."]
+  ["What still needs confirmation?", "The proposal defense is set for August 13, 2026 and CITI certification is current. What remains is the reader window, any dean's representative requirement, current signature procedures, the IRB submission sequence after the defense, and scheduling for a final dissertation defense that is still TBD."]
 ];
 
 const challengeCategories = [
@@ -519,7 +519,7 @@ function bindEvents() {
 
   qs("#committeeNotes").value = localStorage.getItem(storage.committee) || [
     "Proposal defense is August 13, 2026. The final dissertation defense date is TBD and must fall on or before April 30, 2027.",
-    "CITI human-subjects training is complete; the certificate goes in the IRB file.",
+    "CITI human-subjects recertification is complete; the current certificate goes in the IRB file.",
     "",
     "Settled in the July 24, 2026 Chapters 1-3 working proposal (say these the same way every time):",
     "- Qualitative-dominant convergent mixed methods grounded in constructivist qualitative inquiry; the qualitative strand answers the questions and the quantitative strand supplies supporting context.",
