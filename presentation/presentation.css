@@ -547,8 +547,10 @@ a:focus-visible,
   color: var(--white);
 }
 
+/* Deliberately quieter than the artifact label, but .58 landed at 4.33:1 on
+   the rust field, under AA. .62 clears it at 4.71:1 and keeps the hierarchy. */
 .trace-formation .trace-label {
-  color: rgba(255, 253, 248, .58);
+  color: rgba(255, 253, 248, .62);
 }
 
 /* Six uniform bars: the visible, finished surface. */
@@ -2724,9 +2726,11 @@ body.fullscreen .notes-drawer {
 /* s11 — evidence ecology with a clear weight order, not three equal bands. */
 .evidence-primary { border-left: .34cqw solid var(--teal); }
 .evidence-supporting { border-left: .34cqw solid var(--blue); opacity: .93; }
+/* Held back from the two participant-evidence rows, but .86 put its rust label
+   at 4.41:1, under AA. .90 clears it at 4.78:1 and stays visibly secondary. */
 .evidence-comparison {
   border-left: .34cqw dashed var(--rust);
-  opacity: .86;
+  opacity: .90;
 }
 
 /* s12 — weave: the two strands overlap only at integration. */

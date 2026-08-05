@@ -19,6 +19,30 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-04 - Slides 2 and 11 contrast misses cleared
+
+Agent: Claude Opus 5 (Claude Code). Closes the open item left by the entry
+below, at the author's instruction.
+
+- Slide 2, `.trace-formation .trace-label` ("Durable learning"):
+  `rgba(255,253,248,.58)` to `.62`. 4.33:1 to **4.71:1**.
+- Slide 11, `.evidence-comparison`: `opacity: .86` to `.90`. 4.41:1 to
+  **4.78:1**.
+
+Both were deliberately de-emphasised, so the values are the smallest that clear
+AA rather than a reset to full strength. The hierarchy each was expressing still
+reads: the formation label stays quieter than the artifact label, and the
+evidence rows still step 1 → .93 → .90.
+
+Verified with the DOM contrast sweep described below: **216 text nodes across
+all 17 slides, 0 failures**. Predicted and measured ratios agreed exactly on
+both, so that sweep can be trusted to size this kind of change in advance
+instead of guessing at alpha values.
+
+Still open: the CI accessibility job remains blind to contrast on this deck for
+the two reasons recorded below. Closing that gap would mean adding a sweep like
+this one to the workflow. Not attempted here.
+
 ## 2026-08-04 - Invisible first guardrail on slide 14, and an axe blind spot
 
 Agent: Claude Opus 5 (Claude Code). Reported by the author.
