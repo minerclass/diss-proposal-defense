@@ -19,6 +19,76 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-04 - Interactive research questions, section rail, and Studio access
+
+Agent: Claude Opus 5 (Claude Code).
+
+Presentation only. No slide claim, research-status language, reveal order, or
+research question wording changed. The three research questions were already
+present on slide 8 and their text is untouched; what changed is how they are
+navigated.
+
+Added:
+
+- **Slide 8 research questions are now selectable.** Each question became a
+  button. Selecting one swaps a panel underneath showing who it draws on, what
+  evidence answers it, and how that evidence is read, plus the framework form
+  it ties to. Panel content is drawn from slides 10, 11, and 12 and the
+  existing speaker notes; no new claim was introduced. Keys 1, 2, and 3 open
+  the matching question and pull the progressive reveal forward to it. All
+  three questions stay on the slide at all times and stay in the accessibility
+  tree; the panel is fixed height so swapping never reflows the slide.
+- **Section rail** replaces the flat progress bar in the control dock. It is
+  built from each slide's `data-section`, so it stays correct if slides move.
+  Segments are proportional to section length, fill as the deck advances, and
+  jump to the start of a section on click, which is the Q&A path back to a
+  part of the argument.
+- **Standing Studio link** in the top bar plus a **Materials dialog** (M) with
+  the Proposal Defense Studio as the primary destination and direct links to
+  the Claims Lab, Traceability Matrix, Challenge Deck, Committee Questions,
+  printable matrix and brief, explorer, intellectual history, the framework
+  companion, the Overview, and Miner (2026a). The closing footer link was
+  relabeled "Proposal Defense Studio".
+- **Talk timer** (T, Shift+T resets) in the status area.
+- Section-tinted shell wash and a short slide entrance, both collapsing under
+  `prefers-reduced-motion`.
+
+Also fixed a latent presenting annoyance: arrow keys were previously swallowed
+whenever focus sat on any button or link, so clicking a control killed keyboard
+navigation until focus moved. Only text-entry targets now block navigation
+keys; Space and Enter still belong to the focused control.
+
+Validated against a local server at 1600x900 and 1920x1080:
+
+- axe-core 4.12.1, WCAG 2.0/2.1 A and AA: **0 violations**, both in the default
+  state and on a temporary copy with the Materials dialog and an evidence panel
+  forced open, since axe skips hidden content. The temporary copy was deleted.
+- Evidence panel height is constant at 155px across the resting line and all
+  three questions, so no question selection reflows the slide. All three panels
+  clear the container by 15px or more.
+- Every slide's `.slide-field` still fits inside its slide box; no regressions.
+- Rail, timer, dialog focus and Escape return, keys 1/2/3, and overview-mode
+  clicks on a question all verified. No console errors.
+
+Known and unchanged: slide 8 reports 263px of clipped scroll overflow. This is
+pre-existing and not caused by this work. It was confirmed by swapping the
+original slide 8 markup back into the live page and re-measuring: identical
+991px scrollHeight either way. Nothing is visibly cut off, since `.slide` is
+`overflow: hidden` and no element extends past the slide's bottom edge.
+
+Two notes for the next agent:
+
+- Viewport resizing in the review browser changed `innerWidth` and media-query
+  matching but did not re-resolve CSS `vw`/`vh` units, so the deck stayed
+  1600x900 while `innerWidth` reported 1366. Slide 8's type is entirely
+  container-relative (`cqw`), so its proportions hold at any deck size, but do
+  not trust absolute pixel readings taken after a resize.
+- This clone lives in a OneDrive-synced folder. During this session AGENT_LOG.md
+  was edited successfully, showed as modified in `git status`, and then
+  disappeared from disk minutes later with no conflict copy written. It was
+  recovered with `git restore` and the entry reapplied. Check `git status` for
+  unexpected deletions before committing here.
+
 ## 2026-08-02 - Progressive-reveal contrast repair
 
 Agent: OpenAI Codex.

@@ -24,9 +24,21 @@
       <div class="presentation-status">
         <p id="sectionLabel">Opening</p>
         <p><span id="slideNumber">1</span> / <span id="slideTotal">17</span></p>
+        <button type="button" id="timerButton" class="timer-chip" aria-label="Start the presentation timer" title="Start or pause the timer (T). Shift+T resets it.">
+          <span aria-hidden="true">◷</span>
+          <span id="timerReadout">00:00</span>
+        </button>
       </div>
 
       <div class="presentation-actions">
+        <a class="studio-link" href="../" aria-label="Open the Proposal Defense Studio" title="Open the Proposal Defense Studio">
+          <span aria-hidden="true">◆</span>
+          <span class="action-label">Studio</span>
+        </a>
+        <button type="button" id="materialsButton" aria-label="Show committee materials" title="Committee materials (M)">
+          <span aria-hidden="true">❖</span>
+          <span class="action-label">Materials</span>
+        </button>
         <button type="button" id="overviewButton" aria-label="Toggle slide overview" aria-pressed="false" title="Toggle slide overview (O)">
           <span aria-hidden="true">▦</span>
           <span class="action-label">Overview</span>
@@ -285,19 +297,51 @@
             <h2 id="slide-8-title">The study follows meaning from experience to institutional action.</h2>
             <ol class="question-sequence">
               <li data-step="1">
-                <span>RQ1</span>
-                <p>How do educators, leaders, and adult students make sense of the ways <em>generative AI changes</em> effort, dialogue, authorship, judgment, and participation in teaching and learning?</p>
+                <button type="button" class="rq-button" data-rq="1" aria-expanded="false" aria-controls="rqEvidence">
+                  <span class="rq-tag">RQ1</span>
+                  <span class="rq-text">How do educators, leaders, and adult students make sense of the ways <em>generative AI changes</em> effort, dialogue, authorship, judgment, and participation in teaching and learning?</span>
+                  <span class="rq-cue"><span aria-hidden="true">Evidence</span><span class="sr-only">Show the evidence for research question 1</span></span>
+                </button>
               </li>
               <li data-step="2">
-                <span>RQ2</span>
-                <p>How do educators and school-system leaders make sense of and respond to the policy, professional-learning, assessment, access, and governance conditions surrounding generative AI?</p>
+                <button type="button" class="rq-button" data-rq="2" aria-expanded="false" aria-controls="rqEvidence">
+                  <span class="rq-tag">RQ2</span>
+                  <span class="rq-text">How do educators and school-system leaders make sense of and respond to the policy, professional-learning, assessment, access, and governance conditions surrounding generative AI?</span>
+                  <span class="rq-cue"><span aria-hidden="true">Evidence</span><span class="sr-only">Show the evidence for research question 2</span></span>
+                </button>
               </li>
               <li data-step="3">
-                <span>RQ3</span>
-                <p>What language, assessment expectations, practices, supports, and leadership approaches do they identify as important <em>for preserving friction that supports learning while reducing unnecessary barriers?</em></p>
+                <button type="button" class="rq-button" data-rq="3" aria-expanded="false" aria-controls="rqEvidence">
+                  <span class="rq-tag">RQ3</span>
+                  <span class="rq-text">What language, assessment expectations, practices, supports, and leadership approaches do they identify as important <em>for preserving friction that supports learning while reducing unnecessary barriers?</em></span>
+                  <span class="rq-cue"><span aria-hidden="true">Evidence</span><span class="sr-only">Show the evidence for research question 3</span></span>
+                </button>
               </li>
             </ol>
-            <p data-step="4" class="source-line">Participant meaning leads. Framework concepts sensitize attention without prescribing findings.</p>
+            <div class="rq-evidence" id="rqEvidence" data-step="4">
+              <p class="rq-rest">Participant meaning leads. Framework concepts sensitize attention without prescribing findings. <span class="rq-hint">Select a question to trace the evidence that answers it.</span></p>
+
+              <div class="rq-panel" data-rq-panel="1" hidden>
+                <div><span>Who</span><p>Educators, building and district leaders, and about four adult university students</p></div>
+                <div><span>Evidence</span><p>Semistructured interviews · card-sort explanations · open-ended survey responses</p></div>
+                <div><span>How it is read</span><p>Two-cycle interpretive codebook thematic analysis, with a temporal layer on student transcripts</p></div>
+                <div class="rq-panel-tie"><span>Framework tie</span><p>Noetic, rhetorical, and existential friction</p></div>
+              </div>
+
+              <div class="rq-panel" data-rq-panel="2" hidden>
+                <div><span>Who</span><p>Classroom-facing educators, building administrators, and district or system leaders</p></div>
+                <div><span>Evidence</span><p>Interviews · institutional documents · closed-ended survey items · NCES School Pulse Panel and RAND datasets</p></div>
+                <div><span>How it is read</span><p>Themes set beside descriptive estimates; don’t-know responses read as a signal, not as missing data</p></div>
+                <div class="rq-panel-tie"><span>Framework tie</span><p>Infrastructural friction</p></div>
+              </div>
+
+              <div class="rq-panel" data-rq-panel="3" hidden>
+                <div><span>Who</span><p>Educators and school-system leaders, with recruitment priority for those supporting multilingual learners and students with disabilities</p></div>
+                <div><span>Evidence</span><p>Card sorts · interviews · open responses · policy and leadership documents</p></div>
+                <div><span>How it is read</span><p>Joint displays and narrative weaving across convergence, expansion, divergence, and silence</p></div>
+                <div class="rq-panel-tie"><span>Framework tie</span><p>The productive and exclusionary friction boundary</p></div>
+              </div>
+            </div>
           </div>
           <aside class="speaker-notes" hidden>
             <h2>Exact research questions</h2>
@@ -570,7 +614,7 @@
             <p>Micah J. Miner · Dissertation proposal defense · August 13, 2026</p>
             <nav class="closing-links" aria-label="Companion materials">
               <a href="https://minerclass.github.io/dissertation-overview/" target="_blank" rel="noopener">Dissertation Overview</a>
-              <a href="../">Defense Studio</a>
+              <a href="../">Proposal Defense Studio</a>
               <a href="../methods-matrix/">Research matrix</a>
               <a href="../committee-brief.html">Committee brief</a>
               <a href="https://minerclass.github.io/pedagogical-friction/" target="_blank" rel="noopener">Framework companion</a>
@@ -595,10 +639,8 @@
         <span aria-hidden="true">←</span>
         <span>Previous</span>
       </button>
-      <div class="progress-wrap" aria-label="Presentation progress">
-        <div class="progress-track" aria-hidden="true">
-          <span id="progressBar"></span>
-        </div>
+      <div class="progress-wrap">
+        <nav class="section-rail" id="sectionRail" aria-label="Jump to a section"></nav>
         <p id="slideTitle">Pedagogical Friction in the Age of Generative AI and Tertiary Algorithmicity</p>
       </div>
       <button type="button" id="nextButton" aria-label="Next slide">
@@ -619,6 +661,35 @@
     <div class="notes-content" id="notesContent"></div>
   </aside>
 
+  <div class="keyboard-help" id="materialsDialog" role="dialog" aria-modal="true" aria-labelledby="materialsTitle" hidden>
+    <div class="keyboard-help-panel materials-panel">
+      <button type="button" id="closeMaterialsButton" aria-label="Close committee materials">×</button>
+      <p class="eyebrow">Companion materials</p>
+      <h2 id="materialsTitle">Everything the committee can open during questions.</h2>
+
+      <a class="materials-primary" href="../">
+        <span class="materials-kicker">Start here</span>
+        <strong>Proposal Defense Studio</strong>
+        <small>Defense room, claims lab, traceability matrix, challenge deck, and committee questions in one place.</small>
+      </a>
+
+      <div class="materials-grid">
+        <a href="../#claims">Claims Lab<small>Each claim with its warrant and source</small></a>
+        <a href="../#methods">Traceability Matrix<small>Question to instrument to analysis</small></a>
+        <a href="../#challenges">Challenge Deck<small>Anticipated objections and replies</small></a>
+        <a href="../#committee">Committee Questions<small>Prepared responses by member</small></a>
+        <a href="../methods-matrix/">Printable research matrix<small>One-page design summary</small></a>
+        <a href="../committee-brief.html">Printable committee brief<small>Handout version</small></a>
+        <a href="../explorer/">Expanded explorer<small>References and source detail</small></a>
+        <a href="../intellectual-history/">Intellectual history<small>Shared lineage of the framework</small></a>
+        <a href="https://minerclass.github.io/pedagogical-friction/" target="_blank" rel="noopener">Framework companion<small>Framework, instruments, secondary data</small></a>
+        <a href="https://minerclass.github.io/dissertation-overview/" target="_blank" rel="noopener">Dissertation Overview<small>Canonical front door</small></a>
+        <a href="https://minerclass.github.io/dissertation-proposal-studio/" target="_blank" rel="noopener">Pedagogical Friction Studio<small>Intellectual-history experience</small></a>
+        <a href="https://doi.org/10.5281/zenodo.21152544" target="_blank" rel="noopener">Miner (2026a) on Zenodo<small>Weighting behind the slide 3 estimates</small></a>
+      </div>
+    </div>
+  </div>
+
   <div class="keyboard-help" id="keyboardHelp" role="dialog" aria-modal="true" aria-labelledby="keyboardHelpTitle" hidden>
     <div class="keyboard-help-panel">
       <button type="button" id="closeHelpButton" aria-label="Close keyboard shortcuts">×</button>
@@ -627,8 +698,11 @@
       <dl>
         <div><dt>← / → / Space</dt><dd>Previous or next slide</dd></div>
         <div><dt>Home / End</dt><dd>First or last slide</dd></div>
+        <div><dt>1 – 3</dt><dd>On the questions slide, open that RQ's evidence</dd></div>
         <div><dt>O</dt><dd>Toggle slide overview</dd></div>
         <div><dt>N</dt><dd>Toggle presenter notes</dd></div>
+        <div><dt>M</dt><dd>Committee materials and Studio links</dd></div>
+        <div><dt>T</dt><dd>Start or pause the timer (Shift+T resets)</dd></div>
         <div><dt>F</dt><dd>Toggle fullscreen</dd></div>
         <div><dt>?</dt><dd>Show this help</dd></div>
       </dl>
