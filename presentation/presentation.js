@@ -36,6 +36,8 @@
   const fieldNote = frameworkAside ? frameworkAside.querySelector(".field-note") : null;
   const frameworkField = document.querySelector(".framework-field");
 
+  const stageButtons = Array.from(document.querySelectorAll(".stage-button"));
+
   // Keys 1-3 address whichever slide is showing.
   const nodeOrder = ["head", "room", "world"];
 
@@ -47,6 +49,7 @@
   let openDialog = null;
   let activeRq = null;
   let activeNode = null;
+  let activeStage = null;
 
   // Contiguous runs of slides that share a data-section become one rail
   // segment, so the rail is derived from the deck rather than duplicated.
@@ -123,6 +126,10 @@
 
     if (activeNode && !currentSlide.contains(frameworkAside)) {
       setNode(null);
+    }
+
+    if (activeStage && activeStage.slide !== currentSlide) {
+      setStage(activeStage.slide, null);
     }
 
     if (notesOpen) {
@@ -306,6 +313,48 @@
     const title = nodeButtons.find((b) => b.dataset.node === next)?.querySelector(".node-title")?.textContent || "";
     const pressure = detail?.querySelector(".detail-pressure")?.textContent || "";
     announce(`${title}. Answers ${pressure}. Sustained or constrained by infrastructural friction.`);
+  }
+
+  // ---- Timeline stages ----------------------------------------------------
+  // Two slides use the timeline component, so this is scoped to a slide rather
+  // than to the document. Only one timeline slide is ever visible at a time.
+  function setStage(slide, id) {
+    const aside = slide?.querySelector(".timeline-aside");
+    if (!aside) {
+      return;
+    }
+
+    slide.querySelectorAll(".stage-button").forEach((button) => {
+      const on = Boolean(id) && button.dataset.stage === id;
+      button.classList.toggle("selected", on);
+      button.setAttribute("aria-expanded", String(on));
+    });
+
+    aside.querySelectorAll(".stage-detail").forEach((detail) => {
+      detail.hidden = detail.dataset.stageDetail !== id;
+    });
+
+    const rest = aside.querySelector(".timeline-rest");
+    if (rest) {
+      rest.hidden = Boolean(id);
+    }
+
+    activeStage = id ? { slide, id } : null;
+  }
+
+  function toggleStage(slide, id) {
+    const same = activeStage && activeStage.slide === slide && activeStage.id === id;
+    setStage(slide, same ? null : id);
+
+    if (same) {
+      announce("Stage detail closed.");
+      return;
+    }
+
+    const detail = slide.querySelector(`.stage-detail[data-stage-detail="${id}"]`);
+    const label = detail?.querySelector(".stage-kicker")?.textContent || `Stage ${id}`;
+    const body = detail?.querySelector(".stage-body")?.textContent || "";
+    announce(`${label}. ${body}`);
   }
 
   // ---- Presentation timer -------------------------------------------------
@@ -574,6 +623,19 @@
     });
   });
 
+  stageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const slide = button.closest(".slide");
+      if (overviewOpen && slide) {
+        currentIndex = slides.indexOf(slide);
+        toggleOverview(false);
+        return;
+      }
+
+      toggleStage(slide, button.dataset.stage);
+    });
+  });
+
   [keyboardHelp, materialsDialog].forEach((dialog) => {
     dialog?.addEventListener("click", (event) => {
       if (event.target === dialog) {
@@ -638,6 +700,10 @@
       }
       if (activeNode) {
         toggleNode(activeNode);
+        return;
+      }
+      if (activeStage) {
+        toggleStage(activeStage.slide, activeStage.id);
         return;
       }
       if (overviewOpen) {
@@ -711,19 +777,30 @@
         break;
       case "1":
       case "2":
-      case "3": {
+      case "3":
+      case "4":
+      case "5": {
         const slide = slides[currentIndex];
+        const index = Number.parseInt(event.key, 10);
 
         if (rqButtons.length && slide.contains(rqEvidence)) {
+          if (index > 3) {
+            break;
+          }
           event.preventDefault();
-          const step = Number.parseInt(event.key, 10);
-          if (stepCount(slide) && step > Number.parseInt(slide.dataset.currentStep || "0", 10)) {
-            setStep(slide, step);
+          if (stepCount(slide) && index > Number.parseInt(slide.dataset.currentStep || "0", 10)) {
+            setStep(slide, index);
           }
           toggleRq(event.key);
         } else if (nodeButtons.length && slide.contains(frameworkAside)) {
+          if (index > 3) {
+            break;
+          }
           event.preventDefault();
-          toggleNode(nodeOrder[Number.parseInt(event.key, 10) - 1]);
+          toggleNode(nodeOrder[index - 1]);
+        } else if (slide.querySelector(".stage-button")) {
+          event.preventDefault();
+          toggleStage(slide, event.key);
         }
         break;
       }
@@ -748,5 +825,6 @@
   renderTimer();
   setRq(null);
   setNode(null);
+  slides.forEach((slide) => setStage(slide, null));
   showSlide(currentIndex, false);
 })();

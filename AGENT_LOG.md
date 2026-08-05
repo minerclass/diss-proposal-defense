@@ -19,6 +19,76 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-04 - Timeline stages on slides 4 and 16 made selectable
+
+Agent: Claude Opus 5 (Claude Code). Third entry this day; follows the two below.
+
+Both slides that use the `.media-timeline` component now have selectable
+stages, so one implementation covers them. Keys 1 through 5 select a stage,
+Escape closes, and leaving either slide resets it.
+
+Slide 4, the media-ecology progression. Detail names what changes at each stage
+and who it is attributed to. Stages 3, 4, and 5 are quoted from the existing
+speaker notes and source line. **Stages 1 and 2 are newly drafted single
+sentences** summarizing Ong on primary orality and literacy; they are the only
+new prose in this change and were flagged to the author for approval:
+
+- 01 "Knowledge lives in speech, memory, and performance. What cannot be
+  remembered cannot persist."
+- 02 "Writing externalizes memory. Analysis, revision, and a durable record
+  become possible."
+
+Slide 16, the study timeline. Detail is drawn entirely from the slide's own
+speaker notes and from slides 9 and 12: CITI status on stage 1, why stage 2 is
+the one the committee can most usefully shape and that cognitive-interview
+respondents are recruited outside the main study, the same-policy-moment
+rationale and the documented reduction order on stage 3, the below-80
+frequencies-only rule on stage 4, and the four integration outcomes on stage 5.
+
+Structural notes:
+
+- Unlike slide 6, nothing changed element type. `strong`, `small`, and `span`
+  are all phrasing content, so they sit inside a `button` unchanged. The `li`
+  keeps its position, right border, and `timeline-current` / `timeline-original`
+  background classes; the button inside carries the padding and the
+  `flex-direction: column; justify-content: flex-end` the cell used to have.
+  The absolutely positioned `.timeline-number` still resolves against the `li`,
+  so it did not move.
+- `.timeline-current` is teal with light text, so the hover and selected states
+  have a second pair of rules for that cell.
+- Each slide's resting line was moved into the swappable block rather than a
+  new line being added: slide 4's coda and slide 16's source line are now the
+  resting state of `.timeline-aside`. Slide 4's Ong and Stalder source line
+  stays outside and always visible, because it is a citation.
+- The aside reserves 8.8cqw. The timeline `ol` is `flex: 1` and gives up that
+  space, dropping from 198px to 162px at a 779px deck. The big stage numbers
+  still clear their labels by 94px or more.
+
+Validated:
+
+- No reflow. Timeline height, first-cell position, aside height, and
+  slide-field bottom are identical across the resting state and all five
+  stages, on both slides.
+- Reserved height is 70% filled by the tallest panel on each slide, leaving
+  18px of 60px headroom at a 779px deck. Because `.slide` is the query
+  container, is locked to 16:9, and every dimension involved is in `cqw`, the
+  layout is scale-invariant: measurements were identical at every container
+  width tried, so that headroom holds at any projector resolution.
+- Resting geometry matches the previous commit when compared through real hash
+  navigation: slide, field, and timeline left and top identical.
+- axe-core 4.12.1, WCAG 2.0/2.1 A and AA: 0 violations, in the default state
+  and on a temporary copy with the tallest panel on each slide forced open and
+  its button marked selected, covering both the plain and the teal cell. The
+  copy was deleted.
+- Keys 1-5, Escape, cross-slide reset, and every slide still fitting its box
+  all verified. Slide 8's and slide 6's existing shortcuts still work; the
+  digit handler now dispatches on which slide is showing.
+
+Method note that cost time: forcing a slide active by toggling the `active`
+class, rather than navigating, leaves it without the state `showSlide` applies
+and reports a false 9px horizontal offset against a baseline. Compare through
+real navigation.
+
 ## 2026-08-04 - Framework nodes on slide 6 made selectable
 
 Agent: Claude Opus 5 (Claude Code). Follows the entry below, same day.

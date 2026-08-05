@@ -728,14 +728,49 @@ a:focus-visible,
   border-bottom: 1px solid var(--line);
 }
 
+/* The cell keeps its position, border, and stage background classes; the
+   button inside carries the layout the cell used to have. strong, small, and
+   span are all phrasing content, so nothing had to change element type. */
 .media-timeline li {
   position: relative;
+  display: flex;
+  min-width: 0;
+  border-right: 1px solid var(--line);
+}
+
+.stage-button {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   min-width: 0;
   padding: 1.4cqw 1.15cqw;
-  border-right: 1px solid var(--line);
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.stage-button:hover {
+  background: rgba(23, 35, 45, .06);
+}
+
+.stage-button.selected {
+  background: rgba(47, 105, 112, .15);
+  box-shadow: inset 0 0 0 1px rgba(31, 80, 87, .55);
+}
+
+/* The current-stage cell is teal with light text, so it needs its own pair. */
+.timeline-current .stage-button:hover {
+  background: rgba(255, 253, 248, .09);
+}
+
+.timeline-current .stage-button.selected {
+  background: rgba(255, 253, 248, .16);
+  box-shadow: inset 0 0 0 1px rgba(255, 253, 248, .55);
 }
 
 .media-timeline li:last-child {
@@ -771,6 +806,51 @@ a:focus-visible,
   font-weight: 700;
   letter-spacing: -.06em;
   line-height: 1;
+}
+
+/* Resting line and the five stage panels share one reserved block, so
+   selecting a stage never resizes the timeline above it. */
+.timeline-aside {
+  display: grid;
+  align-content: center;
+  min-height: 8.8cqw;
+  margin-top: .2cqw;
+}
+
+.timeline-rest {
+  margin: 0;
+}
+
+.stage-detail {
+  display: grid;
+  gap: .3cqw;
+  padding-left: 1.1cqw;
+  border-left: .22cqw solid var(--teal-dark);
+}
+
+.stage-detail[hidden] {
+  display: none;
+}
+
+.stage-kicker {
+  color: var(--teal-dark);
+  font-size: .84cqw;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.stage-body {
+  max-width: 68em;
+  font-size: 1.18cqw;
+  line-height: 1.34;
+}
+
+.stage-note {
+  max-width: 74em;
+  color: var(--ink-soft);
+  font-size: .95cqw;
+  line-height: 1.3;
 }
 
 .timeline-original {
