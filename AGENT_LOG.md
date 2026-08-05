@@ -19,6 +19,68 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-04 - Framework nodes on slide 6 made selectable
+
+Agent: Claude Opus 5 (Claude Code). Follows the entry below, same day.
+
+The three learner-facing forms on slide 6 are now controls. Selecting one names
+the pressure it answers and lights the infrastructural field it depends on,
+which is the dependency the slide's own title asserts. Keys 1, 2, and 3 select
+head, room, and world; Escape closes; leaving the slide resets it.
+
+No claim, definition, or card copy changed. The detail text is quoted from
+slide 5's three pressures, so the interaction links two slides that already
+argue this and introduces nothing new:
+
+- Noetic friction, answers noetic displacement
+- Rhetorical friction, answers rhetorical saturation
+- Existential friction, answers existential abstraction
+
+Each panel closes with "Sustained or constrained by infrastructural friction",
+restating the relationship the slide already claims.
+
+Structural notes for whoever edits this slide next:
+
+- The `article` elements became `button`s, so `h3` became `span.node-title` and
+  the card's `p`/`small` became `span.node-desc`/`span.node-small`. Buttons take
+  phrasing content only. The `article`-keyed CSS was retargeted to `.node`.
+- The button is `display: block`, not flex, and `.node-kicker` stays inline.
+  That reproduces the article's box model exactly. A flex column was tried
+  first and shortened every card by about 10px, because the inline kicker had
+  been sitting on a taller line box.
+- `.node-title` restates what three rules used to supply between them:
+  `.slide h3` gave the serif face and 1.05 leading, `.framework-constellation
+  h3` the size and margins, the UA sheet the bold weight. The overview and
+  max-width 820px sizes are restated too, since those rules keyed on `h3` and
+  `p` element names and no longer match.
+- The resting note and the three panels share one grid cell at a reserved
+  9.6cqw height, so selection never moves the constellation.
+- Selection adds emphasis to the chosen node rather than dimming the other two.
+  Dimming would drop their text contrast, which is the failure recorded in the
+  2026-08-02 entry below.
+
+Validated at 1280x720 against the committed baseline (ce4aa2e) rendered side by
+side in an iframe at the same viewport:
+
+- The resting state is **pixel-identical** to the baseline across the kicker,
+  title, description, small print, card box, core, constellation, field label,
+  field note, and all three card positions. Zero computed-style or geometry
+  differences.
+- Constellation height, all three card positions, core position, aside height,
+  and slide-field bottom are identical across the resting state and all three
+  selections. No reflow.
+- axe-core 4.12.1, WCAG 2.0/2.1 A and AA: 0 violations, both in the default
+  state and on a temporary copy with a node detail and its active field state
+  forced open. The temporary copy was deleted.
+- Keys 1/2/3, Escape, reset-on-navigate, overview rendering, and slide 8's
+  existing question shortcuts all verified. Every slide still fits its box.
+
+Gotcha that cost time here: after editing CSS, the review browser kept serving
+the cached stylesheet across `location.reload()` and `navigate`, so a corrected
+rule appeared not to apply and an early comparison reported false differences.
+Cache-bust the stylesheet href, or load the page with a query string, before
+trusting any computed-style reading.
+
 ## 2026-08-04 - Interactive research questions, section rail, and Studio access
 
 Agent: Claude Opus 5 (Claude Code).

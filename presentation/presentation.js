@@ -30,6 +30,14 @@
   const rqEvidence = document.getElementById("rqEvidence");
   const rqPanels = rqEvidence ? Array.from(rqEvidence.querySelectorAll(".rq-panel")) : [];
   const rqRest = rqEvidence ? rqEvidence.querySelector(".rq-rest") : null;
+  const nodeButtons = Array.from(document.querySelectorAll(".node[data-node]"));
+  const frameworkAside = document.getElementById("frameworkAside");
+  const nodeDetails = frameworkAside ? Array.from(frameworkAside.querySelectorAll(".node-detail")) : [];
+  const fieldNote = frameworkAside ? frameworkAside.querySelector(".field-note") : null;
+  const frameworkField = document.querySelector(".framework-field");
+
+  // Keys 1-3 address whichever slide is showing.
+  const nodeOrder = ["head", "room", "world"];
 
   let currentIndex = getIndexFromHash();
   let overviewOpen = false;
@@ -38,6 +46,7 @@
   let previousFocus = null;
   let openDialog = null;
   let activeRq = null;
+  let activeNode = null;
 
   // Contiguous runs of slides that share a data-section become one rail
   // segment, so the rail is derived from the deck rather than duplicated.
@@ -106,10 +115,14 @@
     updateRail();
     playEnter(currentSlide);
 
-    // Leaving the questions slide clears the selection so returning to it
-    // starts from the three questions rather than mid-answer.
+    // Leaving a slide clears its selection so returning to it starts from the
+    // whole picture rather than mid-answer.
     if (activeRq && !currentSlide.contains(rqEvidence)) {
       setRq(null);
+    }
+
+    if (activeNode && !currentSlide.contains(frameworkAside)) {
+      setNode(null);
     }
 
     if (notesOpen) {
@@ -252,6 +265,47 @@
     announce(next
       ? `Research question ${next}. Showing who it draws on, what evidence answers it, and how that evidence is read.`
       : "Research question evidence closed.");
+  }
+
+  // ---- Framework nodes ----------------------------------------------------
+  // Selecting a learner-facing form names the pressure it answers and lights
+  // the infrastructural field it depends on. All three nodes stay in place and
+  // in the accessibility tree; only the shared aside cell swaps.
+  function setNode(id) {
+    activeNode = id;
+
+    nodeButtons.forEach((button) => {
+      const on = button.dataset.node === id;
+      button.classList.toggle("selected", on);
+      button.setAttribute("aria-expanded", String(on));
+    });
+
+    nodeDetails.forEach((detail) => {
+      detail.hidden = detail.dataset.nodeDetail !== id;
+    });
+
+    if (fieldNote) {
+      fieldNote.hidden = Boolean(id);
+    }
+
+    if (frameworkField) {
+      frameworkField.classList.toggle("node-active", Boolean(id));
+    }
+  }
+
+  function toggleNode(id) {
+    const next = activeNode === id ? null : id;
+    setNode(next);
+
+    if (!next) {
+      announce("Framework detail closed.");
+      return;
+    }
+
+    const detail = nodeDetails.find((d) => d.dataset.nodeDetail === next);
+    const title = nodeButtons.find((b) => b.dataset.node === next)?.querySelector(".node-title")?.textContent || "";
+    const pressure = detail?.querySelector(".detail-pressure")?.textContent || "";
+    announce(`${title}. Answers ${pressure}. Sustained or constrained by infrastructural friction.`);
   }
 
   // ---- Presentation timer -------------------------------------------------
@@ -507,6 +561,19 @@
     });
   });
 
+  nodeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const slide = button.closest(".slide");
+      if (overviewOpen && slide) {
+        currentIndex = slides.indexOf(slide);
+        toggleOverview(false);
+        return;
+      }
+
+      toggleNode(button.dataset.node);
+    });
+  });
+
   [keyboardHelp, materialsDialog].forEach((dialog) => {
     dialog?.addEventListener("click", (event) => {
       if (event.target === dialog) {
@@ -567,6 +634,10 @@
       }
       if (activeRq) {
         toggleRq(activeRq);
+        return;
+      }
+      if (activeNode) {
+        toggleNode(activeNode);
         return;
       }
       if (overviewOpen) {
@@ -640,17 +711,22 @@
         break;
       case "1":
       case "2":
-      case "3":
-        if (rqButtons.length && slides[currentIndex].contains(rqEvidence)) {
+      case "3": {
+        const slide = slides[currentIndex];
+
+        if (rqButtons.length && slide.contains(rqEvidence)) {
           event.preventDefault();
-          const slide = slides[currentIndex];
           const step = Number.parseInt(event.key, 10);
           if (stepCount(slide) && step > Number.parseInt(slide.dataset.currentStep || "0", 10)) {
             setStep(slide, step);
           }
           toggleRq(event.key);
+        } else if (nodeButtons.length && slide.contains(frameworkAside)) {
+          event.preventDefault();
+          toggleNode(nodeOrder[Number.parseInt(event.key, 10) - 1]);
         }
         break;
+      }
       case "?":
         event.preventDefault();
         showDialog(keyboardHelp);
@@ -671,5 +747,6 @@
   buildRail();
   renderTimer();
   setRq(null);
+  setNode(null);
   showSlide(currentIndex, false);
 })();
