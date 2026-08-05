@@ -2750,7 +2750,11 @@ body.fullscreen .notes-drawer {
   border-left: .34cqw solid var(--gold);
 }
 
-.boundary-list li:first-child { color: var(--white); }
+/* The first guardrail used to be forced to var(--white). Slide 14 is cream, so
+   that rendered the whole line invisible; the dark background it was written
+   for never landed, and the .agentic-rule box above now carries the "entry
+   condition" role the storyboard assigned it. The line keeps its <strong>
+   weight, which is what marked it out in the first place. */
 
 /* s15 — contribution as a constellation tied to contradiction testing. */
 .contribution-lines > div:nth-child(2) { transform: translateY(1.1cqw); }

@@ -19,6 +19,60 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-04 - Invisible first guardrail on slide 14, and an axe blind spot
+
+Agent: Claude Opus 5 (Claude Code). Reported by the author.
+
+**The bug.** `.boundary-list li:first-child { color: var(--white) }` rendered
+slide 14's first guardrail, "Comparison begins only after themes from human
+accounts are finalized", as white text on the cream slide. Contrast 1.13:1, so
+the line was invisible; only its teal checkmark showed. Introduced 2026-07-31 in
+d178657, not by the interaction work earlier today.
+
+The storyboard assigned slide 14 "entry, traces, guardrails, stop", so the first
+row was meant to read as the entry condition. The dark background that white was
+written for never landed, and the `.agentic-rule` box above now carries that
+role. Fix: drop the colour rule. The line keeps its `<strong>` weight, which is
+what set it apart anyway. All five guardrails now sit at 13.92:1.
+
+**Why CI did not catch it, and will not catch the next one.** The axe job is
+blind to this whole class of bug, for two compounding reasons:
+
+1. Inactive slides are `display: none`, and axe skips hidden content. Running
+   axe against `presentation/index.html` only ever tests slide 1 plus the bar,
+   dock, and dialogs. Sixteen slides are never examined.
+2. Even with a slide made active, axe returns colour-contrast on it as
+   **incomplete**, not as a violation: "Element's background color could not be
+   determined due to a background gradient". `--exit` only fails on violations,
+   so an invisible line passes green. Verified by reintroducing the bug in a
+   scratch copy: 0 violations, with the offending node sitting in `incomplete`.
+
+This is very likely why the 2026-08-02 progressive-reveal contrast problem also
+shipped past a green check. Treat the axe job as covering structure and naming,
+not colour, on this deck.
+
+**What was used instead.** A DOM contrast sweep run in the browser: activate
+each slide, walk every element with a direct text node, resolve the nearest
+ancestor with an opaque background, multiply the opacity chain, and compare
+against WCAG AA thresholds with the large-text rule applied. 216 text nodes
+across all 17 slides. Two gotchas worth knowing if this is rerun:
+
+- Disable animations first. `.slide.active` carries `animation: slide-in .32s
+  both`, whose `from` state is `opacity: 0`. Toggling `active` restarts it, and
+  a synchronous `getComputedStyle` then reports opacity 0 for everything, which
+  silently reports every element as failing at ratio 1.00.
+- Validate with a positive control. Reinjecting the bug drops the first
+  guardrail to 1.13:1 while its siblings stay at 13.92:1.
+
+**Open, not fixed, needs the author's call.** Two pre-existing marginal misses,
+both just under AA and neither introduced today:
+
+- Slide 2, `.trace-label` "Durable learning": 4.33:1, needs 4.5. It is
+  `rgba(255,253,248,.58)` on rust. Raising the alpha to about .62 clears it.
+- Slide 11, the `.evidence-comparison` label "Separately labeled nonparticipant
+  comparison": 4.41:1, needs 4.5. The block sits at `opacity: .86`; about .90
+  clears it.
+
 ## 2026-08-04 - Timeline stages on slides 4 and 16 made selectable
 
 Agent: Claude Opus 5 (Claude Code). Third entry this day; follows the two below.
