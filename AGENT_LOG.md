@@ -19,6 +19,26 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-07 - Braun and Clarke moved to Constructivist Qualitative Inquiry
+
+Agent: Claude Opus 5 (Claude Code). Researcher decision on the split the entry
+below flagged as contestable.
+
+Braun and Clarke (2006, 2021) move from Research Methods and Analysis to
+Constructivist Qualitative Inquiry, on the reasoning that reflexive thematic
+analysis treats the researcher as an instrument, which is an epistemological
+commitment rather than a procedural step. Saldaña, Patton, and Malterud stay
+with procedure. Cluster counts go from 6 and 16 to 8 and 14; the total stays
+155 across 18 clusters.
+
+Changed in the studio repo (`dissertation-proposal-studio@51fda76`) and
+regenerated here. Two `tradition` fields, plus the derived thinkers lists,
+contribution blurbs, and refs arrays.
+
+Verified on a local server at the 127.0.0.1 origin: Constructivist Qualitative
+Inquiry lists 8 works ending in the two Braun and Clarke entries, Research
+Methods lists 14 with no Braun, and doubled punctuation stays at 0.
+
 ## 2026-08-07 - Proposal Bibliography bucket emptied; 18 clusters
 
 Agent: Claude Opus 5 (Claude Code). Follow-on to the entry below, at the
