@@ -32,7 +32,14 @@
     .cluster { color:var(--coral); font-size:12px; font-weight:850; text-transform:uppercase; }
     .detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
     .detail-box { padding:12px; border:1px solid var(--line); }
+    .detail-box.wide { grid-column:1/-1; }
     .detail-box strong { display:block; margin-bottom:4px; color:var(--teal); }
+    .detail-box p { margin:0; }
+    .citation { padding-left:1.4em; text-indent:-1.4em; font-size:14px; overflow-wrap:anywhere; }
+    .detail-box a { margin-top:8px; display:inline-block; color:#0a545f; font-weight:750; }
+    .tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+    .tag { padding:3px 9px; border:1px solid var(--line); background:#f2f7f7; font-size:12px; font-weight:750; }
+    .era { margin:6px 0 0; color:var(--muted); font-size:13px; }
     .history-list { display:grid; gap:10px; margin-top:18px; }
     .source-card { display:grid; grid-template-columns:minmax(92px,max-content) minmax(0,1fr); gap:12px; width:100%; padding:14px; }
     .source-card.active { border-left:4px solid var(--gold); }
@@ -47,7 +54,7 @@
     <div class="masthead-inner">
       <p class="eyebrow">Canonical shared resource</p>
       <h1>Proposal Intellectual History</h1>
-      <p class="lede">One stable intellectual-history page for the Proposal Defense Studio and Expanded Explorer, organized around each source's role, proposal bridge, verification status, and defense use.</p>
+      <p class="lede">One stable intellectual-history page for the Proposal Defense Studio and Expanded Explorer, carrying the full cited corpus from the Pedagogical Friction Studio traditions and reference library. Each source shows its role, proposal bridge, verification status, and full APA reference.</p>
       <nav class="links" aria-label="Connected dissertation experiences">
         <a href="../">Proposal Defense Studio</a>
         <a href="../explorer/">Expanded Explorer</a>
@@ -74,24 +81,57 @@
     const clusters = ["all", ...new Set(sources.map(source => source.cluster))];
     let selectedCluster = "all";
     let selectedIndex = 0;
+    // Titles and citations carry ampersands, quotes, and brackets, so every
+    // interpolated value is escaped before it reaches innerHTML.
+    const esc = value => String(value ?? "").replace(/[&<>"']/g, character => (
+      { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[character]
+    ));
     function renderFilters() {
-      document.querySelector("#filters").innerHTML = clusters.map(cluster => `<button type="button" class="${cluster === selectedCluster ? "active" : ""}" data-cluster="${cluster}">${cluster === "all" ? "All clusters" : cluster}</button>`).join("");
+      document.querySelector("#filters").innerHTML = clusters.map(cluster => {
+        const count = cluster === "all" ? sources.length : sources.filter(source => source.cluster === cluster).length;
+        const active = cluster === selectedCluster;
+        return `<button type="button" class="${active ? "active" : ""}" aria-pressed="${active}" data-cluster="${esc(cluster)}">${cluster === "all" ? "All clusters" : esc(cluster)} (${count})</button>`;
+      }).join("");
     }
     function filteredSources() {
       const query = document.querySelector("#search").value.trim().toLowerCase();
       return sources.map((source,index)=>({source,index})).filter(({source}) => {
-        const text = `${source.year} ${source.title} ${source.author} ${source.cluster} ${source.role} ${source.bridge}`.toLowerCase();
+        const text = `${source.year} ${source.title} ${source.author} ${source.cluster} ${source.role} ${source.bridge} ${source.citation || ""}`.toLowerCase();
         return (selectedCluster === "all" || source.cluster === selectedCluster) && (!query || text.includes(query));
       });
     }
     function renderDetail(source) {
-      document.querySelector("#detail").innerHTML = `<span class="cluster">${source.cluster}</span><h2>${source.author}</h2><p><strong>${source.year}. ${source.title}.</strong></p><div class="detail-grid"><div class="detail-box"><strong>Role in intellectual history</strong>${source.role}</div><div class="detail-box"><strong>Bridge to the proposal</strong>${source.bridge}</div><div class="detail-box"><strong>Verification status</strong>${source.status}. Check final APA 7 details against the proposal bibliography.</div><div class="detail-box"><strong>Defense use</strong>Use this source to explain how the dissertation connects theory, learning, governance, and empirical design.</div></div>`;
+      if (!source) { document.querySelector("#detail").innerHTML = ""; return; }
+      const link = source.doi ? `https://doi.org/${source.doi}` : source.url;
+      // Only the entries transcribed from the proposal carry a full APA string;
+      // the rest show the venue the studio library records for them.
+      const body = source.citation
+        ? `<p class="citation">${esc(source.citation)}</p>`
+        : source.venue ? `<p>${esc(source.venue)}</p>` : "";
+      const reference = body || link
+        ? `<div class="detail-box wide"><strong>Reference</strong>${body}${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">Open source record for ${esc(source.author)}</a>` : ""}</div>`
+        : "";
+      const tags = (source.frictions || []).length
+        ? `<div class="tags">${source.frictions.map(friction => `<span class="tag">${esc(friction)}</span>`).join("")}</div>`
+        : "";
+      document.querySelector("#detail").innerHTML =
+        `<span class="cluster">${esc(source.cluster)}</span>` +
+        `<h2>${esc(source.author)}</h2>` +
+        `<p><strong>${esc(source.year)}. ${esc(source.title)}${/[?!.]$/.test(source.title) ? "" : "."}</strong></p>` +
+        (source.era ? `<p class="era">Tradition span: ${esc(source.era)}</p>` : "") +
+        tags +
+        `<div class="detail-grid">` +
+          `<div class="detail-box"><strong>Role in intellectual history</strong><p>${esc(source.role)}</p></div>` +
+          `<div class="detail-box"><strong>Bridge to the proposal</strong><p>${esc(source.bridge)}</p></div>` +
+          `<div class="detail-box wide"><strong>Verification status</strong><p>${esc(source.status)}. Check final APA 7 details against the proposal bibliography.</p></div>` +
+          reference +
+        `</div>`;
     }
     function renderHistory() {
       const filtered = filteredSources();
       if (!filtered.some(item => item.index === selectedIndex) && filtered.length) selectedIndex = filtered[0].index;
       document.querySelector("#count").textContent = `${filtered.length} of ${sources.length} canonical sources shown`;
-      document.querySelector("#historyList").innerHTML = filtered.map(({source,index}) => `<button type="button" class="source-card ${index === selectedIndex ? "active" : ""}" data-index="${index}"><span class="year">${source.year}</span><span><strong>${source.title}</strong>${source.author}<small>${source.cluster} | ${source.role}</small></span></button>`).join("") || "<p>No sources match this search.</p>";
+      document.querySelector("#historyList").innerHTML = filtered.map(({source,index}) => `<button type="button" class="source-card ${index === selectedIndex ? "active" : ""}" data-index="${index}"><span class="year">${esc(source.year)}</span><span><strong>${esc(source.title)}</strong>${esc(source.author)}<small>${esc(source.cluster)} | ${esc(source.role)}</small></span></button>`).join("") || "<p>No sources match this search.</p>";
       renderDetail(sources[selectedIndex] || sources[0]);
     }
     document.querySelector("#filters").addEventListener("click", event => { const button=event.target.closest("[data-cluster]"); if(!button)return; selectedCluster=button.dataset.cluster; renderFilters(); renderHistory(); });

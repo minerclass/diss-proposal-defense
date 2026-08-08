@@ -362,36 +362,49 @@ function renderMethods() {
   updateReadiness();
 }
 
+// Cluster names come from the studio's traditions, so the filter is built from
+// the data rather than hard-coded against a list that drifts out of date.
+function renderHistoryFilter() {
+  const select = qs("#historyFilter");
+  const seen = [];
+  sources.forEach(source => {
+    if (!seen.includes(source.cluster)) seen.push(source.cluster);
+  });
+  select.innerHTML = `<option value="all">All clusters</option>` +
+    seen.map(cluster => `<option value="${cluster}">${cluster}</option>`).join("");
+}
+
 function renderHistory() {
   const search = qs("#historySearch").value.trim().toLowerCase();
   const filter = qs("#historyFilter").value;
-  const selected = qs(".source-button.active")?.dataset.source || `${sources[0].author}-${sources[0].year}`;
+  const selected = qs(".source-button.active")?.dataset.source || sources[0].id;
   const filtered = sources.filter(source => {
-    const haystack = `${source.cluster} ${source.year} ${source.title} ${source.author} ${source.role} ${source.bridge}`.toLowerCase();
+    const haystack = `${source.cluster} ${source.year} ${source.title} ${source.author} ${source.role} ${source.bridge} ${source.citation || ""}`.toLowerCase();
     return (filter === "all" || source.cluster === filter) && (!search || haystack.includes(search));
   });
-  qs("#historyTimeline").innerHTML = filtered.map(source => {
-    const key = `${source.author}-${source.year}`;
-    return `
-      <button class="source-button ${key === selected ? "active" : ""}" type="button" data-source="${key}">
+  qs("#historyTimeline").innerHTML = filtered.map(source => `
+      <button class="source-button ${source.id === selected ? "active" : ""}" type="button" data-source="${source.id}">
         <strong>${source.year} · ${source.author}</strong>
         <span>${source.title} · ${source.cluster}</span>
       </button>
-    `;
-  }).join("") || `<div class="detail-box"><strong>No sources match.</strong><p>Try a broader search or cluster filter.</p></div>`;
-  renderSourceDetail(filtered.find(source => `${source.author}-${source.year}` === selected) || filtered[0] || sources[0]);
+    `).join("") || `<div class="detail-box"><strong>No sources match.</strong><p>Try a broader search or cluster filter.</p></div>`;
+  renderSourceDetail(filtered.find(source => source.id === selected) || filtered[0] || sources[0]);
 }
 
 function renderSourceDetail(source) {
+  const link = source.doi ? `https://doi.org/${source.doi}` : source.url;
+  const reference = source.citation
+    ? `<div class="detail-box"><strong>Reference</strong><p>${source.citation}</p>${link ? `<p><a href="${link}" target="_blank" rel="noopener">Open source record</a></p>` : ""}</div>`
+    : "";
   qs("#sourceDetail").innerHTML = `
     <p class="section-label">${source.cluster}</p>
     <h3>${source.author}</h3>
-    <p><strong>${source.year}. ${source.title}.</strong></p>
+    <p><strong>${source.year}. ${source.title}${/[?!.]$/.test(source.title) ? "" : "."}</strong></p>
     <div class="detail-grid">
       <div class="detail-box"><strong>Role in intellectual history</strong><p>${source.role}</p></div>
       <div class="detail-box"><strong>Bridge to the proposal</strong><p>${source.bridge}</p></div>
       <div class="detail-box"><strong>Verification status</strong><p>${source.status}. Check final APA 7 details against the proposal bibliography before publication as a reference list.</p></div>
-      <div class="detail-box"><strong>Defense use</strong><p>Use this source to explain how the dissertation connects theory, learning, governance, and empirical design.</p></div>
+      ${reference}
     </div>
   `;
 }
@@ -475,7 +488,7 @@ function bindEvents() {
     if (!button) return;
     qsa(".source-button").forEach(item => item.classList.remove("active"));
     button.classList.add("active");
-    renderSourceDetail(sources.find(source => `${source.author}-${source.year}` === button.dataset.source));
+    renderSourceDetail(sources.find(source => source.id === button.dataset.source));
   });
 
   qs("#challengeCategories").addEventListener("click", event => {
@@ -593,6 +606,7 @@ function init() {
   renderDefense();
   renderClaims();
   renderMethods();
+  renderHistoryFilter();
   renderHistory();
   renderChallengeDeck();
   renderQuestions();

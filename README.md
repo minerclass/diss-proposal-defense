@@ -12,6 +12,14 @@ The public studio also includes an expanded dissertation explorer at `explorer/`
 
 Both intellectual-history views use the shared `intellectual-history.js` dataset so their source sequence, roles, proposal bridges, and verification language remain aligned.
 
+`intellectual-history.js` is generated, not hand-edited. It merges the traditions and reference library published by the [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) with the defense prose written before that bibliography existed. Regenerate it after the studio bibliography changes:
+
+```
+node tools/build-intellectual-history.mjs [path-to-dissertation-proposal-studio]
+```
+
+The path defaults to a `dissertation-proposal-studio` checkout beside this repository. Clusters come from the studio's traditions; references the studio has not mapped to a tradition are grouped under **Proposal Bibliography** rather than being assigned a lineage here.
+
 The standalone canonical experience is published from `intellectual-history/` and links back to both the Proposal Defense Studio and Expanded Explorer.
 
 The separate [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) remains the polished argument and intellectual-lineage experience and is linked from all three repository experiences.
@@ -50,7 +58,7 @@ For GitHub Pages:
 - **Claims Lab:** committee-facing claims with evidence anchors, likely challenges, and rehearsed answers.
 - **Methods Map:** RQ-to-data-source-to-analysis alignment plus evidence-based defense preparation checks.
 - **One-Page Research Matrix:** print-ready alignment of the three primary research questions with participants, instruments, analysis, framework dimensions, and integration points at `methods-matrix/`.
-- **Intellectual History:** searchable source atlas connecting media ecology, learning science, algorithm studies, AI education, and methods.
+- **Intellectual History:** searchable source atlas of the full cited corpus, clustered by the fourteen traditions carried in the Pedagogical Friction Studio plus the wider proposal bibliography.
 - **Challenge Deck:** active-recall rehearsal for adversarial theory, methodology, equity, positionality, and practice questions, with source-cautious response scaffolds.
 - **Committee Questions:** rehearsal prompts and a local scratchpad.
 
