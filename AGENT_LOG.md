@@ -19,6 +19,51 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-07 - Pages now publishes through actions/deploy-pages
+
+Agent: Claude Opus 5 (Claude Code). Requested by the author after the legacy
+build hung twice in one session.
+
+**Why.** The legacy branch-based Pages build hung on both pushes today. The
+signature was identical each time: the `build` job sat with `updated_at` never
+advancing past `created_at`, `deploy` never started, and the Ecosystem Quality
+Checks passed the whole time, so the commit looked green while the live site
+served a stale dataset. The first hang lasted 87 minutes before it was
+cancelled. Cancelling and then `POST /repos/:owner/:repo/pages/builds` cleared
+it within a minute both times, which is worth remembering if this recurs
+elsewhere in the ecosystem, since the sibling repos are still on legacy.
+
+**What changed.** New `.github/workflows/pages.yml` checks out the repository
+and publishes it as a Pages artifact. No build step; the tree served is the
+same one the legacy build published, and `.nojekyll` still applies. The
+repository's Pages `build_type` was switched from `legacy` to `workflow`
+through the API, so pushes no longer trigger the dynamic build. That switch is
+repository configuration, not a file, so it will not travel with a fork or a
+restore from this repo alone.
+
+Action versions were checked against their latest releases rather than written
+from memory, which mattered: the current majors are `checkout@v7`,
+`configure-pages@v6`, `upload-pages-artifact@v5`, and `deploy-pages@v5`, all
+well ahead of the v4/v3 pairs that were current when most examples were
+written.
+
+`concurrency.cancel-in-progress` is deliberately **false**. Cancelling a
+`deploy-pages` run mid-publish can leave the Pages environment half-updated,
+which is the failure this change exists to avoid. `workflow_dispatch` is
+enabled so a stuck deploy can be re-run without an empty commit.
+
+**Verified.** First run deployed in 20 seconds against the legacy build's 87
+minutes. `build_type` reads `workflow`, and `/`, `intellectual-history/`,
+`explorer/`, `presentation/`, `methods-matrix/`, and `committee-brief.html` all
+return 200 with the correct 155-source, 18-cluster dataset. Quality checks
+still pass on the same push.
+
+**Not done:** deployment stays independent of Ecosystem Quality Checks, matching
+the previous behaviour, so a red quality check does not block publication.
+Gating it is a one-line `needs:` change if that is wanted. `ci.yml` still pins
+`actions/checkout@v4` and emits the Node 20 deprecation annotation; not touched
+here.
+
 ## 2026-08-07 - Braun and Clarke moved to Constructivist Qualitative Inquiry
 
 Agent: Claude Opus 5 (Claude Code). Researcher decision on the split the entry
