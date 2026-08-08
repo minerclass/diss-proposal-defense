@@ -241,9 +241,20 @@ const entries = references.map((ref) => {
   };
 });
 
+// The standalone entries name a cluster rather than a reference, so their era
+// is resolved from the tradition that cluster belongs to.
+const byName = new Map(traditions.map((t) => [t.name, t]));
 const all = [
   ...entries,
-  ...STANDALONE.map((s) => ({ citation: "", venue: "", doi: "", url: "", era: "", frictions: [], ...s })),
+  ...STANDALONE.map((s) => ({
+    citation: "",
+    venue: "",
+    doi: "",
+    url: "",
+    era: byName.get(s.cluster)?.era || "",
+    frictions: [],
+    ...s,
+  })),
 ];
 
 all.sort((a, b) => {

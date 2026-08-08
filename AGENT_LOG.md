@@ -19,6 +19,42 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-07 - Proposal Bibliography bucket emptied; 18 clusters
+
+Agent: Claude Opus 5 (Claude Code). Follow-on to the entry below, at the
+author's instruction: map the 104 unmapped proposal references to traditions.
+
+The mapping was written to the **studio** repo, not here.
+`dissertation-proposal-studio/data/references.json` now assigns a `tradition` to
+all 151 references, and `data/traditions.json` carries four new traditions.
+`intellectual-history.js` was regenerated from it. The rationale, including the
+one contestable split, is in that repo's `AI_AUDIT_TRAIL_TRADITION_MAPPING.md` —
+read it there rather than duplicating it here.
+
+Net effect on this repo: 15 clusters to 18, and the **Proposal Bibliography
+cluster is now empty**, so it no longer appears in either filter. Every source
+now shows a real tradition bridge instead of the "not mapped to a tradition"
+fallback. The fallback string stays in the generator for future unmapped refs.
+
+Four new clusters: Tertiary Orality Scholarship (6), Educational Sensemaking
+(5), Research Methods and Analysis (16), Disability, Access, and Exclusionary
+Difficulty (2). Largest existing cluster is now Generative AI in Education at 40.
+
+Also: the four `defense-*` standalone entries had no `era`, since they are not
+studio records. The generator now resolves it from the tradition their cluster
+belongs to, so all 155 carry one.
+
+Verified: 155 sources and 18 clusters on all three consumers, Proposal
+Bibliography absent from both filters, Tertiary Orality filters to 6, no console
+errors. Terminology linter clean on both repos; all JSON parses. On the studio
+side, `private/` confirmed untracked and no em dashes introduced in user-facing
+copy, per that repo's AGENTS.md.
+
+**Not done:** `js/app.js` in the studio renders the works list as `Author.. Title`,
+because it appends a period to an author string that already ends in one. It is
+pre-existing and shows on untouched traditions, but longer works lists make it
+more visible. Left alone as unrelated to the mapping.
+
 ## 2026-08-07 - Intellectual history carries the full studio corpus (16 to 155)
 
 Agent: Claude Opus 5 (Claude Code). Requested by the author: add the cited
