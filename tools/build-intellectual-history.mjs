@@ -1,6 +1,6 @@
 // Regenerates intellectual-history.js from the Pedagogical Friction Studio data.
 //
-// The canonical bibliography lives in the sibling dissertation-proposal-studio
+// The source bibliography lives in the sibling dissertation-proposal-studio
 // repo (data/traditions.json + data/references.json). This script merges those
 // two files with the hand-written defense prose that predates them, so the
 // shared dataset stays reproducible when the studio bibliography changes.
@@ -41,12 +41,9 @@ const UNMAPPED_CLUSTER = "Proposal Bibliography";
 // ---------------------------------------------------------------------------
 // Titles for the proposal-transcribed entries.
 //
-// Those records carry a complete APA citation but an empty title field, and the
-// cards are keyed on title. parseTitle() recovers it from the citation; the
-// overrides below cover the cases it cannot get right on its own — titles that
-// end in a question mark, contain a translator credit, or sit behind a
-// full publication date rather than a bare year. Each was read against the
-// citation string in data/references.json.
+// These records originally carried a complete APA citation but an empty title
+// field. The source data now includes the recovered titles; parseTitle() and the
+// overrides remain as reproducibility guards for older or incomplete checkouts.
 // ---------------------------------------------------------------------------
 const TITLE_OVERRIDES = {
   "proposal-baudrillard-1994": "Simulacra and simulation",
@@ -221,6 +218,7 @@ const entries = references.map((ref) => {
   return {
     id: ref.id,
     cluster: tradition ? tradition.name : UNMAPPED_CLUSTER,
+    kind: tradition?.kind || "evidence-context",
     year: String(ref.year),
     title,
     author: ref.author || "",
@@ -230,8 +228,8 @@ const entries = references.map((ref) => {
       tradition?.contribution ||
       "Cited in the July 2026 proposal; not mapped to a tradition lineage in the studio data.",
     status: curated?.status || defaultStatus,
-    // Only the 120 entries transcribed from the proposal carry a full APA
-    // string. The rest fall back to venue, which is all the studio data has.
+    // Only 120 entries carry a recorded APA citation. Other entries fall back
+    // to partial venue metadata when available and are labeled in the UI.
     citation: ref.citation || "",
     venue: ref.venue || "",
     doi: ref.doi || "",
@@ -247,6 +245,7 @@ const byName = new Map(traditions.map((t) => [t.name, t]));
 const all = [
   ...entries,
   ...STANDALONE.map((s) => ({
+    kind: byName.get(s.cluster)?.kind || "evidence-context",
     citation: "",
     venue: "",
     doi: "",

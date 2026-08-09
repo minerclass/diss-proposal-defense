@@ -10,19 +10,19 @@ Interactive GitHub Pages-ready dissertation proposal defense workspace for:
 
 The public studio also includes an expanded dissertation explorer at `explorer/`. Its public reference atlas intentionally excludes local file paths, full-text source extracts, and private research data.
 
-Both intellectual-history views use the shared `intellectual-history.js` dataset so their source sequence, roles, proposal bridges, and verification language remain aligned.
+All three literature-map views use the shared `intellectual-history.js` dataset so their source sequence, roles, proposal bridges, taxonomy kinds, and verification language remain aligned. Each view selects sources by the stable source `id`, not by array position or an ambiguous author-year key.
 
-`intellectual-history.js` is generated, not hand-edited. It merges the traditions and reference library published by the [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) with the defense prose written before that bibliography existed. Regenerate it after the studio bibliography changes:
+`intellectual-history.js` is generated, not hand-edited. It merges the typed literature-map groups and reference library published by the [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) with the defense prose written before that bibliography existed. Regenerate it after the studio bibliography changes:
 
 ```
 node tools/build-intellectual-history.mjs [path-to-dissertation-proposal-studio]
 ```
 
-The path defaults to a `dissertation-proposal-studio` checkout beside this repository. Clusters come from the studio's traditions; references the studio has not mapped to a tradition are grouped under **Proposal Bibliography** rather than being assigned a lineage here.
+The path defaults to a `dissertation-proposal-studio` checkout beside this repository. Clusters come from the Studio's literature map; references the Studio has not mapped to a group are placed under **Proposal Bibliography** rather than being assigned a lineage here.
 
-The standalone canonical experience is published from `intellectual-history/` and links back to both the Proposal Defense Studio and Expanded Explorer.
+The standalone shared working experience is published from `intellectual-history/` and links back to both the Proposal Defense Studio and Expanded Explorer.
 
-The separate [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) remains the polished argument and intellectual-lineage experience and is linked from all three repository experiences.
+The separate [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) remains the polished argument and literature-map experience and is linked from all three repository experiences.
 
 ## Project Status
 
@@ -58,7 +58,7 @@ For GitHub Pages:
 - **Claims Lab:** committee-facing claims with evidence anchors, likely challenges, and rehearsed answers.
 - **Methods Map:** RQ-to-data-source-to-analysis alignment plus evidence-based defense preparation checks.
 - **One-Page Research Matrix:** print-ready alignment of the three primary research questions with participants, instruments, analysis, framework dimensions, and integration points at `methods-matrix/`.
-- **Intellectual History:** searchable source atlas of the full cited corpus, clustered by the fourteen traditions carried in the Pedagogical Friction Studio plus the wider proposal bibliography.
+- **Traditions and Research Map:** searchable working atlas of 155 sources across 19 typed groups. It combines the Studio library with four defense-context sources and labels recorded, partial, or missing reference metadata rather than presenting every entry as bibliography-ready.
 - **Challenge Deck:** active-recall rehearsal for adversarial theory, methodology, equity, positionality, and practice questions, with source-cautious response scaffolds.
 - **Committee Questions:** rehearsal prompts and a local scratchpad.
 

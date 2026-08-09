@@ -4,6 +4,19 @@ const storage = {
   checks: "proposalDefenseStudio.defenseChecks.v2"
 };
 
+const groupKindLabels = {
+  "intellectual-lineage": "Intellectual lineage",
+  "research-tradition": "Research tradition",
+  "conceptual-framework": "Conceptual framework",
+  "methodological-framework": "Methodological framework",
+  "research-infrastructure": "Research infrastructure",
+  "evidence-context": "Evidence and practice context"
+};
+
+function groupKindLabel(kind) {
+  return groupKindLabels[kind] || "Mapped group";
+}
+
 const nodes = {
   "Pedagogical Friction": {
     claim: "The study is not arguing that all difficulty is good. It distinguishes productive friction that supports interpretation, authorship, and judgment from exclusionary friction that blocks access.",
@@ -379,13 +392,13 @@ function renderHistory() {
   const filter = qs("#historyFilter").value;
   const selected = qs(".source-button.active")?.dataset.source || sources[0].id;
   const filtered = sources.filter(source => {
-    const haystack = `${source.cluster} ${source.year} ${source.title} ${source.author} ${source.role} ${source.bridge} ${source.citation || ""}`.toLowerCase();
+    const haystack = `${source.cluster} ${groupKindLabel(source.kind)} ${source.year} ${source.title} ${source.author} ${source.role} ${source.bridge} ${source.citation || ""}`.toLowerCase();
     return (filter === "all" || source.cluster === filter) && (!search || haystack.includes(search));
   });
   qs("#historyTimeline").innerHTML = filtered.map(source => `
       <button class="source-button ${source.id === selected ? "active" : ""}" type="button" data-source="${source.id}">
         <strong>${source.year} · ${source.author}</strong>
-        <span>${source.title} · ${source.cluster}</span>
+        <span>${source.title} · ${source.cluster} · ${groupKindLabel(source.kind)}</span>
       </button>
     `).join("") || `<div class="detail-box"><strong>No sources match.</strong><p>Try a broader search or cluster filter.</p></div>`;
   renderSourceDetail(filtered.find(source => source.id === selected) || filtered[0] || sources[0]);
@@ -393,15 +406,19 @@ function renderHistory() {
 
 function renderSourceDetail(source) {
   const link = source.doi ? `https://doi.org/${source.doi}` : source.url;
-  const reference = source.citation
-    ? `<div class="detail-box"><strong>Reference</strong><p>${source.citation}</p>${link ? `<p><a href="${link}" target="_blank" rel="noopener">Open source record</a></p>` : ""}</div>`
-    : "";
+  const referenceBody = source.citation
+    ? `<p>${source.citation}</p>`
+    : source.venue
+      ? `<p>${source.venue}</p>`
+      : "<p>Full reference metadata is not recorded in the shared source data. Treat this as a defense-context source, not a bibliography-ready entry.</p>";
+  const referenceLabel = source.citation ? "Recorded APA citation" : source.venue ? "Partial reference metadata" : "Reference status";
+  const reference = `<div class="detail-box"><strong>${referenceLabel}</strong>${referenceBody}${link ? `<p><a href="${link}" target="_blank" rel="noopener">Open source record</a></p>` : ""}</div>`;
   qs("#sourceDetail").innerHTML = `
-    <p class="section-label">${source.cluster}</p>
+    <p class="section-label">${source.cluster} · ${groupKindLabel(source.kind)}</p>
     <h3>${source.author}</h3>
     <p><strong>${source.year}. ${source.title}${/[?!.]$/.test(source.title) ? "" : "."}</strong></p>
     <div class="detail-grid">
-      <div class="detail-box"><strong>Role in intellectual history</strong><p>${source.role}</p></div>
+      <div class="detail-box"><strong>Role in the mapped literature</strong><p>${source.role}</p></div>
       <div class="detail-box"><strong>Bridge to the proposal</strong><p>${source.bridge}</p></div>
       <div class="detail-box"><strong>Verification status</strong><p>${source.status}. Check final APA 7 details against the proposal bibliography before publication as a reference list.</p></div>
       ${reference}

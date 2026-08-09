@@ -730,6 +730,14 @@
     }
 
     .timeline-node {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      font: inherit;
+      text-align: left;
       position: relative;
       margin-bottom: 24px;
       cursor: pointer;
@@ -757,6 +765,7 @@
     }
 
     .timeline-node-card {
+      display: block;
       background: rgba(255, 255, 255, 0.01);
       border: 1px solid var(--border-color);
       border-radius: 12px;
@@ -768,6 +777,15 @@
       background: rgba(255, 255, 255, 0.03);
       border-color: rgba(255, 255, 255, 0.15);
       transform: translateX(4px);
+    }
+
+    .timeline-node:focus-visible {
+      outline: none;
+    }
+
+    .timeline-node:focus-visible .timeline-node-card {
+      outline: 3px solid var(--accent-blue);
+      outline-offset: 3px;
     }
 
     .timeline-node-header {
@@ -791,6 +809,7 @@
     }
 
     .timeline-node-author {
+      display: block;
       font-size: 0.82rem;
       color: var(--text-muted);
     }
@@ -1443,8 +1462,8 @@
           
           <!-- Timeline flow -->
           <div>
-            <h2 style="color: var(--accent-gold);">⏳ Curated Proposal Intellectual History</h2>
-            <p class="text-muted" style="margin-top:-10px; margin-bottom: 20px;">The same proposal-defense sequence used in the Proposal Defense Studio, connecting media ecology, learning science, algorithm studies, AI education, and methods.</p>
+            <h2 style="color: var(--accent-gold);">⏳ Curated Proposal Literature Map</h2>
+            <p class="text-muted" style="margin-top:-10px; margin-bottom: 20px;">The same working map used in the Proposal Defense Studio, distinguishing intellectual lineages and research traditions from frameworks, research infrastructure, and evidence context.</p>
             
             <div class="timeline-flow" id="timeline-flow-list">
               <!-- Dynamically populated -->
@@ -1953,46 +1972,79 @@
     }
 
     // Timeline Rendering
+    function timelineKindLabel(kind) {
+      const labels = {
+        'intellectual-lineage': 'Intellectual lineage',
+        'research-tradition': 'Research tradition',
+        'conceptual-framework': 'Conceptual framework',
+        'methodological-framework': 'Methodological framework',
+        'research-infrastructure': 'Research infrastructure',
+        'evidence-context': 'Evidence and practice context'
+      };
+      return labels[kind] || 'Mapped group';
+    }
+
     function renderTimeline() {
       const flow = document.getElementById('timeline-flow-list');
       const historySources = window.intellectualHistorySources || [];
 
-      let html = '<div class="timeline-group-header">Proposal Defense Studio canonical sequence</div>';
-      historySources.forEach((source, index) => {
-        const sourceId = `history-source-${index}`;
-        html += `
-          <div class="timeline-node" id="${sourceId}" onclick="selectTimelineNode('${sourceId}')">
-            <div class="timeline-node-card">
-              <div class="timeline-node-header">
-                <span class="timeline-node-title">${source.title}</span>
-                <span class="timeline-node-year">${source.year}</span>
-              </div>
-              <div class="timeline-node-author">${source.author} · ${source.cluster}</div>
-              <div class="timeline-node-summary">${source.role}</div>
-            </div>
-          </div>
-        `;
+      flow.innerHTML = '';
+      const header = document.createElement('div');
+      header.className = 'timeline-group-header';
+      header.textContent = 'Proposal Defense Studio shared working sequence';
+      flow.appendChild(header);
+
+      historySources.forEach(source => {
+        const node = document.createElement('button');
+        node.type = 'button';
+        node.className = 'timeline-node';
+        node.id = `history-source-${source.id}`;
+        node.dataset.sourceId = source.id;
+        node.setAttribute('aria-pressed', 'false');
+
+        const card = document.createElement('span');
+        card.className = 'timeline-node-card';
+        const nodeHeader = document.createElement('span');
+        nodeHeader.className = 'timeline-node-header';
+        const title = document.createElement('span');
+        title.className = 'timeline-node-title';
+        title.textContent = source.title;
+        const year = document.createElement('span');
+        year.className = 'timeline-node-year';
+        year.textContent = source.year;
+        nodeHeader.append(title, year);
+
+        const author = document.createElement('span');
+        author.className = 'timeline-node-author';
+        author.textContent = `${source.author} · ${source.cluster} · ${timelineKindLabel(source.kind)}`;
+        const summary = document.createElement('span');
+        summary.className = 'timeline-node-summary';
+        summary.textContent = source.role;
+        card.append(nodeHeader, author, summary);
+        node.appendChild(card);
+        node.addEventListener('click', () => selectTimelineNode(source.id));
+        flow.appendChild(node);
       });
-      flow.innerHTML = html;
 
       if (historySources.length > 0) {
-        selectTimelineNode('history-source-0');
+        selectTimelineNode(historySources[0].id);
       }
     }
 
     function selectTimelineNode(sourceId) {
-      document.querySelectorAll('.timeline-node').forEach(n => n.classList.remove('active-node'));
-      const node = document.getElementById(sourceId);
-      if (node) node.classList.add('active-node');
+      document.querySelectorAll('.timeline-node').forEach(node => {
+        const active = node.dataset.sourceId === sourceId;
+        node.classList.toggle('active-node', active);
+        node.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
 
-      const sourceIndex = Number(sourceId.replace('history-source-', ''));
-      const source = (window.intellectualHistorySources || [])[sourceIndex];
+      const source = (window.intellectualHistorySources || []).find(item => item.id === sourceId);
       if (!source) return;
 
       document.getElementById('tl-title').textContent = source.title;
       document.getElementById('tl-author').textContent = `${source.author} (${source.year})`;
-      document.getElementById('tl-citation').innerHTML = `<em>${source.cluster}</em>`;
-      document.getElementById('tl-summary').innerHTML = `<strong>Role in intellectual history</strong><br />${source.role}`;
+      document.getElementById('tl-citation').innerHTML = `<em>${source.cluster}</em> · ${timelineKindLabel(source.kind)}`;
+      document.getElementById('tl-summary').innerHTML = `<strong>Role in the mapped literature</strong><br />${source.role}`;
       document.getElementById('tl-quotes').innerHTML = `
         <div class="card-evidence-box"><strong>Bridge to the proposal</strong><br />${source.bridge}</div>
         <div class="card-evidence-box"><strong>Verification status</strong><br />${source.status}. Check final APA 7 details against the proposal bibliography before publication as a reference list.</div>

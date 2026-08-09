@@ -866,3 +866,23 @@ This change set spans five repositories: `pedagogical-friction`,
 `diss-proposal-defense`, `dissertationquestionsbeta`, `conference-presentations`,
 and `interactive-resume-2026`. Each carries its own `AGENT_LOG.md` entry for the
 same date. Check the siblings before assuming a change was isolated.
+
+## 2026-08-09 - Literature-map accuracy, stable IDs, and keyboard access
+
+Agent: OpenAI Codex, implementing the author's follow-up to a verification review.
+
+- Regenerated `intellectual-history.js` from the revised Pedagogical Friction
+  Studio taxonomy: 155 sources across 19 typed groups.
+- Replaced the public claim that every item is part of a canonical, fully cited
+  corpus. The standalone view now describes a shared working map and labels
+  recorded APA citations, partial metadata, and missing reference records.
+- Added each group's taxonomy `kind` to the shared dataset and public views so
+  intellectual lineages are distinct from frameworks, research infrastructure,
+  and evidence or practice context.
+- Converted the standalone selector and Explorer timeline from positional array
+  indices to stable source IDs. The primary Studio view already used stable IDs.
+- Rebuilt Explorer timeline entries as native buttons with visible focus,
+  `aria-pressed` state, and Enter/Space activation through native button
+  behavior.
+- Preserved the proposal-stage boundary. No participant data, findings, or
+  claims of IRB or committee approval were added.
