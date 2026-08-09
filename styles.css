@@ -720,6 +720,8 @@ button:disabled {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .toolbar input,
@@ -901,6 +903,16 @@ td {
   .top-actions,
   .toolbar-controls {
     justify-content: flex-start;
+  }
+
+  .toolbar-controls {
+    width: 100%;
+  }
+
+  .toolbar-controls input,
+  .toolbar-controls select {
+    width: 100%;
+    min-width: 0;
   }
 
   .nav-stack,
