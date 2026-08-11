@@ -26,7 +26,8 @@ The standalone shared working experience is published from `intellectual-history
 
 The defense site treats two public companions as a layered resource rather than merging their codebases:
 
-- [Pedagogical Friction Companion](https://minerclass.github.io/pedagogical-friction/#study) is the current defense-facing entry point for the research questions, framework, and Chapter 2–3 walkthroughs.
+- [Pedagogical Friction Companion](https://minerclass.github.io/pedagogical-friction/#top) is the current defense-facing entry point for the complete argument, framework, equity boundary, research questions, and Chapter 2–3 walkthroughs.
+- [Research Questions and Study Design](https://minerclass.github.io/pedagogical-friction/#study) provides a direct route to the exact RQs, evidence and participant mappings, analysis, integration, and interpretive boundaries.
 - [Dissertation Proposal Studio](https://minerclass.github.io/dissertation-proposal-studio/#traditions) is the deeper reference for the comprehensive literature map, source library, methods, and RQ connections.
 
 The Defense Room links to both with these distinct roles. Keeping the sites separate preserves their different interaction models while giving readers one clear path between them.

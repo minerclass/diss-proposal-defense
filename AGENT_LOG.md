@@ -19,6 +19,26 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-11 - Route the full companion and direct RQ path
+
+Agent: OpenAI Codex, implementing the author's follow-up after comparing the
+two live sites.
+
+- Changed the Defense Room's primary Pedagogical Friction route from `#study`
+  to `#top` so it opens the companion's full narrative argument.
+- Preserved `#study` as a separate direct route to the exact research
+  questions, evidence and participant mappings, analysis, integration, and
+  interpretive boundaries.
+- Expanded the Companion Path from two cards to three: full current companion,
+  RQs and study design, and comprehensive literature and methods.
+- Preserved the separate codebases and proposal-stage research boundaries.
+
+Local verification: all three cards rendered as native links with the intended
+section anchors; the sidebar opens `#top`; desktop used three equal columns;
+390 x 844 collapsed to one column with no horizontal overflow; no duplicate
+IDs or browser warnings/errors were found. Live Pages verification remains
+pending until this commit deploys.
+
 ## 2026-08-11 - Clarify the current and comprehensive companion sites
 
 Agent: OpenAI Codex, implementing the author's request to connect the two
