@@ -12,7 +12,7 @@ The public studio also includes an expanded dissertation explorer at `explorer/`
 
 All three literature-map views use the shared `intellectual-history.js` dataset so their source sequence, roles, proposal bridges, taxonomy kinds, and verification language remain aligned. Each view selects sources by the stable source `id`, not by array position or an ambiguous author-year key.
 
-`intellectual-history.js` is generated, not hand-edited. It merges the typed literature-map groups and reference library published by the [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) with the defense prose written before that bibliography existed. Regenerate it after the studio bibliography changes:
+`intellectual-history.js` is generated, not hand-edited. It merges the typed literature-map groups and reference library published by the [Dissertation Proposal Studio](https://minerclass.github.io/dissertation-proposal-studio/) with the defense prose written before that bibliography existed. Regenerate it after the studio bibliography changes:
 
 ```
 node tools/build-intellectual-history.mjs [path-to-dissertation-proposal-studio]
@@ -22,7 +22,14 @@ The path defaults to a `dissertation-proposal-studio` checkout beside this repos
 
 The standalone shared working experience is published from `intellectual-history/` and links back to both the Proposal Defense Studio and Expanded Explorer.
 
-The separate [Pedagogical Friction Studio](https://minerclass.github.io/dissertation-proposal-studio/) remains the polished argument and literature-map experience and is linked from all three repository experiences.
+## Companion relationship
+
+The defense site treats two public companions as a layered resource rather than merging their codebases:
+
+- [Pedagogical Friction Companion](https://minerclass.github.io/pedagogical-friction/#study) is the current defense-facing entry point for the research questions, framework, and Chapter 2–3 walkthroughs.
+- [Dissertation Proposal Studio](https://minerclass.github.io/dissertation-proposal-studio/#traditions) is the deeper reference for the comprehensive literature map, source library, methods, and RQ connections.
+
+The Defense Room links to both with these distinct roles. Keeping the sites separate preserves their different interaction models while giving readers one clear path between them.
 
 ## Project Status
 

@@ -19,6 +19,26 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-11 - Clarify the current and comprehensive companion sites
+
+Agent: OpenAI Codex, implementing the author's request to connect the two
+proposal companions from the Defense Room.
+
+- Replaced two mislabeled links that called `dissertation-proposal-studio` the
+  Pedagogical Friction Studio.
+- Added the current `pedagogical-friction/#study` companion to the sidebar,
+  source links, and a new two-card Companion Path in the Defense Room.
+- Kept `dissertation-proposal-studio/#traditions` as the comprehensive
+  literature-and-methods destination and described the two sites as a layered
+  resource rather than combining their separate codebases.
+- Preserved the proposal-stage and public/private research boundaries.
+
+Local verification: both companion cards rendered as native links; their
+destination anchors resolved on the two live companion sites; desktop and
+390 x 844 checks found no horizontal overflow; the mobile cards collapsed to
+one column; no duplicate IDs or browser warnings/errors were found. Live Pages
+verification remains pending until this commit deploys.
+
 ## 2026-08-07 - Pages now publishes through actions/deploy-pages
 
 Agent: Claude Opus 5 (Claude Code). Requested by the author after the legacy
