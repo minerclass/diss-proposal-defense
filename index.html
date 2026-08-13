@@ -441,7 +441,12 @@
       </section>
     </main>
   </div>
-  <script src="intellectual-history.js"></script>
-  <script src="app.js"></script>
+  <!-- Bump ?v= on every change to these files, as with styles.css above.
+       /explorer and /intellectual-history load intellectual-history.js without
+       a version, deliberately: they are the only pages opened from disk, and
+       leaving them bare keeps that path untouched. The cost is that this page
+       and those two hold separate cache entries for the same file. -->
+  <script src="intellectual-history.js?v=20260813a"></script>
+  <script src="app.js?v=20260813a"></script>
 </body>
 </html>

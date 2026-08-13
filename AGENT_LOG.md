@@ -19,6 +19,34 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-13 - Version the root page scripts, and stop there
+
+Agent: Claude Opus 5 (Claude Code), at the author's direction.
+
+`index.html` now loads `intellectual-history.js?v=20260813a` and
+`app.js?v=20260813a`, alongside the `styles.css?v=20260811b` that was already
+there. `styles.css` was not bumped; the file did not change and bumping it would
+force a pointless refetch.
+
+**`/explorer` and `/intellectual-history` were deliberately left unversioned**,
+after the author raised the risk and then chose the narrower scope. They are the
+pages opened from disk, and the shared `intellectual-history.js` is reached from
+them by relative path. The cost of this choice is that the root page and those
+two hold separate cache entries for the same file. That is accepted, and a
+comment at the root page's script tags records it.
+
+**A `file://` claim in this log is now corrected.** Query strings on script
+`src` were assumed to be unsafe over `file://`. They are not, in Chromium.
+Measured with the headless Chrome path recorded further down this log: a probe
+page loaded `versioned.js?v=20260813a` from `file://` with
+`versioned=true`, and the edited root page rendered from disk with both scripts
+executing and history data populating. This also means the deck's version params
+are safe if it is ever presented straight from disk as a network fallback.
+
+**Verified.** Root page over http: both scripts resolve with the param,
+`renderHistory` and `intellectualHistorySources` present on `window`, console
+clean. Root page over `file://`: 94KB DOM, history data present.
+
 ## 2026-08-13 - Version the presentation script link
 
 Agent: Claude Opus 5 (Claude Code), at the author's request. Closes the "Not
