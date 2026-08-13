@@ -19,6 +19,50 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-12 - Slide 2 visual rebuilt as two routes to one artifact
+
+Agent: Claude Opus 5 (Claude Code), at the author's report that the polished
+product versus durable learning visual "does not seem to track."
+
+**Diagnosis.** The old `.trace-field` drew six solid bars against ten fading
+bars, joined by a `≠`. Two problems. It rendered as a paragraph of text beside a
+faded paragraph of text, which reads as a loading skeleton rather than as
+missing thinking. And the `≠` argued the weak form of the claim: "polished
+product does not equal durable learning" has been true since the take-home
+essay. The slide's own headline and coda argue the sharp form, that the artifact
+carries no signal of which case it is, which is why the coda can call it an
+evidence problem before a misconduct problem.
+
+**Replacement.** Two artifacts drawn from identical markup sit above a dashed
+horizon labelled "what an evaluator can see." Below it, two SVG routes to the
+same endpoint: a switchback path (221 units, measured with `getTotalLength`)
+labelled "drafted, reconsidered, revised" and a straight line (77 units)
+labelled "produced in one pass." Same destination, 2.9x the distance, and the
+distance is the part that does not survive into the product. This also puts the
+friction argument itself in the opening visual instead of a generic inequality.
+
+Two intermediate versions were rejected on screenshot: a wrapped field of small
+marks (reverted to reading as a paragraph, the original failure) and a
+rectilinear switchback (read as a circuit trace). The rounded serpentine holds.
+
+- Removed: `.trace-side`, `.trace-label`, `.trace-artifact`, `.trace-formation`,
+  `.trace-bars`, `.trace-marks`, `.trace-hinge`. Grepped the repo; no remaining
+  references outside this log's older entries.
+- `.slide-statement .slide-field` columns went from `1.16fr / minmax(18cqw,
+  .84fr)` to `1fr / minmax(26cqw, .95fr)` to give the visual room.
+- Both `.trace-doc` elements must stay byte-identical. Any per-column override
+  inverts the point of the slide.
+
+**Verified.** DOM contrast sweep over the new subtree against the actual
+`--rust-dark` (#6f3324) background: 5 text nodes, 0 failures (caps and route
+labels 5.77:1, horizon label 7.07:1). Non-text graphics: doc border 3.23:1, doc
+bars 8.31:1, route stroke 6.97:1, all clearing 3:1. The doc border started at
+`.45` alpha for this reason; `.3` measured 2.25:1. Rendering checked at desktop
+and tablet widths and in overview mode; console clean.
+
+**Not done.** axe was not run locally, and print/PDF output was not checked.
+Speaker notes for the slide were left alone; the talk track still matches.
+
 ## 2026-08-11 - Route the full companion and direct RQ path
 
 Agent: OpenAI Codex, implementing the author's follow-up after comparing the

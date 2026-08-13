@@ -505,9 +505,9 @@ a:focus-visible,
 
 .slide-statement .slide-field {
   display: grid;
-  grid-template-columns: minmax(0, 1.16fr) minmax(18cqw, .84fr);
+  grid-template-columns: minmax(0, 1fr) minmax(26cqw, .95fr);
   grid-template-rows: auto auto 1fr auto;
-  column-gap: 5cqw;
+  column-gap: 4.4cqw;
 }
 
 .slide-statement .eyebrow {
@@ -520,88 +520,132 @@ a:focus-visible,
   grid-row: 2;
 }
 
-/* Trace: the artifact stays crisp and complete while the formation behind it
-   dissolves. Shows what goes missing rather than only naming it. */
+/* Trace: two artifacts drawn identically above a line of visibility, with
+   wildly different amounts of process below it. The claim is not that product
+   differs from learning, which was always true; it is that the product carries
+   no record of which case it is. The asymmetry has to sit under the line, and
+   the two documents above it have to be pixel-identical, or the point inverts. */
 .trace-field {
   grid-column: 2;
   grid-row: 1 / span 3;
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 1.3cqw;
+  gap: 1.05cqw;
 }
 
-.trace-side {
+/* Both pairs share this track definition so the columns register across the
+   horizon line. Changing one without the other breaks the read. */
+.trace-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5cqw;
+  align-items: start;
+}
+
+.trace-cap {
+  color: rgba(255, 253, 248, .72);
+  font-size: clamp(.6rem, .82cqw, .88rem) !important;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Sits immediately under the horizon so each half reads caption-then-content. */
+.trace-cap-under {
+  margin-top: -.25cqw !important;
+}
+
+/* The finished surface: identical markup, no per-column overrides. */
+.trace-doc {
   display: flex;
   flex-direction: column;
-  gap: .9cqw;
+  gap: .62cqw;
+  padding: 1cqw .95cqw;
+  border: 1px solid rgba(255, 253, 248, .45);
+  border-radius: .3cqw;
+  background: rgba(255, 253, 248, .07);
 }
 
-.trace-label {
+.trace-doc i {
+  height: .62cqw;
+  border-radius: .31cqw;
+  background: rgba(255, 253, 248, .92);
+}
+
+.trace-doc i:nth-child(4) { width: 84%; }
+.trace-doc i:nth-child(5) { width: 46%; }
+
+/* The evidence horizon. Dashed rather than solid because it is a limit of
+   what can be seen, not a boundary in the work itself. */
+.trace-horizon {
+  display: flex;
+  align-items: center;
+  gap: .8cqw;
+  margin: .15cqw 0 !important;
+}
+
+.trace-horizon::before,
+.trace-horizon::after {
+  content: "";
+  flex: 1;
+  border-top: 1px dashed rgba(245, 217, 168, .72);
+}
+
+/* #f0c274 is only 4.05:1 on rust, which passes as large text for a glyph but
+   not for a caption this size. #f5d9a8 clears AA at 4.93:1. */
+.trace-horizon span {
+  color: #f5d9a8;
   font-family: var(--serif);
-  font-size: clamp(.92rem, 1.72cqw, 1.75rem);
-  line-height: 1.1;
+  font-size: clamp(.6rem, .95cqw, .95rem);
+  font-style: italic;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
-.trace-artifact .trace-label {
-  color: var(--white);
+/* The route below the line. Stacked bars were tried here first and read as a
+   second paragraph of text, which is the misreading this slide has to avoid.
+   A switchback against a straight line carries the friction argument directly:
+   same destination, different distance travelled, and the distance is the part
+   that does not survive into the product. */
+.trace-pair-routes {
+  align-items: stretch;
 }
 
-/* Deliberately quieter than the artifact label, but .58 landed at 4.33:1 on
-   the rust field, under AA. .62 clears it at 4.71:1 and keeps the hierarchy. */
-.trace-formation .trace-label {
-  color: rgba(255, 253, 248, .62);
-}
-
-/* Six uniform bars: the visible, finished surface. */
-.trace-bars {
+.trace-route {
   display: flex;
   flex-direction: column;
-  gap: .78cqw;
+  align-items: center;
+  gap: .55cqw;
 }
 
-.trace-bars i {
-  height: .95cqw;
-  border-radius: .36cqw;
-  background: rgba(255, 253, 248, .9);
+.trace-route svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  overflow: visible;
 }
 
-.trace-bars i:nth-child(4) { width: 82%; }
-.trace-bars i:nth-child(6) { width: 54%; }
-
-/* Irregular marks fading toward nothing: the interpretive work that no longer
-   survives in the artifact. */
-.trace-marks {
-  display: flex;
-  flex-direction: column;
-  gap: .5cqw;
+.route-line {
+  stroke: rgba(255, 253, 248, .82);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.trace-marks i {
-  height: .42cqw;
-  border-radius: .17cqw;
-  background: var(--white);
+.route-start {
+  fill: #f5d9a8;
+  stroke: none;
 }
 
-.trace-marks i:nth-child(1) { width: 74%; opacity: .50; }
-.trace-marks i:nth-child(2) { width: 88%; opacity: .42; }
-.trace-marks i:nth-child(3) { width: 61%; opacity: .35; }
-.trace-marks i:nth-child(4) { width: 79%; opacity: .28; }
-.trace-marks i:nth-child(5) { width: 47%; opacity: .22; }
-.trace-marks i:nth-child(6) { width: 66%; opacity: .17; }
-.trace-marks i:nth-child(7) { width: 38%; opacity: .12; }
-.trace-marks i:nth-child(8) { width: 52%; opacity: .08; }
-.trace-marks i:nth-child(9) { width: 27%; opacity: .05; }
-.trace-marks i:nth-child(10) { width: 40%; opacity: .03; }
-
-.trace-hinge {
-  align-self: flex-start;
-  margin: .1cqw 0 .1cqw .2cqw;
-  color: #f0c274;
+.route-label {
+  color: rgba(255, 253, 248, .72);
   font-family: var(--serif);
-  font-size: clamp(1.6rem, 3.4cqw, 3.6rem);
-  font-weight: 400;
-  line-height: 1;
+  font-size: clamp(.58rem, .92cqw, .95rem);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .slide-statement .slide-coda {

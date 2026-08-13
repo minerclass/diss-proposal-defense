@@ -61,7 +61,8 @@ Five, not seventeen. Each performs part of the argument:
 
 1. **Slide 1 — aperture.** Title as reading sequence; negative space framed by a
    concentric opening.
-2. **Slide 2 — trace.** The formation behind an artifact visibly fading out.
+2. **Slide 2 — two routes, one horizon.** Identical artifacts above the line an
+   evaluator can see; a switchback route and a straight one below it.
 3. **Slide 6 — constellation in a field.** Head/room/world around a learning
    event, *contained by* an infrastructural field.
 4. **Slide 13 — spine.** Interpretive investment as a traceable audit chain.
@@ -72,7 +73,7 @@ Five, not seventeen. Each performs part of the argument:
 | # | Job | Move |
 |---|---|---|
 | 1 | Enter the argument | Aperture; staged title with `.t-lead` / `.t-quiet` |
-| 2 | Break the inference | Trace fading from formation into finished artifact |
+| 2 | Break the inference | Identical artifacts above the evidence horizon; unequal routes below |
 | 3 | Establish the moment | Two figures as a widening clarity gap |
 | 4 | Name the condition | Progression with a visible authorship hinge |
 | 5 | Show the bypass | Intended path primary; AI routing around it |
