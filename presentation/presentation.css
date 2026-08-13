@@ -1275,6 +1275,13 @@ a:focus-visible,
   line-height: 1.1;
 }
 
+/* Second kicker inside a panel. Dimmer than the "Answers" kicker so the
+   pressure link still reads first and the instance reads as illustration. */
+.detail-kicker-sub {
+  margin-top: .34cqw;
+  color: rgba(217, 164, 65, .82);
+}
+
 .detail-body {
   color: rgba(255, 253, 248, .82);
   font-size: clamp(.58rem, .88cqw, .9rem);
