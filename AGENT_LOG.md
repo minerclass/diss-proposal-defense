@@ -19,6 +19,30 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-13 - Version the presentation stylesheet link
+
+Agent: Claude Opus 5 (Claude Code), at the author's request. Supersedes the
+"Not done" item in the entry below, which declined this.
+
+`presentation/index.html` now loads `presentation.css?v=20260813a`, matching the
+`?v=YYYYMMDD` + letter scheme already used for `styles.css` at the repo root.
+Reason it changed: this deck gets presented live, and a ten-minute window where
+a browser can pair new HTML with a stale stylesheet is worth more than the cost
+of remembering to bump a string.
+
+**This now has to be bumped on every `presentation.css` change.** A comment
+above the link in the HTML says so. If a CSS edit ships and the visual does not
+change for anyone holding a cached copy, this is why.
+
+**Verified.** Fresh load resolves `presentation.css?v=20260813a`, stylesheet
+parses with `.route-line` present, `.route-line` computes
+`rgba(255,253,248,.82)`, both `.trace-doc` elements measure 152.73x52.39,
+console clean.
+
+**Not done.** `presentation.js` is still unversioned, as are the scripts on the
+root page. Stale JS against new HTML would break slide navigation rather than
+just styling, so it is the larger of the two risks and is still open.
+
 ## 2026-08-13 - Harden the slide 2 routes against a missing stylesheet
 
 Agent: Claude Opus 5 (Claude Code), after the author saw the slide render with
