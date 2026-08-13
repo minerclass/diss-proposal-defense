@@ -19,6 +19,31 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-13 - Harden the slide 2 routes against a missing stylesheet
+
+Agent: Claude Opus 5 (Claude Code), after the author saw the slide render with
+black inkblots where the routes should be.
+
+Cause was a cache split, not a bug: Pages serves `presentation.css` with
+`Cache-Control: max-age=600`, so a browser holding the pre-deploy stylesheet
+paired it with the new HTML for up to ten minutes. It self-heals.
+
+What it exposed is worth keeping fixed. An SVG `<path>` with no CSS defaults to
+`fill: black, stroke: none`, so any stylesheet failure turns the opening slide
+of the defense into black blobs. The two route SVGs now carry `fill="none"`,
+`stroke`, `stroke-width`, and the cap/join as presentation attributes, with
+`fill="#f5d9a8"` on the start circles. CSS overrides presentation attributes, so
+the styled render is unchanged; the no-CSS render degrades to cream strokes.
+
+**Verified.** Reproduced the stale-stylesheet state locally (sheet loaded, 394
+rules, no `.route-line`) and confirmed the fallback draws cream, not black. With
+the fresh sheet, `.route-line` computes `rgba(255,253,248,.82)` over the
+attribute and both `.trace-doc` elements still measure 152.73x52.39.
+
+**Not done.** No cache-busting query was added to the stylesheet link. The
+ten-minute window self-heals and a version param would need bumping on every CSS
+change. A hard reload before presenting is the mitigation.
+
 ## 2026-08-12 - Slide 2 visual rebuilt as two routes to one artifact
 
 Agent: Claude Opus 5 (Claude Code), at the author's report that the polished
