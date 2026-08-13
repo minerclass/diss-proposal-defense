@@ -19,6 +19,30 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-13 - Version the presentation script link
+
+Agent: Claude Opus 5 (Claude Code), at the author's request. Closes the "Not
+done" item in the entry below as it applies to `presentation.js`.
+
+`presentation/index.html` now loads `presentation.js?v=20260813a`, matching the
+stylesheet. Both strings have to be bumped when their file changes; comments at
+each tag say so.
+
+**Verified.** Both assets resolve with the version param. Navigation exercised
+rather than assumed: Next button advanced 2 to 3 with the live region announcing
+"Slide 3 of 17", Previous returned, and ArrowRight/ArrowLeft moved in both
+directions. Console clean.
+
+Note for the next agent: the browser automation `key` action needs the literal
+`ArrowRight`, not `Right`. `Right` produces no `keydown` the deck recognises and
+looks exactly like broken keyboard navigation. It is not.
+
+**Not done, and deliberately.** The root page's `app.js` and
+`intellectual-history.js`, and the explorer's scripts, remain unversioned. The
+justification for accepting the bump-forever maintenance cost was that this deck
+is presented live from a podium; that does not extend to the website surfaces,
+where a ten-minute stale window is merely untidy.
+
 ## 2026-08-13 - Version the presentation stylesheet link
 
 Agent: Claude Opus 5 (Claude Code), at the author's request. Supersedes the
