@@ -1,7 +1,7 @@
 const storage = {
   opening: "proposalDefenseStudio.openingAnswer.v1",
   committee: "proposalDefenseStudio.committeeNotes.v1",
-  checks: "proposalDefenseStudio.defenseChecks.v2"
+  checks: "proposalDefenseStudio.defenseChecks.v3"
 };
 
 const groupKindLabels = {
@@ -62,7 +62,7 @@ const claims = [
     claim: "Under tertiary algorithmicity, polished output may not reliably demonstrate the learning process on its own.",
     warrant: "Generative AI can produce text that mimics the markers of deep cognitive processing without the student having performed that processing.",
     literatureFunction: "Draws on learning sciences and cognitive psychology to distinguish performance from durable learning.",
-    empiricalStatus: "Proposal-stage conceptual claim.",
+    empiricalStatus: "Post-defense proposal conceptual claim; no participant findings.",
     evidenceToBeCollected: "Interview accounts of how teachers assess understanding when products are unreliable.",
     possibleDisconfirmation: "Educators might find that polished output remains a reliable proxy for learning if paired with AI-assisted reflection.",
     consequenceIfUnsupported: "The premise of 'unproductive success' would be weakened, shifting the focus entirely to instructional design.",
@@ -158,13 +158,13 @@ const methodRows = [
 ];
 
 const sampleChecks = [
-  "Confirm that the July 24 Chapters 1-3 working proposal is the committee-circulated version.",
-  "Confirm chair and committee authorization for the August 13, 2026 defense, the required reader window, and any dean's representative requirement.",
-  "File the current CITI certificate with the IRB materials, and keep proposal approval and IRB approval as prerequisites for recruitment and data collection.",
-  "Rehearse a 20- to 30-minute narrative using the exact RQ1-RQ3 wording and the qualitative-dominant evidence hierarchy.",
-  "Explain the participant and instrument mapping: interviews across all four groups; card sorts only for classroom-facing educators and adult university students.",
-  "Explain interpretive codebook thematic analysis, the below-80 descriptive survey rule, and integration through convergence, divergence, expansion, or silence.",
-  "Verify the printable brief, research matrix, public links, and backup pages before freezing the defense materials."
+  "Record the August 13, 2026 proposal-defense decision and any conditions in the dissertation revision trail.",
+  "Revise the interview-question wording without changing the defended research-question or evidence alignment.",
+  "Provide the revised interview questions to the dissertation committee for review.",
+  "Rehearse the revised questions with three educators to assess conversational flow.",
+  "Document flow issues as instrument-development feedback, not main-study data or findings.",
+  "Update the IRB materials after committee review and the flow rehearsal.",
+  "Begin formal recruitment or main-study data collection only after the applicable IRB approval and permissions are documented."
 ];
 const boundaries = [
   ["Public GitHub Pages", "Defense rehearsal, concept map, source atlas, non-participant study explanation, presentation support."],
@@ -180,7 +180,7 @@ const questions = [
   ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts and agentic artifacts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
   ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI and agentic artifacts as limited nonparticipant evidence, reporting counterexamples, and avoiding claims about findings before data collection."],
-  ["What still needs confirmation?", "The proposal defense is set for August 13, 2026 and CITI certification is current. What remains is the reader window, any dean's representative requirement, current signature procedures, the IRB submission sequence after the defense, and scheduling for a final dissertation defense that is still TBD."]
+  ["What still needs confirmation?", "The proposal defense was passed on August 13, 2026. What remains is the final interview-question wording, committee review of that wording, the three-educator flow rehearsal, the resulting IRB-materials update, written IRB approval, and any applicable site permissions before formal recruitment or main-study data collection."]
 ];
 
 const challengeCategories = [
@@ -548,8 +548,9 @@ function bindEvents() {
   qs("#openingAnswer").addEventListener("input", event => localStorage.setItem(storage.opening, event.target.value));
 
   qs("#committeeNotes").value = localStorage.getItem(storage.committee) || [
-    "Proposal defense is August 13, 2026. The final dissertation defense date is TBD and must fall on or before April 30, 2027.",
+    "The Chapters 1-3 dissertation proposal defense was passed on August 13, 2026.",
     "CITI human-subjects recertification is complete; the current certificate goes in the IRB file.",
+    "Current gate: revise interview-question wording, obtain committee review, rehearse the revised questions with three educators for conversational flow, then update the IRB materials.",
     "",
     "Settled in the July 24, 2026 Chapters 1-3 working proposal (say these the same way every time):",
     "- Qualitative-dominant convergent mixed methods grounded in constructivist qualitative inquiry; the qualitative strand answers the questions and the quantitative strand supplies supporting context.",
@@ -558,21 +559,22 @@ function bindEvents() {
     "- Survey analysis stays descriptive and exploratory under the below-80 rule, and national datasets provide context rather than inference about participants.",
     "- AI-generated texts and the one bounded, prespecified agentic-artifact task hold nonparticipant status and stay separate from participant evidence and participant data.",
     "- Public pages carry explanation and rehearsal only; consent records, transcripts, and raw survey data live in approved secure storage.",
-    "- No recruitment or data collection begins before proposal approval and IRB approval, and recruitment excludes the researcher's own district.",
+    "- No formal recruitment or main-study data collection begins before IRB approval, and recruitment excludes the researcher's own district.",
     "",
-    "Asks for the chair (procedural, not conceptual):",
-    "- Confirm the July 24 draft is the version the committee is reading for August 13 and the format they want it in.",
-    "- Confirm the reader window, dean's representative, and signature requirements that apply before August 13.",
-    "- Confirm whether the Appendix A instruments must be final at the defense or can be revised during IRB review.",
-    "- Confirm how soon after the defense the IRB application should go in, and what revisions must clear first.",
+    "Post-defense confirmations:",
+    "- Confirm the revised interview-question wording and any committee-required changes.",
+    "- Confirm that the three-educator flow rehearsal is treated as instrument development rather than main-study data collection.",
+    "- Confirm which flow-rehearsal notes, if any, belong in the IRB materials.",
+    "- Confirm the IRB update and submission sequence after the revised instruments are ready.",
     "- Confirm the scheduling window for the final dissertation defense so it lands on or before April 30, 2027.",
     "",
     "Dates:",
-    "- Proposal defense: August 13, 2026",
+    "- Proposal defense: passed August 13, 2026",
     "- CITI training: complete",
     "- Final dissertation defense: TBD, on or before April 30, 2027",
-    "- Materials to committee by ____",
-    "- IRB submission target ____"
+    "- Revised interview questions to committee by ____",
+    "- Three-educator flow rehearsal by ____",
+    "- IRB materials update target ____"
   ].join("\n");
   qs("#committeeNotes").addEventListener("input", event => localStorage.setItem(storage.committee, event.target.value));
 

@@ -1071,3 +1071,20 @@ Agent: OpenAI Codex, implementing the author's follow-up to a verification revie
   behavior.
 - Preserved the proposal-stage boundary. No participant data, findings, or
   claims of IRB or committee approval were added.
+
+## 2026-08-13 - Proposal defense passed and post-defense sequence recorded
+
+Agent: OpenAI Codex, recording the researcher's reported milestone and planned sequence.
+
+- Updated the Studio, readiness checklist, printable committee brief, research
+  matrix, Explorer, and README to record that the Chapters 1-3 proposal defense
+  was passed on August 13, 2026.
+- Reframed the current gate as interview-question revision, committee review, a
+  planned three-educator conversational-flow rehearsal, and an IRB-materials update.
+- Preserved the delivered presentation as a historical defense record rather
+  than rewriting its deck narrative after the event.
+- Added phone-width wrapping constraints to the Studio brand and navigation so
+  the longer post-defense status and existing route names remain fully readable.
+- Preserved the research boundary: the flow rehearsal is not presented as
+  main-study data, and no IRB approval, recruitment, data collection, analysis,
+  findings, framework validation, or ABD status is claimed.

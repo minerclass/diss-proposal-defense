@@ -34,6 +34,12 @@ The Defense Room links to both with these distinct roles. Keeping the sites sepa
 
 ## Project Status
 
+Micah passed the Chapters 1-3 dissertation proposal defense on August 13, 2026. The Defense Studio
+and presentation are preserved as records of that milestone. Current work is to revise the
+interview-question wording, obtain committee review, rehearse the revised questions with three
+educators to assess conversational flow, and then update the IRB materials. IRB approval, formal
+recruitment, main-study data collection, analysis, and findings remain future gates.
+
 This first version is grounded in the local Phase 2 artifacts in this workspace:
 
 - `DISSERTATION_DRIVE_REVIEW_PHASE2.md`
@@ -84,4 +90,4 @@ This repository is suitable for public explanation, rehearsal, and source mappin
 - staff or student data,
 - API keys or credentials.
 
-Use approved secure systems for human-subjects research data after proposal and IRB approval.
+Use approved secure systems for human-subjects research data after IRB approval and any applicable permissions.

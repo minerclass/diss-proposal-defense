@@ -947,6 +947,31 @@ td {
 }
 
 @media (max-width: 720px) {
+  .brand {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .brand > span:last-child {
+    min-width: 0;
+  }
+
+  .brand strong,
+  .brand small,
+  .nav-item {
+    overflow-wrap: anywhere;
+  }
+
+  .nav-item {
+    min-width: 0;
+    white-space: normal;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .nav-item span {
+    flex: 0 0 28px;
+  }
+
   .workspace {
     padding: 18px;
   }
