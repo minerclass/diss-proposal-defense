@@ -19,6 +19,27 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-09-01 - Adopt the paper ground, and fix a regression before it reached CI
+
+**Token adoption.** Ground, panel, ink, and muted come from the shared tokens with
+pre-adoption fallbacks; the teal, blue, rust, gold, green, and red accents stay local. The
+stylesheet's `?v=` query was bumped to `20260901a` per this repo's convention.
+
+**A regression I caused, caught before pushing.** Mapping `--panel` from pure `#ffffff` to
+the shared warm surface tipped `.status-chip.caution` from passing to **4.39**. The probe
+showed one failure with the token sheet on and **zero** with it off, which is the signature
+of a self-inflicted break. The chip's text was darkened from `#8c6014` to `#744f10`, giving
+5.82. This is the same failure mode that made this ecosystem's other CI repo go red on
+2026-08-31: warming a light surface by a few points is enough to tip a thin accent.
+
+**Scope checked.** CI runs axe over every HTML file here, but none of the other five pages
+link `styles.css` - they carry their own styles - so this change affects `index.html` only.
+
+**Verified.** 100 elements probed: **zero** failures with the token sheet on and off;
+tightest pair 4.79.
+
+---
+
 ## 2026-08-31 - Remove the private proposal Doc locator from public surfaces
 
 Found during a read-only audit of the Tier 2-4 repositories.

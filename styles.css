@@ -1,11 +1,15 @@
 :root {
-  --ink: #18222b;
-  --muted: #5c6872;
+  /* Ground, ink, and rules come from the shared ecosystem tokens at
+     https://minerclass.github.io/tokens.css, with each fallback set to this
+     page's pre-adoption value so a failed load changes nothing. Accents local. */
+  --ink: var(--mjm-ink, #18222b);
+  --muted: var(--mjm-muted, #5c6872);
+  --mjm-accent: var(--mjm-teal, #0c6572);
   --quiet: #7b8791;
   --line: #dbe2e7;
-  --soft: #f4f6f8;
+  --soft: var(--mjm-bg, #f4f6f8);
   --softer: #fafbfc;
-  --panel: #ffffff;
+  --panel: var(--mjm-surface, #ffffff);
   --teal: #0c6572;
   --blue: #315f89;
   --rust: #9a4d2f;
@@ -577,7 +581,7 @@ textarea {
 
 .status-chip.review,
 .status-chip.caution {
-  color: #8c6014;
+  color: #744f10;
   border-color: rgba(169, 120, 29, .28);
   background: rgba(169, 120, 29, .09);
 }
