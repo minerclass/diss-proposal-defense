@@ -1,16 +1,19 @@
 :root {
-  --ink: #17232d;
-  --ink-soft: #34434e;
-  --paper: #f3efe6;
+  /* Ground, ink and rules from the shared ecosystem tokens with pre-adoption
+     fallbacks. The rust/teal/blue/gold deck accents stay local. */
+  --ink: var(--mjm-ink, #17232d);
+  --ink-soft: var(--mjm-muted, #34434e);
+  --paper: var(--mjm-bg, #f3efe6);
   --paper-deep: #e8e0d2;
-  --white: #fffdf8;
+  --white: var(--mjm-surface, #fffdf8);
   --rust: #91462f;
   --rust-dark: #6f3324;
   --teal: #2f6970;
   --teal-dark: #1f5057;
   --blue: #315f7c;
   --gold: #b58127;
-  --line: rgba(23, 35, 45, .18);
+  --line: var(--mjm-line, rgba(23, 35, 45, .18));
+  --mjm-accent: var(--mjm-rust, #91462f);
   --line-light: rgba(255, 253, 248, .22);
   --shadow: 0 22px 70px rgba(18, 28, 36, .22);
   --serif: Georgia, "Times New Roman", serif;

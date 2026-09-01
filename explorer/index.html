@@ -9,15 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
+  <link rel="stylesheet" href="https://minerclass.github.io/tokens.css">
   <style>
     :root {
-      --bg-dark: #070a13;
-      --bg-slate: #0b1120;
+      /* Ground, ink, and rules come from the shared ecosystem tokens at
+         https://minerclass.github.io/tokens.css, each fallback set to this
+         page's pre-adoption value so a failed load changes nothing. */
+      --bg-dark: var(--mjm-bg, #070a13);
+      --bg-slate: var(--mjm-surface, #0b1120);
       --card-bg: rgba(17, 24, 39, 0.75);
       --border-color: rgba(255, 255, 255, 0.08);
       --border-hover: rgba(244, 63, 94, 0.35);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
+      --text-main: var(--mjm-ink, #f8fafc);
+      --text-muted: var(--mjm-muted, #94a3b8);
+      --mjm-accent: var(--mjm-rose, #f43f5e);
       
       /* Glowing Lenses & Labe/Roles Colors */
       --accent-coral: #f43f5e;

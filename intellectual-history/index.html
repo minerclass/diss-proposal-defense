@@ -1,12 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mjm-ground="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shared Intellectual History | Proposal Defense Studio</title>
   <meta name="description" content="A shared working literature map for the Proposal Defense Studio and Expanded Explorer.">
+  <link rel="stylesheet" href="https://minerclass.github.io/tokens.css">
   <style>
-    :root { --ink:#17232d; --muted:#5f6b73; --paper:#f4f6f5; --panel:#fff; --line:#d8dfdf; --teal:#0c6572; --coral:#a94736; --gold:#a77718; }
+    /* Ground, ink and rules from the shared tokens with pre-adoption fallbacks.
+       --ink is dual-role here: body text AND the masthead background, which
+       carries white text, so it must stay dark. Accents stay local. */
+    :root { --ink:var(--mjm-ink,#17232d); --muted:var(--mjm-muted,#5f6b73); --paper:var(--mjm-bg,#f4f6f5); --panel:var(--mjm-surface,#fff); --line:var(--mjm-line,#d8dfdf); --teal:#0c6572; --coral:#a94736; --gold:#a77718; --mjm-accent:var(--mjm-teal,#0c6572); }
     * { box-sizing:border-box; }
     body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.55 system-ui,sans-serif; }
     a { color:inherit; }

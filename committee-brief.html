@@ -1,15 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mjm-ground="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Committee Brief | Pedagogical Friction in the Age of Generative AI</title>
+  <link rel="stylesheet" href="https://minerclass.github.io/tokens.css">
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111827;
-      --muted: #4b5563;
-      --border: #e5e7eb;
+      /* Ground, ink, and rules come from the shared ecosystem tokens at
+         https://minerclass.github.io/tokens.css, each fallback set to this
+         page's pre-adoption value so a failed load changes nothing. */
+      --bg: var(--mjm-surface, #ffffff);
+      --text: var(--mjm-ink, #111827);
+      --muted: var(--mjm-muted, #4b5563);
+      --border: var(--mjm-line, #e5e7eb);
+      --mjm-accent: var(--mjm-blue, #2563eb);
       --brand: #2563eb;
     }
     body {

@@ -1,17 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mjm-ground="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research Alignment Matrix | Proposal Defense Studio</title>
   <meta name="description" content="Printable research-question alignment matrix for the July 24 Chapters 1-3 Pedagogical Friction dissertation proposal.">
+  <link rel="stylesheet" href="https://minerclass.github.io/tokens.css">
   <style>
     :root {
-      --ink: #18232d;
-      --muted: #52616d;
-      --paper: #f7f5f0;
-      --white: #ffffff;
-      --line: #cfd6d9;
+      /* Ground, ink, and rules come from the shared ecosystem tokens at
+         https://minerclass.github.io/tokens.css, each fallback set to this
+         page's pre-adoption value so a failed load changes nothing. */
+      --ink: var(--mjm-ink, #18232d);
+      --muted: var(--mjm-muted, #52616d);
+      --paper: var(--mjm-bg, #f7f5f0);
+      --white: var(--mjm-surface, #ffffff);
+      --line: var(--mjm-line, #cfd6d9);
+      --mjm-accent: var(--mjm-teal, #216a70);
       --rust: #8b3a21;
       --teal: #216a70;
       --gold: #8a5d10;
