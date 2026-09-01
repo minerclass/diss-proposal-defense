@@ -19,6 +19,53 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-31 - Remove the private proposal Doc locator from public surfaces
+
+Found during a read-only audit of the Tier 2-4 repositories.
+
+**Problem.** The controlling Chapters 1-3 working copy is a restricted Google Doc,
+but its document ID was published on four public surfaces in this repository: a
+link in the root page source list, a link in the methods-matrix action bar, and
+entries in both README.md and SOURCES_AND_PRIVACY.md. GitHub renders README.md on
+the repository landing page, so that instance was the most visible of the four.
+
+**Actual exposure was limited.** Anonymous requests to the document returned HTTP
+401 on both /edit and /export?format=txt, so its contents were never publicly
+readable. The concern is the locator itself: it is useless to a public reader who
+cannot open it, and it becomes a real exposure the moment sharing is widened, for
+example to let someone read without signing in.
+
+**Changed.**
+
+- `index.html` - removed the source-list link. Not replaced, because the page
+  navigation already links to the public dissertation-overview; adding a second
+  link to the same destination would have been redundant.
+- `methods-matrix/index.html` - replaced with a link to the public
+  dissertation-overview, since that action bar had no other proposal reference
+  and losing the affordance entirely would have been a downgrade.
+- `README.md` and `SOURCES_AND_PRIVACY.md` - kept the provenance line naming the
+  controlling source, removed the URL, and pointed to the public overview instead.
+
+**Verified.** The document ID now appears in **zero** files of any type in this
+repository, checked by walking every file rather than only HTML/CSS/JS - the
+markdown instances were missed by the first scan precisely because it was limited
+to web assets. Both edited HTML files parse with balanced tags.
+
+**Checked and deliberately left alone.** The qualifying-paper Google Doc linked
+from the same source list is a different case. Its Drive permissions are
+`role: reader, type: anyone`, so it is intentionally world-readable and view-only;
+anonymous visitors to its /edit URL simply get a read-only view. That link is
+correct as it stands and was not touched.
+
+**Open.** The wider audit recorded two further items for this ecosystem that are
+not addressed here: an archived qualifying-paper page that still describes the
+dissertation as a "mixed-methods case study design", which contradicts the
+defended proposal and needs a dated editorial note rather than a silent rewrite;
+and accessibility gaps in several sibling repositories. Neither is in this
+repository.
+
+---
+
 ## 2026-08-13 - Version the root page scripts, and stop there
 
 Agent: Claude Opus 5 (Claude Code), at the author's direction.
