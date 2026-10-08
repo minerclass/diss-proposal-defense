@@ -35,10 +35,9 @@ The Defense Room links to both with these distinct roles. Keeping the sites sepa
 ## Project Status
 
 Micah passed the Chapters 1-3 dissertation proposal defense on August 13, 2026. The Defense Studio
-and presentation are preserved as records of that milestone. Current work is to revise the
-interview-question wording, obtain committee review, rehearse the revised questions with three
-educators to assess conversational flow, and then update the IRB materials. IRB approval, formal
-recruitment, main-study data collection, analysis, and findings remain future gates.
+and presentation are preserved as records of that milestone. NLU IRB approved the study as Exempt
+on October 7, 2026 (protocol ER01884), through October 7, 2027. Interview and survey-review
+invitations are open. The anonymous survey, analysis, and findings have not begun.
 
 This first version is grounded in the local Phase 2 artifacts in this workspace:
 

@@ -180,7 +180,7 @@ const questions = [
   ["What evidence is central?", "Interviews and other open-ended sources address participant meaning directly. Closed-ended survey items and national datasets provide supporting context, while AI-generated texts and agentic artifacts retain a distinct nonparticipant status."],
   ["What makes this mixed methods?", "The qualitative strand is primary, while survey, secondary data, document analysis, and artifact comparisons contextualize, challenge, or extend the qualitative interpretations."],
   ["How will you avoid overclaiming?", "By keeping supporting strands proportionate, treating AI and agentic artifacts as limited nonparticipant evidence, reporting counterexamples, and avoiding claims about findings before data collection."],
-  ["What still needs confirmation?", "The proposal defense was passed on August 13, 2026. What remains is the final interview-question wording, committee review of that wording, the three-educator flow rehearsal, the resulting IRB-materials update, written IRB approval, and any applicable site permissions before formal recruitment or main-study data collection."]
+  ["What still needs confirmation?", "The proposal defense was passed on August 13, 2026. NLU IRB approved the study as Exempt on October 7, 2026 (protocol ER01884), through October 7, 2027. Interview and survey-review invitations are open. The anonymous survey is not open until the approved form is live. Analysis and findings have not begun."]
 ];
 
 const challengeCategories = [
